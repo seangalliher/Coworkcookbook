@@ -1,0 +1,17 @@
+name: Bug (repo / CI)
+description: Something is wrong with the repo, CI, schemas, or other non-recipe content
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's broken?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+    validations:
+      required: true

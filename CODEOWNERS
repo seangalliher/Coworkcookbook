@@ -1,0 +1,7 @@
+# Maintainers own everything by default.
+* @seangalliher
+
+# Schemas are particularly load-bearing — keep maintainer review explicit.
+/schemas/                @seangalliher
+/taxonomy/               @seangalliher
+/.github/workflows/      @seangalliher

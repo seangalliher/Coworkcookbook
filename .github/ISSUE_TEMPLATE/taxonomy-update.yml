@@ -1,0 +1,19 @@
+name: Taxonomy update
+description: Propose a change to the business-process taxonomy or BPMN files
+title: "[Taxonomy] "
+labels: ["taxonomy"]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: What node would be added / renamed / moved / removed? Why?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on existing recipes
+      description: Which recipes (by id) would be affected? Any redirects needed?
+    validations:
+      required: true

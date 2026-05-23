@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/seangalliher/Coworkcookbook/security/advisories/new
+    about: Report a security issue privately (do NOT use public issues).
+  - name: Web app issue
+    url: https://github.com/seangalliher/CoworkCookBookWebApp/issues
+    about: Bugs in the web app belong in the web app repo.

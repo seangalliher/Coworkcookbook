@@ -1,0 +1,46 @@
+name: Recipe request
+description: Propose a new Cowork recipe
+title: "[Recipe request] "
+labels: ["recipe-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a recipe! Please give us enough detail that a maintainer can scope the work.
+  - type: input
+    id: business_process
+    attributes:
+      label: Business process
+      description: Which Business Process Catalog node would this recipe sit under? (e.g., source-to-pay/invoice-validation)
+      placeholder: source-to-pay/invoice-validation
+    validations:
+      required: true
+  - type: input
+    id: plugin
+    attributes:
+      label: Cowork plugin
+      description: Which Cowork plugin should this recipe use? (e.g., dynamics-365-erp)
+      placeholder: dynamics-365-erp
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should the recipe accomplish? Who is the user?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs_outputs
+    attributes:
+      label: Inputs / outputs
+      description: What data does the recipe consume? What artifact does it produce?
+    validations:
+      required: true
+  - type: checkboxes
+    id: data_safety
+    attributes:
+      label: Data safety
+      options:
+        - label: This recipe would CREATE or MODIFY data in Dynamics 365 (we will require a `VERIFICATION.md`)
+        - label: This recipe is READ-ONLY (reports, validations, summaries)

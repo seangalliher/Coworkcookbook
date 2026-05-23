@@ -1,0 +1,39 @@
+name: Recipe broken
+description: Report a recipe that no longer works or produces incorrect results
+title: "[Broken] "
+labels: ["bug", "recipe-broken"]
+body:
+  - type: input
+    id: recipe_id
+    attributes:
+      label: Recipe ID
+      description: Slug of the recipe (from its URL or recipe.yaml)
+      placeholder: vendor-invoice-validation
+    validations:
+      required: true
+  - type: input
+    id: cowork_build
+    attributes:
+      label: Cowork build
+      description: Which Cowork build / date were you running when it broke?
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What did Cowork actually do? Include error messages or response excerpts.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
