@@ -4,7 +4,7 @@ summary: >-
   Validates open journal entries against a configurable rule set before posting and produces an exception report.
 plugin: dynamics-365-erp
 process_tags:
-  - record-to-report/journal-validation
+  - record-to-report/record-financial-transactions
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

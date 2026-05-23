@@ -4,7 +4,7 @@ summary: >-
   Identifies duplicate, incomplete, or inactive vendors in the master record and proposes a cleanup plan.
 plugin: dynamics-365-erp
 process_tags:
-  - source-to-pay/vendor-management
+  - source-to-pay/manage-supplier-relationships
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

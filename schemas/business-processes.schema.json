@@ -25,7 +25,10 @@
         "description": { "type": "string" },
         "level": { "type": "string", "enum": ["end-to-end", "area", "process", "activity"] },
         "parent": { "type": "string", "description": "id of parent node; omitted for end-to-end" },
-        "bpmn": { "type": "string", "description": "relative path to .bpmn file under taxonomy/bpmn/" }
+        "bpmn": { "type": "string", "description": "relative path to .bpmn file under taxonomy/bpmn/" },
+        "ms_bpc_id": { "type": "string", "description": "Microsoft BPC stable id (e.g., d6689987c110v0)." },
+        "sequence_id": { "type": "string", "description": "Microsoft BPC Process Sequence ID (e.g., 10.05.020.000)." },
+        "learn_url": { "type": "string", "description": "URL on learn.microsoft.com." }
       }
     }
   }

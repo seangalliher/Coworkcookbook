@@ -4,7 +4,7 @@ summary: >-
   Forecasts the next 12 months of depreciation expense by asset group and by GL account.
 plugin: dynamics-365-erp
 process_tags:
-  - acquire-to-dispose/depreciation
+  - acquire-to-dispose/analyze-assets
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

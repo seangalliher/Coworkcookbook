@@ -4,7 +4,7 @@ summary: >-
   Reviews the current payment proposal for accuracy and flags lines that need attention before release.
 plugin: dynamics-365-erp
 process_tags:
-  - source-to-pay/payment-execution/payment-proposal-review
+  - source-to-pay/manage-accounts-payable
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

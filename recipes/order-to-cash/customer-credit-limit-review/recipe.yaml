@@ -4,7 +4,7 @@ summary: >-
   Builds a review report of customers whose credit limit or exposure looks out of policy.
 plugin: dynamics-365-erp
 process_tags:
-  - order-to-cash/credit-management
+  - order-to-cash/manage-credit-and-collections
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

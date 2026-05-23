@@ -4,7 +4,7 @@ summary: >-
   Compares standard cost to actual cost on completed production orders and highlights material variances.
 plugin: dynamics-365-erp
 process_tags:
-  - plan-to-produce/production-execution
+  - plan-to-produce/run-production-operations
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

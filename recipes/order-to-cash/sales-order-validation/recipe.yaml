@@ -4,7 +4,7 @@ summary: >-
   Validates open sales orders against policy: pricing, credit, customer status, delivery terms.
 plugin: dynamics-365-erp
 process_tags:
-  - order-to-cash/sales-order
+  - order-to-cash/manage-sales-orders
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

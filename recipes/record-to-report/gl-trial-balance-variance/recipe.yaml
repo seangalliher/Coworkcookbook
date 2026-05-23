@@ -4,7 +4,7 @@ summary: >-
   Compares the current-period trial balance to the prior period and highlights GL accounts with material variances.
 plugin: dynamics-365-erp
 process_tags:
-  - record-to-report/general-ledger
+  - record-to-report/record-financial-transactions
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

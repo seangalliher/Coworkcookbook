@@ -4,7 +4,7 @@ summary: >-
   Audits the fixed asset register for missing fields, inconsistent depreciation profiles, and assets due for retirement.
 plugin: dynamics-365-erp
 process_tags:
-  - acquire-to-dispose/fixed-asset-register
+  - acquire-to-dispose/manage-active-assets
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

@@ -3,8 +3,7 @@ title: Vendor Invoice Three-Way Match Status Report
 summary: Builds a status report of vendor invoices and their three-way-match state against POs and goods receipts.
 plugin: dynamics-365-erp
 process_tags:
-  - source-to-pay/invoice-validation
-  - source-to-pay/invoice-validation/three-way-match
+  - source-to-pay/manage-accounts-payable
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

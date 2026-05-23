@@ -4,7 +4,7 @@ summary: >-
   Audits active BOMs for missing components, expired versions, and items that are obsolete.
 plugin: dynamics-365-erp
 process_tags:
-  - plan-to-produce/bom-management
+  - plan-to-produce/develop-production-strategies
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

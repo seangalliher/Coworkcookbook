@@ -4,7 +4,7 @@ summary: >-
   Generates a role-tailored onboarding checklist as a Word document for a named new hire.
 plugin: dynamics-365-erp
 process_tags:
-  - hire-to-retire/onboarding
+  - hire-to-retire/recruit-and-onboard-talent
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

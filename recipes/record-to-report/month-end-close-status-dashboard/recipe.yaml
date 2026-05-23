@@ -4,7 +4,7 @@ summary: >-
   Builds a one-page status dashboard summarizing where each close task stands as of today.
 plugin: dynamics-365-erp
 process_tags:
-  - record-to-report/period-close
+  - record-to-report/close-financial-periods
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

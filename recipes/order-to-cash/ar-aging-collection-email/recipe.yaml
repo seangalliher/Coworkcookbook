@@ -4,7 +4,7 @@ summary: >-
   Drafts polite-but-firm collection emails to customers with overdue invoices, grouped by severity bucket.
 plugin: dynamics-365-erp
 process_tags:
-  - order-to-cash/collections
+  - order-to-cash/manage-credit-and-collections
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false

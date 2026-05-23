@@ -4,7 +4,7 @@ summary: >-
   Builds an interactive 3D globe HTML visualization plotting customer locations sized by trailing-12-month revenue.
 plugin: dynamics-365-erp
 process_tags:
-  - order-to-cash/reporting
+  - order-to-cash/analyze-sales-performance
 recipe_type: prompt
 difficulty: intermediate
 mutates_data: false
