@@ -22,7 +22,7 @@ jobs:
         run: pip install --quiet jsonschema pyyaml yamllint lxml
 
       - name: yamllint taxonomy/
-        run: yamllint -d "{extends: default, rules: {line-length: disable, document-start: disable, truthy: {check-keys: false}}}" taxonomy/
+        run: yamllint -c .yamllint.yml taxonomy/
 
       - name: Validate every recipe.yaml + taxonomy + skills
         run: python .github/scripts/validate_recipes.py
