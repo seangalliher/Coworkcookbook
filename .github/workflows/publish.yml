@@ -1,0 +1,26 @@
+name: publish
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  notify-webapp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch 'recipes-updated' to the web app repo
+        env:
+          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+        run: |
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::warning::DISPATCH_TOKEN not set; skipping web-app notification."
+            exit 0
+          fi
+          curl -fsSL -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/seangalliher/CoworkCookBookWebApp/dispatches \
+            -d "{\"event_type\":\"recipes-updated\",\"client_payload\":{\"sha\":\"$GITHUB_SHA\"}}"

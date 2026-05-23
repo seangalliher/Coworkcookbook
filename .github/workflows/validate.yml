@@ -1,0 +1,61 @@
+name: validate
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  schema-and-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install validation deps
+        run: pip install --quiet jsonschema pyyaml yamllint lxml
+
+      - name: yamllint taxonomy/
+        run: yamllint -d "{extends: default, rules: {line-length: disable, document-start: disable, truthy: {check-keys: false}}}" taxonomy/
+
+      - name: Validate every recipe.yaml + taxonomy + skills
+        run: python .github/scripts/validate_recipes.py
+
+      - name: BPMN well-formed XML check
+        run: |
+          for f in taxonomy/bpmn/*.bpmn; do
+            python -c "from lxml import etree; etree.parse('$f')" || exit 1
+          done
+
+      - name: Cowork skill format check
+        run: python .github/scripts/validate_skills.py
+
+  links-and-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Markdown image alt-text check
+        run: |
+          # Fails if any recipes/**/*.md contains an image ref ![](path) with empty alt text.
+          set -e
+          found=0
+          while IFS= read -r f; do
+            if grep -Pn '!\[\s*\]\([^)]+\)' "$f"; then
+              echo "::error file=$f::image without alt text"
+              found=1
+            fi
+          done < <(find recipes -name '*.md' -type f)
+          exit $found
+
+      - name: Link check
+        uses: lycheeverse/lychee-action@2bb232618be239862e31382c5c0eaeba12e5e966 # v1.10.0
+        with:
+          args: --no-progress --offline --include-fragments './**/*.md'
+        continue-on-error: false

@@ -1,0 +1,51 @@
+name: package-skills
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write   # to publish the release
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 0
+
+      - name: Build skill.zip + SHA-256 per skill folder
+        run: |
+          set -euo pipefail
+          mkdir -p .tmp/artifacts
+          shopt -s nullglob
+          while IFS= read -r d; do
+            recipe_dir="$(dirname "$d")"
+            recipe_id="$(basename "$recipe_dir")"
+            skill_name="$recipe_id"   # zip root folder name
+            staging=".tmp/$skill_name"
+            rm -rf "$staging"
+            mkdir -p "$staging"
+            cp -r "$d/." "$staging/"
+            zip_path=".tmp/artifacts/${recipe_id}.zip"
+            (cd .tmp && zip -qr "artifacts/${recipe_id}.zip" "$skill_name")
+            sha=$(sha256sum "$zip_path" | awk '{print $1}')
+            echo "$sha  ${recipe_id}.zip" > "${zip_path}.sha256"
+            cp "$zip_path" "${recipe_dir}/skill.zip"
+            cp "${zip_path}.sha256" "${recipe_dir}/skill.zip.sha256"
+            echo "Packaged $recipe_id ($sha)"
+          done < <(find recipes -type d -name skill | sort)
+
+      - name: Compute release tag
+        id: tag
+        run: echo "tag=recipes-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_OUTPUT
+
+      - name: Upload artifacts to a tagged release
+        if: ${{ hashFiles('.tmp/artifacts/*.zip') != '' }}
+        uses: softprops/action-gh-release@9d7c94cfd0a1f3ed45544c887983e9fa900f0564 # v2.0.4
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          files: |
+            .tmp/artifacts/*.zip
+            .tmp/artifacts/*.sha256
+          generate_release_notes: false
