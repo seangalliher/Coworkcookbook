@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/seangalliher/Coworkcookbook/blob/main/schemas/cowork-skills.schema.json",
+  "title": "Cowork Skill Inventory",
+  "description": "Out-of-the-box Cowork skills + plugin skills available to recipes. Single source of truth for FR-19/FR-20.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "source", "ootb", "plugins"],
+  "properties": {
+    "version": { "type": "string" },
+    "source": { "type": "string", "description": "Microsoft Learn URL where this inventory was last refreshed from." },
+    "ootb": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description", "actions"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "docs": { "type": "string", "format": "uri" },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "name"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+                "name": { "type": "string" },
+                "description": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

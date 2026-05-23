@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Definitions_SourceToPay"
+                  targetNamespace="https://coworkcookbook/bpmn"
+                  exporter="cowork-cookbook"
+                  exporterVersion="0.1.0">
+  <bpmn:collaboration id="Collab_SourceToPay">
+    <bpmn:participant id="Participant_SourceToPay" name="Source to Pay" processRef="source-to-pay" />
+  </bpmn:collaboration>
+  <bpmn:process id="source-to-pay" name="Source to Pay" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_SourceToPay">
+      <bpmn:lane id="Lane_VendorMgmt" name="Vendor Management">
+        <bpmn:flowNodeRef>source-to-pay/vendor-management</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_InvoiceCapture" name="Invoice Capture and Processing">
+        <bpmn:flowNodeRef>source-to-pay/invoice-capture-and-processing</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_InvoiceValidation" name="Invoice Validation">
+        <bpmn:flowNodeRef>source-to-pay/invoice-validation</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>source-to-pay/invoice-validation/three-way-match</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_PaymentExec" name="Payment Execution">
+        <bpmn:flowNodeRef>source-to-pay/payment-execution</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>source-to-pay/payment-execution/payment-proposal-review</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="StartEvent_S2P" name="Vendor invoice arrives" />
+    <bpmn:task id="source-to-pay/vendor-management" name="Vendor Management" />
+    <bpmn:task id="source-to-pay/invoice-capture-and-processing" name="Invoice Capture and Processing" />
+    <bpmn:task id="source-to-pay/invoice-validation" name="Invoice Validation" />
+    <bpmn:task id="source-to-pay/invoice-validation/three-way-match" name="Three-way match" />
+    <bpmn:task id="source-to-pay/payment-execution" name="Payment Execution" />
+    <bpmn:task id="source-to-pay/payment-execution/payment-proposal-review" name="Payment proposal review" />
+    <bpmn:endEvent id="EndEvent_S2P" name="Vendor paid" />
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_S2P" targetRef="source-to-pay/vendor-management" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="source-to-pay/vendor-management" targetRef="source-to-pay/invoice-capture-and-processing" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="source-to-pay/invoice-capture-and-processing" targetRef="source-to-pay/invoice-validation" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="source-to-pay/invoice-validation" targetRef="source-to-pay/invoice-validation/three-way-match" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="source-to-pay/invoice-validation/three-way-match" targetRef="source-to-pay/payment-execution" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="source-to-pay/payment-execution" targetRef="source-to-pay/payment-execution/payment-proposal-review" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="source-to-pay/payment-execution/payment-proposal-review" targetRef="EndEvent_S2P" />
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_S2P">
+    <bpmndi:BPMNPlane id="BPMNPlane_S2P" bpmnElement="Collab_SourceToPay">
+      <bpmndi:BPMNShape id="Participant_S2P_di" bpmnElement="Participant_SourceToPay" isHorizontal="true">
+        <dc:Bounds x="120" y="60" width="1100" height="480" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_VendorMgmt_di" bpmnElement="Lane_VendorMgmt" isHorizontal="true">
+        <dc:Bounds x="150" y="60" width="1070" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_InvoiceCapture_di" bpmnElement="Lane_InvoiceCapture" isHorizontal="true">
+        <dc:Bounds x="150" y="180" width="1070" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_InvoiceValidation_di" bpmnElement="Lane_InvoiceValidation" isHorizontal="true">
+        <dc:Bounds x="150" y="300" width="1070" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_PaymentExec_di" bpmnElement="Lane_PaymentExec" isHorizontal="true">
+        <dc:Bounds x="150" y="420" width="1070" height="120" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="StartEvent_S2P_di" bpmnElement="StartEvent_S2P">
+        <dc:Bounds x="200" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="VendorMgmt_di" bpmnElement="source-to-pay/vendor-management">
+        <dc:Bounds x="290" y="80" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="InvoiceCapture_di" bpmnElement="source-to-pay/invoice-capture-and-processing">
+        <dc:Bounds x="460" y="200" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="InvoiceValidation_di" bpmnElement="source-to-pay/invoice-validation">
+        <dc:Bounds x="670" y="320" width="140" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ThreeWay_di" bpmnElement="source-to-pay/invoice-validation/three-way-match">
+        <dc:Bounds x="850" y="320" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="PaymentExec_di" bpmnElement="source-to-pay/payment-execution">
+        <dc:Bounds x="1000" y="440" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="PaymentReview_di" bpmnElement="source-to-pay/payment-execution/payment-proposal-review">
+        <dc:Bounds x="1110" y="440" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_S2P_di" bpmnElement="EndEvent_S2P">
+        <dc:Bounds x="1170" y="460" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

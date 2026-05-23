@@ -1,0 +1,63 @@
+version: "0.1.0"
+source: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork#cowork-skills"
+
+# Cowork out-of-the-box skills (per Microsoft Learn, refreshed 2026-05-23).
+ootb:
+  - name: Word
+    description: Create and edit Word documents.
+  - name: Excel
+    description: Create and edit Excel spreadsheets.
+  - name: PowerPoint
+    description: Create and edit PowerPoint presentations.
+  - name: PDF
+    description: Work with PDF documents.
+  - name: Email
+    description: Compose, reply, forward, and send emails. Save drafts and manage attachments.
+  - name: Scheduling
+    description: Schedule meetings.
+  - name: Calendar Management
+    description: Create events using natural language, add Teams meeting links, and manage your calendar.
+  - name: Meetings
+    description: Prepare meeting intelligence.
+  - name: Daily Briefing
+    description: Prepare your daily briefing.
+  - name: Enterprise Search
+    description: Search across your organization.
+  - name: Deep Research
+    description: Conducts in-depth research across multiple sources to compile comprehensive answers and analysis on complex topics.
+  - name: Communications
+    description: Draft stakeholder communications.
+  - name: Adaptive Cards
+    description: Generates interactive card-based responses with structured layouts, buttons, and data displays in the conversation.
+
+# Cowork plugins covered in v1.
+plugins:
+  - id: dynamics-365-erp
+    name: Dynamics 365 ERP
+    description: Read and write Dynamics 365 Finance and Supply Chain Management data via Cowork.
+    docs: https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins
+    actions:
+      - id: vendor-invoice-query
+        name: Query vendor invoices
+        description: List or filter vendor invoices in the AP subledger.
+      - id: vendor-master-query
+        name: Query vendor master
+        description: Read vendor master records.
+      - id: payment-proposal-query
+        name: Query payment proposal
+        description: Read pending payment proposal lines.
+      - id: trial-balance-query
+        name: Query trial balance
+        description: Read GL balances by account and dimension.
+      - id: ar-aging-query
+        name: Query AR aging
+        description: Read AR aging buckets by customer.
+      - id: sales-order-query
+        name: Query sales orders
+        description: Read sales order headers and lines.
+      - id: bom-query
+        name: Query BOM
+        description: Read bills of materials.
+      - id: fixed-asset-query
+        name: Query fixed assets
+        description: Read fixed asset register entries.

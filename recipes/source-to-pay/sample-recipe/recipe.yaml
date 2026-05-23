@@ -1,0 +1,34 @@
+id: vendor-invoice-three-way-match-status
+title: Vendor Invoice Three-Way Match Status Report
+summary: Builds a status report of vendor invoices and their three-way-match state against POs and goods receipts.
+plugin: dynamics-365-erp
+process_tags:
+  - source-to-pay/invoice-validation
+  - source-to-pay/invoice-validation/three-way-match
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: human
+reviewed_by: seangalliher
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "2026.05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - Email
+  plugin:
+    - plugin: dynamics-365-erp
+      action: vendor-invoice-query
+  custom: []
+prerequisites:
+  - Access to Dynamics 365 F&SCM with the Accounts payable role
+  - Cowork D365 ERP plugin installed and signed in
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

@@ -1,0 +1,13 @@
+# Slug redirects. Maps OLD slug -> NEW slug. Both forms continue to resolve;
+# the old form is served with HTTP 301 by the web app's staticwebapp.config.json
+# and the SPA navigates with replace:true.
+#
+# Example:
+#   redirects:
+#     - from: source-to-pay/old-name
+#       to: source-to-pay/new-name
+#       reason: "renamed during 2026-Q3 cleanup"
+#       added: 2026-05-23
+
+version: "0.1.0"
+redirects: []

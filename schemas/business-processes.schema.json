@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/seangalliher/Coworkcookbook/blob/main/schemas/business-processes.schema.json",
+  "title": "Business Process Catalog Taxonomy",
+  "description": "Hierarchical taxonomy mirroring Microsoft's Business Process Catalog (end-to-end -> area -> process -> activity).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "nodes"],
+  "properties": {
+    "version": { "type": "string" },
+    "source": { "type": "string", "description": "Link or filename of the upstream Microsoft BPC source." },
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/node" }
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "level"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$" },
+        "title": { "type": "string", "minLength": 2 },
+        "description": { "type": "string" },
+        "level": { "type": "string", "enum": ["end-to-end", "area", "process", "activity"] },
+        "parent": { "type": "string", "description": "id of parent node; omitted for end-to-end" },
+        "bpmn": { "type": "string", "description": "relative path to .bpmn file under taxonomy/bpmn/" }
+      }
+    }
+  }
+}

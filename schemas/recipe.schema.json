@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/seangalliher/Coworkcookbook/blob/main/schemas/recipe.schema.json",
+  "title": "Cowork Cookbook Recipe",
+  "description": "Schema for a single recipe.yaml file. See README.md and CONTRIBUTING.md for context.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "plugin",
+    "process_tags",
+    "recipe_type",
+    "difficulty",
+    "mutates_data",
+    "generated_by",
+    "reviewed_by",
+    "last_verified_on",
+    "verified_against_cowork_build",
+    "license",
+    "uses_skills",
+    "authors",
+    "created",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{1,78}[a-z0-9])?$",
+      "description": "Kebab-case slug. Permanent; renames must add an entry to taxonomy/redirects.yaml."
+    },
+    "title": { "type": "string", "minLength": 3, "maxLength": 120 },
+    "summary": { "type": "string", "minLength": 10, "maxLength": 280 },
+    "plugin": {
+      "type": "string",
+      "enum": ["dynamics-365-erp", "dynamics-365-cs", "dynamics-365-sales", "none"]
+    },
+    "process_tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$" },
+      "uniqueItems": true
+    },
+    "recipe_type": { "type": "string", "enum": ["prompt", "prompt+skill"] },
+    "difficulty": { "type": "string", "enum": ["beginner", "intermediate", "advanced"] },
+    "mutates_data": {
+      "type": "boolean",
+      "description": "True if the recipe creates or modifies data in the target system (e.g., D365). Requires VERIFICATION.md."
+    },
+    "min_plugin_version": { "type": "string" },
+    "generated_by": { "type": "string", "enum": ["copilot", "human"] },
+    "reviewed_by": { "type": "string", "minLength": 1, "description": "GitHub handle of the human reviewer." },
+    "last_verified_on": { "type": "string", "format": "date" },
+    "verified_against_cowork_build": { "type": "string", "minLength": 1 },
+    "deprecated": { "type": "boolean", "default": false },
+    "deprecated_reason": { "type": "string" },
+    "license": {
+      "type": "string",
+      "enum": ["CC-BY-4.0", "CC0-1.0", "MIT"],
+      "description": "Defaults to repo LICENSE (CC-BY-4.0)."
+    },
+    "uses_skills": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ootb", "plugin", "custom"],
+      "properties": {
+        "ootb": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Word", "Excel", "PowerPoint", "PDF", "Email", "Scheduling", "Calendar Management", "Meetings", "Daily Briefing", "Enterprise Search", "Deep Research", "Communications", "Adaptive Cards"] }
+        },
+        "plugin": {
+          "type": "array",
+          "items": { "type": "object", "additionalProperties": false, "required": ["plugin", "action"], "properties": { "plugin": { "type": "string" }, "action": { "type": "string" } } }
+        },
+        "custom": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9](?:[a-z0-9-]{1,78}[a-z0-9])?$" }
+        }
+      }
+    },
+    "prerequisites": { "type": "array", "items": { "type": "string" } },
+    "youtube": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://(www\\.)?(youtube\\.com|youtu\\.be|youtube-nocookie\\.com)/" } },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object", "additionalProperties": false, "required": ["github"], "properties": { "github": { "type": "string", "minLength": 1 }, "name": { "type": "string" } } }
+    },
+    "created": { "type": "string", "format": "date" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "deprecated": { "const": true } }, "required": ["deprecated"] },
+      "then": { "required": ["deprecated_reason"] }
+    }
+  ]
+}
