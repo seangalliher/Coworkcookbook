@@ -1,0 +1,1 @@
+Audit the fixed-asset register. Flag: assets missing service-life or depreciation profile, assets fully depreciated but not retired, assets with mismatched depreciation profile vs asset group, and assets with no location assigned. Output a workbook.

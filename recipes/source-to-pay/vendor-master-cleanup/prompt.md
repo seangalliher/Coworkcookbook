@@ -1,0 +1,1 @@
+Read the vendor master. For each vendor: flag missing tax id, missing payment terms, missing default bank account, inactive vendors with open POs, and likely duplicates (fuzzy match on name + tax id + bank). Output an Excel workbook 'Vendor-cleanup-<YYYY-MM-DD>.xlsx' with one sheet per finding category. Do not delete or merge anything.

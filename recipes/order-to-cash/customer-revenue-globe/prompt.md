@@ -1,0 +1,1 @@
+Read the customer master and trailing-12-month sales by customer. For each customer with a country and city, geocode the city to lat/lon. Produce a standalone HTML file that renders a 3D globe (using a web library like globe.gl) with a marker per customer, sized by revenue and colored by region. Include a side legend. Save the HTML to the output folder.

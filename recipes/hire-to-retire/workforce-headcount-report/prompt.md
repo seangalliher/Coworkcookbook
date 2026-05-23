@@ -1,0 +1,1 @@
+Build a workforce headcount report as of today. Aggregate by department, by location, and by worker type (employee, contractor, intern). Include trend vs same date last year if data is available. Output as an Excel workbook.

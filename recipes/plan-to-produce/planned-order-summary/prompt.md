@@ -1,0 +1,1 @@
+List planned production orders for the next 4 weeks. Aggregate by primary resource and by week. Include the planned load in hours vs the configured capacity. Highlight any week where load > 90% of capacity. Produce an Excel workbook with a pivot-ready data sheet and a summary sheet.

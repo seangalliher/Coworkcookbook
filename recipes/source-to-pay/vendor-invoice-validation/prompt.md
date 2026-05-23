@@ -1,0 +1,1 @@
+List open vendor invoices not yet posted. For each: confirm vendor is active, posting profile is configured, currency matches the vendor, tax lines balance, and (when applicable) a PO match exists. Build an Excel workbook of exceptions and draft an email (do not send) to the AP team summarizing counts by exception type.

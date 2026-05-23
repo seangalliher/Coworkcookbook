@@ -1,0 +1,1 @@
+For production orders completed in the last 30 days, compute the variance between standard cost and actual cost by category (material, routing, overhead). Flag orders where the absolute variance is greater than 5% of standard. Output an Excel workbook with a 'Material variances' sheet and an 'All' sheet.

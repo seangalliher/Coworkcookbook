@@ -1,0 +1,1 @@
+List all open (unposted) general journal entries in the current period. For each line, validate: account is active, dimensions are valid for the account, debits = credits at the header level, and the description is non-empty. Produce an Excel workbook 'Journal-exceptions-<YYYY-MM-DD>.xlsx' with one row per failing line, indicating which rule was violated. Do not post anything.

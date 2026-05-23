@@ -1,0 +1,1 @@
+For every active fixed asset, calculate the depreciation expense expected over the next 12 months under the current depreciation profile. Aggregate by asset group and by GL account. Produce an Excel workbook with a 'By group', 'By account', and 'Detail' sheet.

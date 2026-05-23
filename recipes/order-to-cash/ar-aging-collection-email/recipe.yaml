@@ -1,0 +1,33 @@
+id: ar-aging-collection-email
+title: AR Aging Collection Email Draft
+summary: >-
+  Drafts polite-but-firm collection emails to customers with overdue invoices, grouped by severity bucket.
+plugin: dynamics-365-erp
+process_tags:
+  - order-to-cash/collections
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "2026.05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin:
+    - plugin: dynamics-365-erp
+      action: ar-aging-query
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the Credit/collections role
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

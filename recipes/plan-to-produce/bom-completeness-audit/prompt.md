@@ -1,0 +1,1 @@
+Audit every active BOM. Flag: BOMs whose effective-from date has passed but effective-to is null AND there is no successor version; BOM lines that reference inactive items; BOM lines with zero quantity; missing UoM. Output an Excel workbook.

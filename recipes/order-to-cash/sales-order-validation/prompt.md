@@ -1,0 +1,1 @@
+Review all open sales orders. Flag: orders with item prices that deviate >10% from the active price list, customers on credit hold, missing delivery terms, and missing tax group. Output a workbook with one sheet per finding. Do not modify orders.

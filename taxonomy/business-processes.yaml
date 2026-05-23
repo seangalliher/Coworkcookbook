@@ -1,92 +1,139 @@
-version: "0.1.0"
+version: "0.2.0"
 source: "https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/overview"
 
-# Microsoft Business Process Catalog — initial hierarchy.
-# v1 fully models only `source-to-pay` with a BPMN file; other end-to-end areas are
-# top-level placeholders to be expanded by maintainers via PR (see P-020).
-
 nodes:
-  # ===== End-to-end processes =====
+  # ===== End-to-end =====
   - id: record-to-report
     title: Record to Report
     description: Capture, classify, and report on financial transactions across the close cycle.
     level: end-to-end
-
   - id: source-to-pay
     title: Source to Pay
     description: Source vendors, procure goods/services, validate invoices, and execute payments.
     level: end-to-end
     bpmn: bpmn/source-to-pay.bpmn
-
   - id: order-to-cash
     title: Order to Cash
     description: Quote, sell, fulfil, invoice customers, and collect payment.
     level: end-to-end
-
   - id: plan-to-produce
     title: Plan to Produce
     description: Forecast demand, plan supply, and execute manufacturing.
     level: end-to-end
-
   - id: acquire-to-dispose
     title: Acquire to Dispose
     description: Acquire, manage, depreciate, and dispose of fixed assets.
     level: end-to-end
-
   - id: hire-to-retire
     title: Hire to Retire
     description: Workforce lifecycle from recruitment through separation.
     level: end-to-end
-
   - id: inventory-to-deliver
     title: Inventory to Deliver
-    description: Manage inventory, warehousing, and outbound logistics.
     level: end-to-end
-
   - id: case-to-resolution
     title: Case to Resolution
-    description: Capture, route, and resolve customer service cases.
     level: end-to-end
-
   - id: idea-to-market
     title: Idea to Market
-    description: From product concept through launch.
     level: end-to-end
 
-  # ===== Source-to-Pay process areas =====
+  # ===== Record to Report =====
+  - id: record-to-report/general-ledger
+    title: General Ledger
+    level: area
+    parent: record-to-report
+  - id: record-to-report/period-close
+    title: Period Close
+    level: area
+    parent: record-to-report
+  - id: record-to-report/fx-revaluation
+    title: FX Revaluation
+    level: area
+    parent: record-to-report
+  - id: record-to-report/journal-validation
+    title: Journal Validation
+    level: area
+    parent: record-to-report
+
+  # ===== Source to Pay =====
   - id: source-to-pay/vendor-management
     title: Vendor Management
-    description: Onboard, maintain, and offboard vendors.
     level: area
     parent: source-to-pay
-
   - id: source-to-pay/invoice-capture-and-processing
     title: Invoice Capture and Processing
-    description: Receive and capture vendor invoices into the system.
     level: area
     parent: source-to-pay
-
   - id: source-to-pay/invoice-validation
     title: Invoice Validation
-    description: Validate invoices against POs and policy before posting.
     level: area
     parent: source-to-pay
-
-  - id: source-to-pay/payment-execution
-    title: Payment Execution
-    description: Propose, approve, and execute payments to vendors.
-    level: area
-    parent: source-to-pay
-
-  # ===== Source-to-Pay sample activities =====
   - id: source-to-pay/invoice-validation/three-way-match
     title: Three-way match
-    description: Match invoice to PO and goods receipt before approval.
     level: activity
     parent: source-to-pay/invoice-validation
-
+  - id: source-to-pay/payment-execution
+    title: Payment Execution
+    level: area
+    parent: source-to-pay
   - id: source-to-pay/payment-execution/payment-proposal-review
     title: Payment proposal review
-    description: Review the payment proposal for accuracy before release.
     level: activity
     parent: source-to-pay/payment-execution
+
+  # ===== Order to Cash =====
+  - id: order-to-cash/customer-management
+    title: Customer Management
+    level: area
+    parent: order-to-cash
+  - id: order-to-cash/credit-management
+    title: Credit Management
+    level: area
+    parent: order-to-cash
+  - id: order-to-cash/sales-order
+    title: Sales Order
+    level: area
+    parent: order-to-cash
+  - id: order-to-cash/collections
+    title: Collections
+    level: area
+    parent: order-to-cash
+  - id: order-to-cash/reporting
+    title: Reporting and Visualization
+    level: area
+    parent: order-to-cash
+
+  # ===== Plan to Produce =====
+  - id: plan-to-produce/bom-management
+    title: BOM Management
+    level: area
+    parent: plan-to-produce
+  - id: plan-to-produce/planning
+    title: Master Planning
+    level: area
+    parent: plan-to-produce
+  - id: plan-to-produce/production-execution
+    title: Production Execution
+    level: area
+    parent: plan-to-produce
+
+  # ===== Acquire to Dispose =====
+  - id: acquire-to-dispose/fixed-asset-register
+    title: Fixed Asset Register
+    level: area
+    parent: acquire-to-dispose
+  - id: acquire-to-dispose/depreciation
+    title: Depreciation
+    level: area
+    parent: acquire-to-dispose
+
+  # ===== Hire to Retire =====
+  - id: hire-to-retire/onboarding
+    title: Onboarding
+    level: area
+    parent: hire-to-retire
+  - id: hire-to-retire/reporting
+    title: Workforce Reporting
+    level: area
+    parent: hire-to-retire

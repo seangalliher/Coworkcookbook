@@ -1,0 +1,35 @@
+id: period-close-checklist
+title: Period Close Checklist Generator
+summary: >-
+  Generates a tailored period-close checklist with item owners and ETA estimates based on the active legal entity's configuration.
+plugin: dynamics-365-erp
+process_tags:
+  - record-to-report/period-close
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "2026.05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Email
+    - Communications
+  plugin:
+    - plugin: dynamics-365-erp
+      action: trial-balance-query
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM read access
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

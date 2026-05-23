@@ -1,0 +1,1 @@
+Build a credit-management review: list customers whose current AR exposure is greater than 80% of their credit limit, customers with no credit limit set but with AR balance > $10,000, and customers with credit limit > $0 but no activity in 12 months. Output an Excel workbook with one sheet per category, sorted by exposure descending. Do not change limits.

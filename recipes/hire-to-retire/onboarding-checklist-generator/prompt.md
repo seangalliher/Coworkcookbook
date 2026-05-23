@@ -1,0 +1,1 @@
+I'll provide a new hire name, role, start date, and manager. Produce a Word onboarding checklist tailored to the role covering: IT access, mandatory training, intro meetings, week-1/week-2/week-4 milestones. Also draft a welcome email (do not send) from the manager to the new hire.

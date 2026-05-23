@@ -1,0 +1,34 @@
+id: gl-trial-balance-variance
+title: GL Trial Balance Variance Report
+summary: >-
+  Compares the current-period trial balance to the prior period and highlights GL accounts with material variances.
+plugin: dynamics-365-erp
+process_tags:
+  - record-to-report/general-ledger
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "2026.05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - Email
+  plugin:
+    - plugin: dynamics-365-erp
+      action: trial-balance-query
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the General ledger user role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

@@ -1,0 +1,32 @@
+id: customer-revenue-globe
+title: Customer Revenue 3D Globe Visualization
+summary: >-
+  Builds an interactive 3D globe HTML visualization plotting customer locations sized by trailing-12-month revenue.
+plugin: dynamics-365-erp
+process_tags:
+  - order-to-cash/reporting
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "2026.05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: sales-order-query
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM read access
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

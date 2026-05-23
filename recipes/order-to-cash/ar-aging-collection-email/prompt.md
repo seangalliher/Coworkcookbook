@@ -1,0 +1,1 @@
+For each customer with invoices overdue >30 days, draft a collection email referencing the specific invoice numbers, due dates, and amounts. Vary tone by aging bucket (30/60/90+). Save drafts to the Cowork output folder; do not send.

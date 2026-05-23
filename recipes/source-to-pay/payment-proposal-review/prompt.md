@@ -1,0 +1,1 @@
+Read the current payment proposal lines. Flag: vendors on hold, invoices with discount expiring within 2 days that are NOT in the proposal, duplicate invoices, payments below a $50 threshold, and vendors missing bank details. Output an Excel workbook 'Payment-proposal-review-<YYYY-MM-DD>.xlsx'. Do not release the proposal.
