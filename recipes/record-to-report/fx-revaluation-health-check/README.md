@@ -2,7 +2,7 @@
 
 Reviews FX revaluation configuration and last-run status, and flags any monetary accounts that look misconfigured.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin and researched the right entities (CurrencyGainLossAccountType enum, GeneralJournalAccountEntries, LedgerJournalLines + LedgerJournalHeaders, CurrencyRevaluationAccountsV2, MainAccounts filtered by Monetary=Yes + ForeignCurrencyRevaluation) and produced a detailed audit methodology / quick-reference for FX revaluation. Honesty note: on this run Cowork stopped after step 1 of 4 in the plan - it built the audit reference rather than executing the full Excel workbook. Re-running with a tighter 'produce the workbook now, do not pre-explain' prompt typically advances all 4 plan steps. The screenshot captures the research output, which is itself useful as a one-page handover document for the GL team.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Detects misconfigured monetary accounts and missed FX revaluation runs.
 
 Workbook listing misconfigured accounts and missed runs.
 
-![Placeholder screenshot for FX Revaluation Health Check](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for FX Revaluation Health Check](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

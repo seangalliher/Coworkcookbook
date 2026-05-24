@@ -331,6 +331,19 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin and "
+            "researched the right entities (CurrencyGainLossAccountType enum, GeneralJournalAccountEntries, "
+            "LedgerJournalLines + LedgerJournalHeaders, CurrencyRevaluationAccountsV2, MainAccounts filtered by "
+            "Monetary=Yes + ForeignCurrencyRevaluation) and produced a detailed audit methodology / quick-reference for "
+            "FX revaluation. Honesty note: on this run Cowork stopped after step 1 of 4 in the plan - it built the "
+            "audit reference rather than executing the full Excel workbook. Re-running with a tighter 'produce the "
+            "workbook now, do not pre-explain' prompt typically advances all 4 plan steps. The screenshot captures the "
+            "research output, which is itself useful as a one-page handover document for the GL team."
+        ),
         prompt=(
             "Audit the FX revaluation setup for the active legal entity. For each monetary main account: confirm it is flagged "
             "for revaluation, the appropriate gain/loss accounts are configured, and there has been a revaluation run in the "
