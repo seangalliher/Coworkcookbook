@@ -413,6 +413,16 @@ RECIPES: List[Recipe] = [
         ootb=["Excel", "Email"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork ran all four plan steps and "
+            "produced 'Vendor-invoice-exceptions-2026-05-23.xlsx' with three sheets (Summary, Exceptions, Methodology). "
+            "USMF finding: zero open vendor invoices awaiting posting - both vendor invoice register batches (00352, 00377) "
+            "are already marked posted. Cowork drafted a zero-finding AP team email (saved to Drafts, not sent) and helpfully "
+            "noted that USSI has ~35 pending invoices if you want to see the validation logic exercise non-zero results."
+        ),
         prompt=(
             "List open vendor invoices not yet posted. For each: confirm vendor is active, posting profile is configured, "
             "currency matches the vendor, tax lines balance, and (when applicable) a PO match exists. Build an Excel workbook "
@@ -694,6 +704,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF (forecast window 2026-05-23 to 2027-05-22). "
+            "Cowork ran all four plan steps and produced 'Depreciation-forecast-2026-05-23.xlsx' with three sheets (By group, "
+            "By account, Detail). Headline numbers: 35 active depreciating fixed assets across 7 asset groups, total 12-month "
+            "forecast ~$911,784 (Buildings dominate at ~$734K under 200% reducing-balance). GL split: $180200 Tangible covers "
+            "all groups except Patents; $180240 Intangible covers Patents. 6 Machinery assets use the Consumption method and "
+            "were correctly shown as N/A in totals (depreciation depends on actual usage). No data was modified."
+        ),
         prompt=(
             "For every active fixed asset, calculate the depreciation expense expected over the next 12 months under the current depreciation "
             "profile. Aggregate by asset group and by GL account. Produce an Excel workbook with a 'By group', 'By account', and 'Detail' sheet."
