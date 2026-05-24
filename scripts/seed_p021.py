@@ -975,6 +975,17 @@ RECIPES: List[Recipe] = [
         ootb=["PDF"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork pulled 20 open cases from "
+            "USMF Case Management (the F&O module - not a dedicated CRM Customer Service module - which surfaces generic "
+            "cases across Audit, Collections, FMLA, General, Product change, Production, Purchase, Sales). All cases were "
+            "opened 2016-2018 so every one lands in the 30+ days age bucket. Real HTML produced: Case-heatmap-2026-05-23.html "
+            "(9.9 KB) with an SVG heatmap (Priority × Age on X, Product Category on Y) and per-cell tooltips. Largest cell: "
+            "Collections / Unset priority / 30+ days = 7 cases. Audit / Unset / 30+ = 3 cases. Product change / Normal / 30+ = 2 cases."
+        ),
         prompt=(
             "Read open customer service cases. For each case capture: product category, priority, days-open bucket "
             "(0-3, 4-7, 8-14, 15-30, 30+), and current owner. Produce a standalone HTML file 'Case-heatmap-<YYYY-MM-DD>.html' "
