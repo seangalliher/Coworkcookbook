@@ -290,6 +290,18 @@ RECIPES: List[Recipe] = [
         ootb=["Word", "Email", "Communications"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF Dec 2017 (also USMF's fiscal year-end). "
+            "Cowork ran all three plan steps and produced both 'USMF_Period_Close_Checklist_Dec_2017.docx' AND a chat-ready "
+            "Communications draft. The 7-task table includes AR aging review (AR Accountant, 1bd), AP aging review (AP "
+            "Accountant, 1bd), FX revaluation (Sr. GL Accountant, 1bd), Sub-ledger recs (GL Accountant, 2bd), Accrual reversals "
+            "(GL Accountant, 1bd), Period-end journals (GL Accountant + Controller, 2bd), and Period-close switch (Controller, "
+            "1bd). Cowork added a sharp FY-end reminder: 'coordinate year-end close with Controller before flipping the period "
+            "to Closed; variances on control accounts 130100 / 200100 / 140200 / 140400 must be cleared before item 7'."
+        ),
         prompt=(
             "Generate a period-close checklist for the active legal entity for the current month. Include: AR aging review, "
             "AP aging review, FX revaluation status, sub-ledger reconciliations (AR/AP/Inventory), accrual reversals, "
