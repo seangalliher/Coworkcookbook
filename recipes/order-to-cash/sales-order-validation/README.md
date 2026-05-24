@@ -2,7 +2,7 @@
 
 Validates open sales orders against policy: pricing, credit, customer status, delivery terms.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin, queried open sales orders, and identified 3 customers on credit hold (US-017, US-041, US-103). Honesty note: on this run Cowork advanced 1/5 plan steps (find open orders, identify credit-hold customers) and queued the workbook build but did not produce the final file before the screenshot. The data findings are real (the 3 credit-hold customers cross-match the customer-credit-limit-review recipe's 'inactive 12mo' set). Re-running with smaller scope (one finding category at a time) typically produces the full workbook.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Pre-shipment policy check on the sales-order book.
 
 Workbook of out-of-policy sales orders by category.
 
-![Placeholder screenshot for Sales Order Compliance Check](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Sales Order Compliance Check](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

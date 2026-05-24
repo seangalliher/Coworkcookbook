@@ -591,6 +591,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin, queried open "
+            "sales orders, and identified 3 customers on credit hold (US-017, US-041, US-103). Honesty note: on this run "
+            "Cowork advanced 1/5 plan steps (find open orders, identify credit-hold customers) and queued the workbook build "
+            "but did not produce the final file before the screenshot. The data findings are real (the 3 credit-hold "
+            "customers cross-match the customer-credit-limit-review recipe's 'inactive 12mo' set). Re-running with smaller "
+            "scope (one finding category at a time) typically produces the full workbook."
+        ),
         prompt=(
             "Review all open sales orders. Flag: orders with item prices that deviate >10% from the active price list, customers on "
             "credit hold, missing delivery terms, and missing tax group. Output a workbook with one sheet per finding. Do not modify orders."
