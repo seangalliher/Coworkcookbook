@@ -2,7 +2,7 @@
 
 Compares project budget to actuals by cost category, flags projects with margin erosion, and drafts emails to the project managers of red projects.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scoped 'active' to Project Status = In process + Project Type = Time and material or Fixed price, yielding 6 projects (000057-000061 + 000184). Real workbook ProjectMargin-2026-05-23.xlsx with Red / All / By PM / Notes sheets, and an email draft saved to Outlook (not sent) to Prakash@contoso.com about the one Red project: 000184 San Diego Subscriptions ('In process' but zero posted transactions, PM Prakash Kovvuru). Honesty notes: USMF carries no quotation headers tied to these projects so Cowork used a 50% target margin as the original-quote baseline (typical T&M services benchmark), with the Target Margin column editable per project; 5 of 6 active projects have no PM assigned in F&O; all Fee transactions in this demo carry $0 cost.
 
 ## Business value
 
@@ -26,7 +26,7 @@ Identifies projects with margin erosion and routes specific overrun information 
 
 Workbook with red/all/by-PM project margin sheets and one email draft per Red project.
 
-![Placeholder screenshot for Project Margin Health Report](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Project Margin Health Report](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

@@ -1214,6 +1214,19 @@ RECIPES: List[Recipe] = [
         ootb=["Excel", "Email"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scoped 'active' to Project "
+            "Status = In process + Project Type = Time and material or Fixed price, yielding 6 projects (000057-000061 + "
+            "000184). Real workbook ProjectMargin-2026-05-23.xlsx with Red / All / By PM / Notes sheets, and an email draft "
+            "saved to Outlook (not sent) to Prakash@contoso.com about the one Red project: 000184 San Diego Subscriptions "
+            "('In process' but zero posted transactions, PM Prakash Kovvuru). Honesty notes: USMF carries no quotation "
+            "headers tied to these projects so Cowork used a 50% target margin as the original-quote baseline (typical T&M "
+            "services benchmark), with the Target Margin column editable per project; 5 of 6 active projects have no PM "
+            "assigned in F&O; all Fee transactions in this demo carry $0 cost."
+        ),
         prompt=(
             "For every active project, compute: total budget, actuals to date by category (hours, expenses, items), and "
             "current expected margin vs the original quote. Flag projects with current margin < 80% of original margin as "
