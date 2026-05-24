@@ -2,7 +2,7 @@
 
 Reviews the current payment proposal for accuracy and flags lines that need attention before release.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork used journal 00601 (18 lines, $40,327.96 USD paid by CHECK to Federal Tax Authority, Humongous Insurance, Idaho Department of Family Services) as a representative proposal and ran all five checks. Findings: 0 vendors on hold, 3 payments below $50 (Federal Tax Authority lines, $37.85 each), 3 vendors missing VendorBankAccount records (acceptable - method is CHECK), 3 duplicate proposal lines (lines 1/2/5 share vendor/date/amount, due 2017-01-15), 0 discount-expiring not in proposal (VendorInvoiceHeader entity is empty in USMF). Produced 'Payment-proposal-review-2026-05-23.xlsx' with a tab per flag plus the full proposal-lines detail. No proposal was released.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Sanity-checks a payment proposal before release.
 
 Workbook with flagged proposal lines by category.
 
-![Placeholder screenshot for Payment Proposal Review](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Payment Proposal Review](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

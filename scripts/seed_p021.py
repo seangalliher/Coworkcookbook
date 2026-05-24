@@ -450,6 +450,18 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork used journal 00601 (18 lines, "
+            "$40,327.96 USD paid by CHECK to Federal Tax Authority, Humongous Insurance, Idaho Department of Family Services) "
+            "as a representative proposal and ran all five checks. Findings: 0 vendors on hold, 3 payments below $50 (Federal "
+            "Tax Authority lines, $37.85 each), 3 vendors missing VendorBankAccount records (acceptable - method is CHECK), "
+            "3 duplicate proposal lines (lines 1/2/5 share vendor/date/amount, due 2017-01-15), 0 discount-expiring not in "
+            "proposal (VendorInvoiceHeader entity is empty in USMF). Produced 'Payment-proposal-review-2026-05-23.xlsx' with "
+            "a tab per flag plus the full proposal-lines detail. No proposal was released."
+        ),
         prompt=(
             "Read the current payment proposal lines. Flag: vendors on hold, invoices with discount expiring within 2 days that "
             "are NOT in the proposal, duplicate invoices, payments below a $50 threshold, and vendors missing bank details. "
