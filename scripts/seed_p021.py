@@ -644,6 +644,18 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF (4-week window 2017-04-01 to 2017-04-28). "
+            "Cowork ran all four plan steps and produced 'Planned-load-2026-05-23.xlsx' with a pivot-ready Data sheet and a "
+            "Summary sheet (Resource x Week matrix). Findings: only two resources had planned-order capacity reservations - "
+            "1120 Cabinet assembly (80 hrs/wk, peak 3.5% utilization week 13) and 1220 Speaker test/packing (160 hrs/wk, peak "
+            "70.0% utilization weeks 14-15). No week exceeded the 90% threshold; the conditional red highlight rule is in "
+            "place for future refreshes. Cowork deduplicated by RequirementPlanId=StaticPlan to avoid double-counting "
+            "(StaticPlan and DynPlan mirror the same orders in USMF)."
+        ),
         prompt=(
             "List planned production orders for the next 4 weeks. Aggregate by primary resource and by week. Include the planned "
             "load in hours vs the configured capacity. Highlight any week where load > 90% of capacity. Produce an Excel workbook "
