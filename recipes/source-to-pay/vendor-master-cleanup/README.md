@@ -2,7 +2,7 @@
 
 Identifies duplicate, incomplete, or inactive vendors in the master record and proposes a cleanup plan.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork queried 49 vendors via data_find_entities_sql, flagged 44 missing tax IDs, 48 missing default bank accounts, 0 missing payment terms, 0 inactive vendors with open POs, and 7 likely duplicate pairs (fuzzy name+tax+bank match). Produced 'Vendor-cleanup-2026-05-23.xlsx' with one sheet per finding category. No vendor records were modified.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Finds dirty vendor records and suggests a triage list.
 
 Workbook with categorized vendor-master issues.
 
-![Placeholder screenshot for Vendor Master Cleanup Report](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Vendor Master Cleanup Report](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

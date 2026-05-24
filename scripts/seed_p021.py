@@ -366,6 +366,15 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork queried 49 vendors via "
+            "data_find_entities_sql, flagged 44 missing tax IDs, 48 missing default bank accounts, 0 missing payment terms, "
+            "0 inactive vendors with open POs, and 7 likely duplicate pairs (fuzzy name+tax+bank match). Produced "
+            "'Vendor-cleanup-2026-05-23.xlsx' with one sheet per finding category. No vendor records were modified."
+        ),
         prompt=(
             "Read the vendor master. For each vendor: flag missing tax id, missing payment terms, missing default bank account, "
             "inactive vendors with open POs, and likely duplicates (fuzzy match on name + tax id + bank). Output an Excel workbook "
@@ -476,6 +485,16 @@ RECIPES: List[Recipe] = [
         ootb=["Email", "Communications"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork used 2017-12-31 as the as-of "
+            "date (since USMF demo activity ends in 2017), pulled all open AR invoices >=30 days overdue, and produced 13 "
+            "per-customer collection drafts plus a summary file covering 40 overdue invoices totalling $600,069.40 across "
+            "13 customers. Tone correctly varied by aging bucket - 12 final-notice (90+) drafts and 1 friendly-reminder (30-day). "
+            "All drafts saved to output/collection-drafts/; no emails were sent."
+        ),
         prompt=(
             "For each customer with invoices overdue >30 days, draft a collection email referencing the specific invoice numbers, "
             "due dates, and amounts. Vary tone by aging bucket (30/60/90+). Save drafts to the Cowork output folder; do not send."
