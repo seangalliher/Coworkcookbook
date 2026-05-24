@@ -740,6 +740,20 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork found 134 completed production orders in "
+            "the 30-day window 2016-11-22 to 2016-12-18 (most recent in tenant). Honesty result: the canonical D365 cost-"
+            "variance entity (ProdCalcTrans) is NOT exposed as a queryable OData entity in this tenant, so only routing "
+            "variance is computable (904 estimated route transactions, 1,550 realized route transactions). Material variance "
+            "requires ProjectCostAmount on picking-list-journal lines which is 0 for every row. Overhead has no "
+            "indirect/surcharge transaction entity exposed. Cowork offered three options (routing-only with real numbers, "
+            "all-three-sheets with placeholders, or pause until an admin exposes ProdCalcTrans). The screenshot captures the "
+            "coverage diagnosis table - itself a deliverable that a controller can hand to the F&O admin to scope the "
+            "entity-exposure work needed for a complete variance report."
+        ),
         prompt=(
             "For production orders completed in the last 30 days, compute the variance between standard cost and actual cost by "
             "category (material, routing, overhead). Flag orders where the absolute variance is greater than 5% of standard. "
