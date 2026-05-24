@@ -2,7 +2,7 @@
 
 Scores released products on launch readiness based on setup completeness (dimensions, pricing, BOM, tax, default order settings) and produces a scorecard.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scored all 206 released products on 6 readiness checks (dimension groups, default order settings, active sales price, BOM for manufactured items, sales tax group, item approved). Score = checks passed / 6 x 100. Real results: Red 12 products (5.8%, score < 60), Amber 188 products (91.3%, score 60-84), Green 6 products (2.9%, score >= 85). Real workbook ProductReadiness-2026-05-23.xlsx with one row per product, per-check 1/0 columns, total score, and RAG indicator. Cowork also rendered a donut-chart visualization of the RAG distribution inline in the chat.
 
 ## Business value
 
@@ -27,7 +27,7 @@ Scores newly released products on readiness for launch and surfaces the specific
 
 Workbook with per-product readiness score and an Adaptive Card summary.
 
-![Placeholder screenshot for Released Product Launch Readiness Scorecard](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Released Product Launch Readiness Scorecard](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

@@ -1033,6 +1033,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel", "Adaptive Cards"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scored all 206 released products "
+            "on 6 readiness checks (dimension groups, default order settings, active sales price, BOM for manufactured items, "
+            "sales tax group, item approved). Score = checks passed / 6 x 100. Real results: Red 12 products (5.8%, score < 60), "
+            "Amber 188 products (91.3%, score 60-84), Green 6 products (2.9%, score >= 85). Real workbook ProductReadiness-"
+            "2026-05-23.xlsx with one row per product, per-check 1/0 columns, total score, and RAG indicator. Cowork also "
+            "rendered a donut-chart visualization of the RAG distribution inline in the chat."
+        ),
         prompt=(
             "List released products released in the last 6 months (for the USMF demo tenant, broaden to FY2017). For each "
             "product, score launch readiness on a 0-100 scale based on: dimension groups set, default order settings present, "
