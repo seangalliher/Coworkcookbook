@@ -2,7 +2,7 @@
 
 For a proposed item change, finds every BOM, sales order, and inventory location affected and quantifies downstream impact.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF item M0001 (Wiring Harness). Cowork ran all five plan steps and produced 'ECO-impact-M0001-2026-05-23.xlsx' with 5 sheets. Findings: 12 active BOM rows use M0001 as a component (plus a flagged sub-section of 3 BOMs - 000020, 000022, 000121 - that contain M0001 but have no active version); 0 open sales orders (M0001 is a purchased component, not a finished good); 956 units total on-hand across 3 warehouses (884 at 1/wh 11, 72 at 1/wh 12); 3 open purchase order lines totalling 2,492 units and $9,594.20. No data was modified.
 
 ## Business value
 
@@ -26,7 +26,7 @@ Builds a complete pre-change impact report (BOM usage, open orders, inventory, i
 
 Workbook with BOM/SO/PO/inventory impact sheets and a summary.
 
-![Placeholder screenshot for Engineering Change Order Impact Analysis](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Engineering Change Order Impact Analysis](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

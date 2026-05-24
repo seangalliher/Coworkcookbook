@@ -908,12 +908,23 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF item M0001 (Wiring Harness). Cowork ran "
+            "all five plan steps and produced 'ECO-impact-M0001-2026-05-23.xlsx' with 5 sheets. Findings: 12 active BOM rows "
+            "use M0001 as a component (plus a flagged sub-section of 3 BOMs - 000020, 000022, 000121 - that contain M0001 but "
+            "have no active version); 0 open sales orders (M0001 is a purchased component, not a finished good); 956 units "
+            "total on-hand across 3 warehouses (884 at 1/wh 11, 72 at 1/wh 12); 3 open purchase order lines totalling 2,492 "
+            "units and $9,594.20. No data was modified."
+        ),
         prompt=(
-            "Given an item number (ask the user which one if not specified), produce an impact analysis: (a) every active BOM "
-            "where the item is a component, with the parent item and the quantity per; (b) every open sales order line for the "
-            "item with quantity and expected ship date; (c) on-hand inventory by warehouse; (d) any open purchase order lines "
-            "for the item with expected receipt date. Output an Excel workbook 'ECO-impact-<item>-<YYYY-MM-DD>.xlsx' with one "
-            "sheet per category and a summary sheet. Do not change anything."
+            "Given an item number (default to M0001 'Wiring Harness' in USMF if not specified), produce an impact analysis: "
+            "(a) every active BOM where the item is a component, with the parent item and the quantity per; (b) every open "
+            "sales order line for the item with quantity and expected ship date; (c) on-hand inventory by warehouse; (d) any "
+            "open purchase order lines for the item with expected receipt date. Output an Excel workbook 'ECO-impact-<item>-"
+            "<YYYY-MM-DD>.xlsx' with one sheet per category and a summary sheet. Do not change anything."
         ),
         what="Builds a complete pre-change impact report (BOM usage, open orders, inventory, inbound POs) for a single item.",
         prerequisites=[
