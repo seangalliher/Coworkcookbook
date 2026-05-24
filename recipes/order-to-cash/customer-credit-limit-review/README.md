@@ -2,7 +2,7 @@
 
 Builds a review report of customers whose credit limit or exposure looks out of policy.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork found that the tenant's most recent transaction is 2023-11-29 and built a 12-month window ending there. Real findings: 9 customers over 80% exposure (Sparrow Retail US-008 at 920%, Contoso Retail Chicago US-015 at 179%, Yellow Square US-024 at 173%; 5 of 9 above 150%); 0 customers with no-limit-but-balance (3 customers have $0 limit all with $0 open AR); 11 customers carrying credit lines with no activity in the 12-month window. Real workbook Credit-review-2026-05-23.xlsx with one sheet per category sorted by exposure descending plus a Notes sheet documenting methodology and the CustomersV3 / CustTransactions entities used. No credit limits modified.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Highlights credit-policy issues so the credit team can act.
 
 Workbook with categorized customer credit issues.
 
-![Placeholder screenshot for Customer Credit Limit Review](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Customer Credit Limit Review](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

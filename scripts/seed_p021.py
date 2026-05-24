@@ -516,6 +516,18 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork found that the tenant's most "
+            "recent transaction is 2023-11-29 and built a 12-month window ending there. Real findings: 9 customers over 80% "
+            "exposure (Sparrow Retail US-008 at 920%, Contoso Retail Chicago US-015 at 179%, Yellow Square US-024 at 173%; "
+            "5 of 9 above 150%); 0 customers with no-limit-but-balance (3 customers have $0 limit all with $0 open AR); 11 "
+            "customers carrying credit lines with no activity in the 12-month window. Real workbook Credit-review-2026-05-23.xlsx "
+            "with one sheet per category sorted by exposure descending plus a Notes sheet documenting methodology and the "
+            "CustomersV3 / CustTransactions entities used. No credit limits modified."
+        ),
         prompt=(
             "Build a credit-management review: list customers whose current AR exposure is greater than 80% of their credit limit, "
             "customers with no credit limit set but with AR balance > $10,000, and customers with credit limit > $0 but no activity "
