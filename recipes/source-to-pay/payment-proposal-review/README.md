@@ -2,6 +2,8 @@
 
 Reviews the current payment proposal for accuracy and flags lines that need attention before release.
 
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+
 ## What it does
 
 Sanity-checks a payment proposal before release.

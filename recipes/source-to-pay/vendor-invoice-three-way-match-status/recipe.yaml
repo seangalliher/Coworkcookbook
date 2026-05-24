@@ -10,8 +10,7 @@ mutates_data: false
 min_plugin_version: "1.0.0"
 generated_by: human
 reviewed_by: seangalliher
-last_verified_on: "2026-05-23"
-verified_against_cowork_build: "2026.05"
+status: draft
 deprecated: false
 license: CC-BY-4.0
 uses_skills:

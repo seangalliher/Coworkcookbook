@@ -78,8 +78,7 @@ def write_recipe(r: Recipe) -> None:
         f"min_plugin_version: \"1.0.0\"\n"
         f"generated_by: copilot\n"
         f"reviewed_by: seangalliher\n"
-        f"last_verified_on: \"{TODAY}\"\n"
-        f"verified_against_cowork_build: \"2026.05\"\n"
+        f"status: draft\n"
         f"deprecated: false\n"
         f"license: CC-BY-4.0\n"
         f"uses_skills:\n"
@@ -104,9 +103,16 @@ def write_recipe(r: Recipe) -> None:
             "\n> ⚠ **This recipe modifies Dynamics 365 data.** Run it in a sandbox tenant first "
             "and review the proposed changes before approving any write action.\n"
         )
+    draft_warning = (
+        "\n> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin "
+        "actions named below are starter content. No one has run this against a live Cowork tenant "
+        "with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual "
+        "published surface. Validate before relying on it.\n"
+    )
     readme = (
         f"# {r.title}\n\n"
         f"{r.summary}\n"
+        f"{draft_warning}"
         f"{sandbox_warning}\n"
         f"## What it does\n\n{r.what}\n\n"
         f"## Prerequisites\n\n" + "\n".join(f"- {p}" for p in r.prerequisites) + "\n\n"

@@ -2,6 +2,8 @@
 
 Builds a status report of recent vendor invoices and their three-way-match state against the corresponding purchase orders and goods receipts. The output is a formatted Excel workbook plus a draft email to the AP team.
 
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and Dynamics 365 ERP plugin action ids below are starter content. No one has run this against a live Cowork tenant yet. Validate before relying on it.
+
 This recipe is **read-only** — it does not modify any data in Dynamics 365.
 
 ## What it does

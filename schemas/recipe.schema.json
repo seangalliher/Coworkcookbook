@@ -16,8 +16,7 @@
     "mutates_data",
     "generated_by",
     "reviewed_by",
-    "last_verified_on",
-    "verified_against_cowork_build",
+    "status",
     "license",
     "uses_skills",
     "authors",
@@ -50,9 +49,14 @@
     },
     "min_plugin_version": { "type": "string" },
     "generated_by": { "type": "string", "enum": ["copilot", "human"] },
-    "reviewed_by": { "type": "string", "minLength": 1, "description": "GitHub handle of the human reviewer." },
-    "last_verified_on": { "type": "string", "format": "date" },
-    "verified_against_cowork_build": { "type": "string", "minLength": 1 },
+    "reviewed_by": { "type": "string", "minLength": 1, "description": "GitHub handle of the human reviewer. Required, but for draft recipes this just records the maintainer who curated the metadata — it does NOT imply functional verification." },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified"],
+      "description": "draft = metadata only, prompt has NOT been run against a live Cowork tenant. verified = a human has actually executed the prompt and confirmed the recipe works, and last_verified_on / verified_against_cowork_build are populated."
+    },
+    "last_verified_on": { "type": "string", "format": "date", "description": "Required when status=verified. Omit for drafts." },
+    "verified_against_cowork_build": { "type": "string", "minLength": 1, "description": "Required when status=verified. Omit for drafts." },
     "deprecated": { "type": "boolean", "default": false },
     "deprecated_reason": { "type": "string" },
     "license": {
@@ -93,6 +97,10 @@
     {
       "if": { "properties": { "deprecated": { "const": true } }, "required": ["deprecated"] },
       "then": { "required": ["deprecated_reason"] }
+    },
+    {
+      "if": { "properties": { "status": { "const": "verified" } } },
+      "then": { "required": ["last_verified_on", "verified_against_cowork_build"] }
     }
   ]
 }

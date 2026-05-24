@@ -2,6 +2,8 @@
 
 Validates open vendor invoices against posting rules and emails the AP team a fix-list.
 
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+
 ## What it does
 
 Catches posting-blocker issues on vendor invoices before they get to the GL.
