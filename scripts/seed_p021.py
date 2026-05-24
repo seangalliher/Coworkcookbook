@@ -1032,6 +1032,18 @@ RECIPES: List[Recipe] = [
         ootb=["PDF"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF Warehouse 24. Cowork produced "
+            "'Warehouse-3D-24-2026-05-23.html' rendering all 45 locations as colored cubes via three.js with orbit controls, "
+            "zone labels (BULK / FLOOR / PICKZONE 1/2/3 / WEBSHOP1 / SERVICE), fill-% color scale, and per-bin hover tooltips. "
+            "Total on-hand: 2,370 units / $859,050. Two honest data caveats surfaced by the agent: (a) USMF doesn't populate "
+            "aisle/rack/shelf/bin metadata for WH 24 — Cowork derived a meaningful grid layout from zone + location ID instead; "
+            "(b) D365 only exposes on-hand at the warehouse level via OData — Cowork distributed totals across likely zones by "
+            "item-series convention. Both caveats are documented in the agent's output."
+        ),
         prompt=(
             "Read on-hand inventory by warehouse location for a single warehouse (ask the user which one, default to the "
             "primary USMF warehouse e.g. 24 if unspecified). For each location, capture aisle, rack, shelf, bin, item count, "
