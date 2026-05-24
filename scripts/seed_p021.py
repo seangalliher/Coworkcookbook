@@ -1261,6 +1261,19 @@ RECIPES: List[Recipe] = [
         ootb=["Excel", "PDF"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin and used the "
+            "DeliveryValidFrom field as the quotation-date anchor (the header doesn't expose a single 'quotation date' field). "
+            "Honesty result: USMF contains exactly ONE sales quote in its entire history (Quote 000007, 2012-10-03, US-008, "
+            "total $0.00, status 'Created'). There are no FY2017 quotes, so a meaningful funnel can't be built. Cowork stopped "
+            "and offered to widen the search to all years or to swap to a different document type (sales orders or sales "
+            "invoices) for FY2017. This is an excellent demonstration of Cowork honestly halting when the source data won't "
+            "support a meaningful answer - the right behavior for a sales-pipeline analytic. Run this recipe against a "
+            "tenant with real quote activity to get the full funnel chart and pivoted breakdowns."
+        ),
         prompt=(
             "Read all sales quotes for the last fiscal year (for the USMF demo tenant use FY2017). For each quote: capture "
             "salesperson, customer, product family, quote total, status (Sent / Won / Lost / Expired), and lost-reason if "
