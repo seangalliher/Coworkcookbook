@@ -249,6 +249,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF (scope: December 2017). Cowork found "
+            "3 open general-journal headers (00619, 00471, 00459) and ran all four validation rules (account active, "
+            "dimensions valid, debits=credits, description non-empty). Produced 'Journal-exceptions-2026-05-23.xlsx' "
+            "with 1 failing line: batch 00459 line 1 (account 600150-001-008-022, debit 1200) - failed the 'dimensions "
+            "valid' rule because the offset 200190-001--022 has an empty middle dimension segment. Other three rules "
+            "PASS-ed. Nothing was posted."
+        ),
         prompt=(
             "List all open (unposted) general journal entries in the current period. For each line, validate: account is active, "
             "dimensions are valid for the account, debits = credits at the header level, and the description is non-empty. "

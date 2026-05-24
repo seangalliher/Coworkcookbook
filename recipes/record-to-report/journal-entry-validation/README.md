@@ -2,7 +2,7 @@
 
 Validates open journal entries against a configurable rule set before posting and produces an exception report.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF (scope: December 2017). Cowork found 3 open general-journal headers (00619, 00471, 00459) and ran all four validation rules (account active, dimensions valid, debits=credits, description non-empty). Produced 'Journal-exceptions-2026-05-23.xlsx' with 1 failing line: batch 00459 line 1 (account 600150-001-008-022, debit 1200) - failed the 'dimensions valid' rule because the offset 200190-001--022 has an empty middle dimension segment. Other three rules PASS-ed. Nothing was posted.
 
 ## Business value
 
@@ -27,7 +27,7 @@ Reads open journals and runs validation rules. Output is a workbook of exception
 
 One workbook with one row per failing journal line and the rule that failed.
 
-![Placeholder screenshot for Journal Entry Pre-Posting Validation](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Journal Entry Pre-Posting Validation](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 
