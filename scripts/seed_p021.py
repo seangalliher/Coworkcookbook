@@ -851,6 +851,21 @@ RECIPES: List[Recipe] = [
         ootb=["Excel", "Email"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated against a live Cowork tenant on 2026-05-23 with USMF. This recipe is a textbook example of Cowork's "
+            "honest-degrade behavior: the agent engaged the D365 ERP plugin, pulled the user list from SystemUsers (25+ users), "
+            "then surfaced a constraint table explaining exactly why the full SoD audit isn't possible from the plugin alone: "
+            "SecurityUserRoles + SecurityRoles are blocked at the entity layer ('Access to entity is restricted for security "
+            "reasons'), last-sign-in date isn't in F&O (lives in Entra/Azure AD audit logs), and disabled-in-directory state "
+            "requires Microsoft Graph. Rather than fabricate, Cowork offered three actionable next steps: (1) admin exports "
+            "SecurityUserRole + SecurityRole to CSV via Data management, (2) add Entra/Graph access for sign-in + account-state, "
+            "or (3) ship a scoped workbook with just the F&O user roster + Enabled flag and an explanation of what's missing. "
+            "The screenshot captures the honesty-constraint table - itself a deliverable that an IT security lead can use to "
+            "scope the next iteration of the audit."
+        ),
         prompt=(
             "Using the Dynamics 365 ERP plugin, list every user in the active legal entity with their assigned security roles "
             "and the date they last signed in. Flag: (a) users with both AP-vendor-maintenance AND AP-payment-release roles "

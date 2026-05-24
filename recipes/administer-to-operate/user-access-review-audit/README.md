@@ -2,7 +2,7 @@
 
 Audits Dynamics 365 user accounts for segregation-of-duties conflicts, inactive accounts with active role assignments, and roles granted without recent login.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated against a live Cowork tenant on 2026-05-23 with USMF. This recipe is a textbook example of Cowork's honest-degrade behavior: the agent engaged the D365 ERP plugin, pulled the user list from SystemUsers (25+ users), then surfaced a constraint table explaining exactly why the full SoD audit isn't possible from the plugin alone: SecurityUserRoles + SecurityRoles are blocked at the entity layer ('Access to entity is restricted for security reasons'), last-sign-in date isn't in F&O (lives in Entra/Azure AD audit logs), and disabled-in-directory state requires Microsoft Graph. Rather than fabricate, Cowork offered three actionable next steps: (1) admin exports SecurityUserRole + SecurityRole to CSV via Data management, (2) add Entra/Graph access for sign-in + account-state, or (3) ship a scoped workbook with just the F&O user roster + Enabled flag and an explanation of what's missing. The screenshot captures the honesty-constraint table - itself a deliverable that an IT security lead can use to scope the next iteration of the audit.
 
 ## Business value
 
@@ -27,7 +27,7 @@ Identifies user access risks (SoD conflicts, stale accounts, orphaned roles) and
 
 Workbook with categorized access findings and a draft summary email.
 
-![Placeholder screenshot for User Access Review & SoD Audit](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for User Access Review & SoD Audit](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 
