@@ -2,7 +2,7 @@
 
 Audits active BOMs for missing components, expired versions, and items that are obsolete.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scanned 72 active BOM versions across 63 BOMs and 252 BOM lines, flagged 4 open-ended active versions (F00007/DEMF000007, F00008/DEMF000102, F00016/DEMF000030, F00017/DEMF000031 - all effective from 2020 with no end date and no successor), and confirmed 0 findings for inactive-item references, zero-quantity lines, and missing UoM. Notable agent behavior: mid-run, Cowork refined its own interpretation of 'effective-from has passed' after the first pass returned 65 hits - correctly recognizing that blank effective-from means 'always effective' (baseline) rather than a finding. Real workbook BOM-audit-2026-05-23.xlsx with Summary + per-issue + reference sheets. Pure read against OData.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Detects BOM hygiene issues that cause planning errors.
 
 Workbook of BOM hygiene issues by category.
 
-![Placeholder screenshot for BOM Completeness Audit](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for BOM Completeness Audit](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

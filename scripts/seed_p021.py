@@ -646,6 +646,18 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork scanned 72 active BOM versions "
+            "across 63 BOMs and 252 BOM lines, flagged 4 open-ended active versions (F00007/DEMF000007, F00008/DEMF000102, "
+            "F00016/DEMF000030, F00017/DEMF000031 - all effective from 2020 with no end date and no successor), and confirmed "
+            "0 findings for inactive-item references, zero-quantity lines, and missing UoM. Notable agent behavior: mid-run, "
+            "Cowork refined its own interpretation of 'effective-from has passed' after the first pass returned 65 hits - "
+            "correctly recognizing that blank effective-from means 'always effective' (baseline) rather than a finding. "
+            "Real workbook BOM-audit-2026-05-23.xlsx with Summary + per-issue + reference sheets. Pure read against OData."
+        ),
         prompt=(
             "Audit every active BOM. Flag: BOMs whose effective-from date has passed but effective-to is null AND there is no successor "
             "version; BOM lines that reference inactive items; BOM lines with zero quantity; missing UoM. Output an Excel workbook."
