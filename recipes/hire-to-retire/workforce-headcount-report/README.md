@@ -2,7 +2,7 @@
 
 Builds a headcount report by department, location, and worker type for the current period.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork pulled 97 active workers (92 employees + 5 contractors + 0 interns) and produced Headcount-2026-05-23.xlsx with 6 sheets: Summary, By Department, By Location, By Worker Type, YoY Trend, and Detail (full roster of all 97). Honesty notes surfaced by the agent: (a) D365's worker type enum only has Employee/Contractor - the Intern row in the summary is structurally zero, not an empirical zero; (b) YoY change is zero because the demo source shows the same 97 personnel records active on both 2026-05-24 and 2025-05-24; (c) 9 recent hires (personnel #000763-000771) are unassigned department/position and roll up under 'Unassigned'.
 
 ## Business value
 
@@ -25,7 +25,7 @@ HR snapshot of current headcount with year-over-year trend.
 
 Workbook with headcount by dimension and YoY trend.
 
-![Placeholder screenshot for Workforce Headcount Report](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Workforce Headcount Report](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

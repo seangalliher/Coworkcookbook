@@ -850,6 +850,18 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork pulled 97 active workers "
+            "(92 employees + 5 contractors + 0 interns) and produced Headcount-2026-05-23.xlsx with 6 sheets: Summary, "
+            "By Department, By Location, By Worker Type, YoY Trend, and Detail (full roster of all 97). Honesty notes "
+            "surfaced by the agent: (a) D365's worker type enum only has Employee/Contractor - the Intern row in the "
+            "summary is structurally zero, not an empirical zero; (b) YoY change is zero because the demo source shows "
+            "the same 97 personnel records active on both 2026-05-24 and 2025-05-24; (c) 9 recent hires (personnel "
+            "#000763-000771) are unassigned department/position and roll up under 'Unassigned'."
+        ),
         prompt=(
             "Build a workforce headcount report as of today. Aggregate by department, by location, and by worker type (employee, "
             "contractor, intern). Include trend vs same date last year if data is available. Output as an Excel workbook."
