@@ -2,7 +2,7 @@
 
 Builds an interactive 3D globe HTML visualization plotting customer locations sized by trailing-12-month revenue.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF 2017 sales data. Cowork ran all four plan steps and produced 'Customer-globe-2017.html' - a standalone interactive 3D globe (globe.gl via CDN) with 13 USMF customer markers sized/elevated by revenue and colored by US region (West/South/Midwest/Northeast). Total 2017 revenue $1,651,883; top customer Sunset Wholesales (Artesia Wells, TX) at $531,250. Cowork geocoded each city from known coordinates (the customer master had no stored lat/lon) and flagged a data inconsistency: US-009 'Owl Wholesales' has city=Phoenix with state=CO in the master; Cowork plotted Phoenix, AZ instead. Sourced from CustomersV3 + SalesInvoiceHeadersV4.TotalInvoiceAmount for invoice dates in calendar year 2017.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Visualizes customer revenue on a 3D globe as a standalone HTML file.
 
 One standalone interactive HTML file.
 
-![Placeholder screenshot for Customer Revenue 3D Globe Visualization](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Customer Revenue 3D Globe Visualization](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

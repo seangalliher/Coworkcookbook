@@ -592,6 +592,18 @@ RECIPES: List[Recipe] = [
         ootb=["PDF"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF 2017 sales data. Cowork ran all four "
+            "plan steps and produced 'Customer-globe-2017.html' - a standalone interactive 3D globe (globe.gl via CDN) with "
+            "13 USMF customer markers sized/elevated by revenue and colored by US region (West/South/Midwest/Northeast). "
+            "Total 2017 revenue $1,651,883; top customer Sunset Wholesales (Artesia Wells, TX) at $531,250. Cowork geocoded "
+            "each city from known coordinates (the customer master had no stored lat/lon) and flagged a data inconsistency: "
+            "US-009 'Owl Wholesales' has city=Phoenix with state=CO in the master; Cowork plotted Phoenix, AZ instead. "
+            "Sourced from CustomersV3 + SalesInvoiceHeadersV4.TotalInvoiceAmount for invoice dates in calendar year 2017."
+        ),
         prompt=(
             "Read the customer master and trailing-12-month sales by customer. For each customer with a country and city, geocode the "
             "city to lat/lon. Produce a standalone HTML file that renders a 3D globe (using a web library like globe.gl) with a marker "
