@@ -204,20 +204,25 @@ RECIPES: List[Recipe] = [
         verified_screenshot="01-cowork-output.png",
         verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
         tenant_caveat=(
-            "Validated against a live Cowork tenant on 2026-05-23. The agent correctly routed to the D365 ERP plugin, "
-            "discovered the right entity (TrialBalanceFiscalYearSnapshots), and queried LedgerJournalLines / "
-            "GeneralLedgerActivities. In the USMF demo dataset there were no posted GL transactions in the current "
-            "or prior period, so the agent honestly refused to fabricate balances and offered three remediation paths "
-            "instead. Run this recipe against a tenant with current-period GL postings to get a fully-populated workbook."
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF demo data. Cowork executed the full "
+            "5-step plan (find trial balance entity → query March/February 2017 → compute variances → build workbook → draft "
+            "email), produced 'TB-variance-2017-03.xlsx' with 8 material accounts and an 'All' sheet of 9 posting accounts, "
+            "and saved a controller email draft summarizing the top 5 by absolute variance. Because USMF has no saved trial-"
+            "balance snapshots for 2017, Cowork honestly derived the comparison from posted LedgerJournalLines activity rather "
+            "than running balances — see the screenshot for the agent's note on this. For a tenant with running trial-balance "
+            "snapshots you'll get period-end positions instead of period activity; both shapes are useful for variance review."
         ),
         prompt=(
-            "Using the Dynamics 365 ERP plugin, query the trial balance for the current period AND the prior period for "
-            "the same chart of accounts. For each posting account: compute the variance amount and the variance percent. "
-            "Mark any account where |variance| ≥ $10,000 OR |variance %| ≥ 10% as 'material'.\n\n"
-            "Use the Excel skill to produce a workbook 'TB-variance-<YYYY-MM-DD>.xlsx' with two sheets: 'Material' (variances "
-            "that crossed the threshold, sorted by absolute variance amount descending) and 'All' (every account).\n\n"
+            "Using the Dynamics 365 ERP plugin, query the trial balance for the most recent posted period AND the prior period "
+            "for the same chart of accounts in legal entity USMF. For each posting account: compute the variance amount and the "
+            "variance percent. Mark any account where |variance| >= $10,000 OR |variance %| >= 10% as 'material'.\n\n"
+            "Use the Excel skill to produce a workbook 'TB-variance-<YYYY-MM>.xlsx' with two sheets: 'Material' (variances that "
+            "crossed the threshold, sorted by absolute variance amount descending) and 'All' (every account).\n\n"
             "Then draft an email to the controller summarizing the count of material variances and the top 5 by amount. "
-            "Do not modify any data."
+            "Do not modify any data.\n\n"
+            "(Tenant note: the USMF demo tenant's posted GL activity is mostly FY2017 — if you want guaranteed data, ask Cowork "
+            "to use March 2017 vs February 2017 explicitly. Cowork will derive the comparison from posted ledger journal lines "
+            "if no trial-balance snapshot exists.)"
         ),
         what="Pulls the trial balance for two consecutive periods, computes variance, flags material lines, and produces a workbook + email draft.",
         prerequisites=[
