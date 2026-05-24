@@ -1,0 +1,36 @@
+id: audit-trace-manufactured-goods
+title: Trace manufactured goods Completeness Audit
+summary: >-
+  Audits trace manufactured goods records for completeness and policy compliance against rule-based checks.
+business_value: >-
+  Reduces audit findings and prevents downstream errors by surfacing missing fields, stale records, and out-of-policy entries while there is still time to fix them at the source.
+plugin: dynamics-365-erp
+process_tags:
+  - plan-to-produce/analyze-production-operations/trace-manufactured-goods
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

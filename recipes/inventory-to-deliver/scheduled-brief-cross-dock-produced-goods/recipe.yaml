@@ -1,0 +1,37 @@
+id: scheduled-brief-cross-dock-produced-goods
+title: Cross dock produced goods Scheduled Email Brief
+summary: >-
+  Schedulable morning-brief email summarizing cross dock produced goods for the responsible owner; designed to run daily or weekly.
+business_value: >-
+  Replaces a daily manual spreadsheet stitch with an automatic brief so owners walk into standup already knowing where cross dock produced goods stands.
+plugin: dynamics-365-erp
+process_tags:
+  - inventory-to-deliver/process-outbound-goods/cross-dock-produced-goods
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

@@ -1,0 +1,36 @@
+id: adaptive-card-conduct-exit-interviews
+title: Conduct exit interviews Status Adaptive Card
+summary: >-
+  Produces a reusable Adaptive Card JSON snapshot of conduct exit interviews status for embedding in dashboards, emails, or Teams.
+business_value: >-
+  Gives any consuming app (Teams, Outlook, custom dashboard) a single canonical conduct exit interviews status card so different surfaces always show the same numbers.
+plugin: dynamics-365-erp
+process_tags:
+  - hire-to-retire/offboard-talent/conduct-exit-interviews
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Adaptive Cards
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

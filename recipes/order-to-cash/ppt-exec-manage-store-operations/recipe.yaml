@@ -1,0 +1,37 @@
+id: ppt-exec-manage-store-operations
+title: Manage store operations Executive PowerPoint Deck
+summary: >-
+  Generates an executive-ready PowerPoint deck on manage store operations status, complete with charts and talking-point notes.
+business_value: >-
+  Cuts deck prep time from hours to minutes for manage store operations reviews while ensuring the numbers in the slides match D365 to the cent.
+plugin: dynamics-365-erp
+process_tags:
+  - order-to-cash/manage-sales-orders/manage-store-operations
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

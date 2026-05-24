@@ -1,0 +1,36 @@
+id: bulk-update-transfer-budgets
+title: Transfer budgets Bulk Field Update
+summary: >-
+  Applies a bulk field update across transfer budgets records from an input list, with dry-run preview before commit.
+business_value: >-
+  Avoids the click-by-click drudgery (and risk of inconsistency) when transfer budgets records need a coordinated change - and the dry-run preview catches mistakes before they hit the system.
+plugin: dynamics-365-erp
+process_tags:
+  - record-to-report/manage-budgets/transfer-budgets
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: true
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_update_entities
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

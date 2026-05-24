@@ -1,0 +1,36 @@
+id: dashboard-implement-cloud-solutions
+title: Implement cloud solutions Interactive HTML Dashboard
+summary: >-
+  Produces a self-contained interactive HTML dashboard for implement cloud solutions - opens in any browser, no D365 access needed by the viewer.
+business_value: >-
+  Lets ops leadership share a live-looking view of implement cloud solutions with executives and customers without granting D365 logins.
+plugin: dynamics-365-erp
+process_tags:
+  - administer-to-operate/implement-solutions/implement-cloud-solutions
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"

@@ -1,0 +1,42 @@
+id: configure-plan-workforce-capacity
+title: Plan workforce capacity Configuration Bulk Setup
+summary: >-
+  Applies a bulk configuration change to plan workforce capacity from an input Excel file, with validation and rollback support.
+business_value: >-
+  Eliminates the click-by-click burden of bulk configuration changes for plan workforce capacity, cutting setup time from days to minutes while preserving auditability.
+plugin: dynamics-365-erp
+process_tags:
+  - forecast-to-plan/conduct-sales-and-operations-planning/plan-workforce-capacity
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: true
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_update_entities
+    - plugin: dynamics-365-erp
+      action: form_open_menu_item
+    - plugin: dynamics-365-erp
+      action: form_set_control_values
+    - plugin: dynamics-365-erp
+      action: form_save_form
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"
