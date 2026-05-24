@@ -2,6 +2,8 @@ id: workforce-headcount-report
 title: Workforce Headcount Report
 summary: >-
   Builds a headcount report by department, location, and worker type for the current period.
+business_value: >-
+  Gives HR and finance a unified headcount source-of-truth that reconciles to payroll without spreadsheet stitching.
 plugin: dynamics-365-erp
 process_tags:
   - hire-to-retire/analyze-hr-programs

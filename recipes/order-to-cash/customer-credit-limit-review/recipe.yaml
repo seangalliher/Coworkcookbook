@@ -2,6 +2,8 @@ id: customer-credit-limit-review
 title: Customer Credit Limit Review
 summary: >-
   Builds a review report of customers whose credit limit or exposure looks out of policy.
+business_value: >-
+  Protects DSO and reduces bad-debt write-offs by flagging customers who have drifted out of credit policy before the next big order ships.
 plugin: dynamics-365-erp
 process_tags:
   - order-to-cash/manage-credit-and-collections
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: ar-aging-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Credit/collections role

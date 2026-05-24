@@ -2,6 +2,8 @@ id: vendor-master-cleanup
 title: Vendor Master Cleanup Report
 summary: >-
   Identifies duplicate, incomplete, or inactive vendors in the master record and proposes a cleanup plan.
+business_value: >-
+  Reduces duplicate payments and tax-reporting errors by tightening the vendor master before bad data propagates into invoicing and 1099s.
 plugin: dynamics-365-erp
 process_tags:
   - source-to-pay/manage-supplier-relationships
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: vendor-master-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Accounts payable role

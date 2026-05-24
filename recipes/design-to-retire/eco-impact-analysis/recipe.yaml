@@ -1,0 +1,36 @@
+id: eco-impact-analysis
+title: Engineering Change Order Impact Analysis
+summary: >-
+  For a proposed item change, finds every BOM, sales order, and inventory location affected and quantifies downstream impact.
+business_value: >-
+  Eliminates the 'didn't realize that part is in 14 other BOMs' surprise by surfacing the full blast radius of a proposed engineering change before it is approved.
+plugin: dynamics-365-erp
+process_tags:
+  - design-to-retire/manage-active-products
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the Production or Item maintainer role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

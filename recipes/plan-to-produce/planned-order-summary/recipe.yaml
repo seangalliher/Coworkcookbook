@@ -2,6 +2,8 @@ id: planned-order-summary
 title: Planned Order Summary by Resource
 summary: >-
   Summarizes planned production orders by resource for the next four weeks, including load vs capacity.
+business_value: >-
+  Gives production planning a one-page view of where capacity is overcommitted, so the team can rebalance before missed promise dates pile up.
 plugin: dynamics-365-erp
 process_tags:
   - plan-to-produce/plan-production-operations
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: bom-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Production role

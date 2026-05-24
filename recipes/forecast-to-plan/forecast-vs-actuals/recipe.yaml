@@ -1,0 +1,36 @@
+id: forecast-vs-actuals
+title: Demand Forecast vs Actuals Variance
+summary: >-
+  Compares demand forecast lines to actual sales orders for the same period and items, computes forecast accuracy, and flags poor performers.
+business_value: >-
+  Surfaces which items and which planners are consistently over- or under-forecasting so demand planning can be improved where it matters most — and inventory dollars stop pooling on the wrong SKUs.
+plugin: dynamics-365-erp
+process_tags:
+  - forecast-to-plan/conduct-sales-and-operations-planning
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the Demand planner role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

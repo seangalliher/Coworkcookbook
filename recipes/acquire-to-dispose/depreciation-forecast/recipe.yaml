@@ -2,6 +2,8 @@ id: depreciation-forecast
 title: Depreciation Forecast (12 months)
 summary: >-
   Forecasts the next 12 months of depreciation expense by asset group and by GL account.
+business_value: >-
+  Gives FP&A a defensible, asset-by-asset depreciation forecast for the budget instead of the historical-average shortcut.
 plugin: dynamics-365-erp
 process_tags:
   - acquire-to-dispose/analyze-assets
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: fixed-asset-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Fixed assets role

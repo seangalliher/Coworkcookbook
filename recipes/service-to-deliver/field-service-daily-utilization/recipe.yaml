@@ -1,0 +1,37 @@
+id: field-service-daily-utilization
+title: Field Service Resource Utilization Daily Email
+summary: >-
+  Drafts a morning email to service operations summarizing technician utilization for today and the coming week, including overbooked and underbooked resources.
+business_value: >-
+  Replaces a daily manual spreadsheet stitch with an automatic morning brief so dispatchers walk into standup already knowing who is overbooked, who has slack, and which jobs are at risk.
+plugin: dynamics-365-erp
+process_tags:
+  - service-to-deliver/manage-service-work
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 Field Service or F&SCM Service module access
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

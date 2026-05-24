@@ -2,7 +2,11 @@
 
 Builds a review report of customers whose credit limit or exposure looks out of policy.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Protects DSO and reduces bad-debt write-offs by flagging customers who have drifted out of credit policy before the next big order ships.
 
 ## What it does
 
@@ -26,7 +30,7 @@ Workbook with categorized customer credit issues.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/ar-aging-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

@@ -1,0 +1,37 @@
+id: quote-conversion-funnel
+title: Quote Conversion Funnel Analysis (HTML)
+summary: >-
+  Analyzes won/lost/expired sales quotes by salesperson, product family, and reason; produces a funnel chart HTML and a workbook.
+business_value: >-
+  Highlights where deals are leaking from the quote pipeline (which salesperson, which product, which lost-reason) so sales coaching and product positioning effort can be targeted with evidence.
+plugin: dynamics-365-erp
+process_tags:
+  - prospect-to-quote/analyze-sales
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the Sales manager role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

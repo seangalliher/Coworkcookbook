@@ -2,7 +2,11 @@
 
 Drafts polite-but-firm collection emails to customers with overdue invoices, grouped by severity bucket.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Multiplies the collections team - every overdue customer gets a personalized, tone-appropriate nudge without anyone hand-writing emails.
 
 ## What it does
 
@@ -26,7 +30,7 @@ One email draft per overdue customer.
 ## Skills used
 
 OOTB: Email, Communications
-Plugin actions: dynamics-365-erp/ar-aging-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

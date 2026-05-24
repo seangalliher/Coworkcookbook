@@ -2,7 +2,11 @@
 
 Reviews the current payment proposal for accuracy and flags lines that need attention before release.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Stops payment-run mistakes - duplicates, blocked vendors, missed discounts - at the review stage instead of after the wire clears.
 
 ## What it does
 
@@ -26,7 +30,7 @@ Workbook with flagged proposal lines by category.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/payment-proposal-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

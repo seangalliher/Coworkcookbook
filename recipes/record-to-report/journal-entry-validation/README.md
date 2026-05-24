@@ -2,7 +2,11 @@
 
 Validates open journal entries against a configurable rule set before posting and produces an exception report.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Catches posting errors before they hit the ledger, eliminating the reverse-and-repost cycles that delay close.
 
 ## What it does
 
@@ -28,7 +32,7 @@ One workbook with one row per failing journal line and the rule that failed.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/trial-balance-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

@@ -2,7 +2,11 @@
 
 Compares the current-period trial balance to the prior period and highlights GL accounts with material variances.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated against a live Cowork tenant on 2026-05-23. The agent correctly routed to the D365 ERP plugin, discovered the right entity (TrialBalanceFiscalYearSnapshots), and queried LedgerJournalLines / GeneralLedgerActivities. In the USMF demo dataset there were no posted GL transactions in the current or prior period, so the agent honestly refused to fabricate balances and offered three remediation paths instead. Run this recipe against a tenant with current-period GL postings to get a fully-populated workbook.
+
+## Business value
+
+Cuts month-end review time by focusing the controller on the GL accounts with material variances instead of every line in the trial balance.
 
 ## What it does
 
@@ -24,12 +28,12 @@ Pulls the trial balance for two consecutive periods, computes variance, flags ma
 
 An Excel workbook with Material/All sheets and a draft email summarizing the top variances.
 
-![Placeholder screenshot for GL Trial Balance Variance Report](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for GL Trial Balance Variance Report](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 
 OOTB: Excel, Email
-Plugin actions: dynamics-365-erp/trial-balance-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

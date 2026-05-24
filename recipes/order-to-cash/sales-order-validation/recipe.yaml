@@ -2,6 +2,8 @@ id: sales-order-validation
 title: Sales Order Compliance Check
 summary: >-
   Validates open sales orders against policy: pricing, credit, customer status, delivery terms.
+business_value: >-
+  Prevents shipped-but-uninvoiceable orders by catching pricing, credit, and tax issues at order entry instead of at invoicing.
 plugin: dynamics-365-erp
 process_tags:
   - order-to-cash/manage-sales-orders
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: sales-order-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Sales role

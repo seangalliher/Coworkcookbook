@@ -1,0 +1,38 @@
+# Project Margin Health Report
+
+Compares project budget to actuals by cost category, flags projects with margin erosion, and drafts emails to the project managers of red projects.
+
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Catches project margin erosion mid-flight (instead of at close-out), so project managers can act on overruns while there is still time to negotiate a change order or replan.
+
+## What it does
+
+Identifies projects with margin erosion and routes specific overrun information to the responsible PM.
+
+## Prerequisites
+
+- Dynamics 365 F&SCM access with the Project manager role
+- Cowork D365 ERP plugin enabled
+
+## Step-by-step
+
+1. Paste the prompt.
+2. Review the workbook; release the email drafts after personalizing tone.
+
+## Expected output
+
+Workbook with red/all/by-PM project margin sheets and one email draft per Red project.
+
+![Placeholder screenshot for Project Margin Health Report](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+
+## Skills used
+
+OOTB: Excel, Email
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
+
+## License
+
+CC-BY-4.0 — see repo `LICENSE`.

@@ -2,7 +2,11 @@
 
 Audits the fixed asset register for missing fields, inconsistent depreciation profiles, and assets due for retirement.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Cleans up the asset register so depreciation, insurance, and property-tax reporting are all based on accurate data - not stale records.
 
 ## What it does
 
@@ -26,7 +30,7 @@ Workbook of fixed-asset register findings.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/fixed-asset-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

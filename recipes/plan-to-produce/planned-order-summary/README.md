@@ -2,7 +2,11 @@
 
 Summarizes planned production orders by resource for the next four weeks, including load vs capacity.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Gives production planning a one-page view of where capacity is overcommitted, so the team can rebalance before missed promise dates pile up.
 
 ## What it does
 
@@ -26,7 +30,7 @@ Workbook with data + summary sheet.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/bom-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 

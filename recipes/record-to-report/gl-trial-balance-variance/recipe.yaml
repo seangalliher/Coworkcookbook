@@ -2,6 +2,8 @@ id: gl-trial-balance-variance
 title: GL Trial Balance Variance Report
 summary: >-
   Compares the current-period trial balance to the prior period and highlights GL accounts with material variances.
+business_value: >-
+  Cuts month-end review time by focusing the controller on the GL accounts with material variances instead of every line in the trial balance.
 plugin: dynamics-365-erp
 process_tags:
   - record-to-report/record-financial-transactions
@@ -11,7 +13,9 @@ mutates_data: false
 min_plugin_version: "1.0.0"
 generated_by: copilot
 reviewed_by: seangalliher
-status: draft
+status: verified
+last_verified_on: "2026-05-23"
+verified_against_cowork_build: "m365.cloud.microsoft 2026-05-23"
 deprecated: false
 license: CC-BY-4.0
 uses_skills:
@@ -20,7 +24,9 @@ uses_skills:
     - Email
   plugin:
     - plugin: dynamics-365-erp
-      action: trial-balance-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the General ledger user role

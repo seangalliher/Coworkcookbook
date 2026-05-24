@@ -2,6 +2,8 @@ id: payment-proposal-review
 title: Payment Proposal Review
 summary: >-
   Reviews the current payment proposal for accuracy and flags lines that need attention before release.
+business_value: >-
+  Stops payment-run mistakes - duplicates, blocked vendors, missed discounts - at the review stage instead of after the wire clears.
 plugin: dynamics-365-erp
 process_tags:
   - source-to-pay/manage-accounts-payable
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: payment-proposal-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Accounts payable role

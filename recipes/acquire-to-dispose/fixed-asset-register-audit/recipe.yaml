@@ -2,6 +2,8 @@ id: fixed-asset-register-audit
 title: Fixed Asset Register Audit
 summary: >-
   Audits the fixed asset register for missing fields, inconsistent depreciation profiles, and assets due for retirement.
+business_value: >-
+  Cleans up the asset register so depreciation, insurance, and property-tax reporting are all based on accurate data - not stale records.
 plugin: dynamics-365-erp
 process_tags:
   - acquire-to-dispose/manage-active-assets
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: fixed-asset-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Fixed assets role

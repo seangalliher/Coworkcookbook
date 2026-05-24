@@ -2,6 +2,8 @@ id: journal-entry-validation
 title: Journal Entry Pre-Posting Validation
 summary: >-
   Validates open journal entries against a configurable rule set before posting and produces an exception report.
+business_value: >-
+  Catches posting errors before they hit the ledger, eliminating the reverse-and-repost cycles that delay close.
 plugin: dynamics-365-erp
 process_tags:
   - record-to-report/record-financial-transactions
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: trial-balance-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the General ledger user role

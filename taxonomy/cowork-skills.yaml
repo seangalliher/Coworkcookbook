@@ -34,30 +34,79 @@ ootb:
 plugins:
   - id: dynamics-365-erp
     name: Dynamics 365 ERP
-    description: Read and write Dynamics 365 Finance and Supply Chain Management data via Cowork.
-    docs: https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins
+    description: >-
+      Read and write Dynamics 365 Finance & Supply Chain Management data via the
+      Dynamics 365 ERP Model Context Protocol (MCP) server. The MCP server exposes
+      three categories of generic tools - Data, Form, and Action - and the agent
+      dynamically resolves which D365 entity, form, or AI tool to use at runtime.
+    docs: https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp
     actions:
-      - id: vendor-invoice-query
-        name: Query vendor invoices
-        description: List or filter vendor invoices in the AP subledger.
-      - id: vendor-master-query
-        name: Query vendor master
-        description: Read vendor master records.
-      - id: payment-proposal-query
-        name: Query payment proposal
-        description: Read pending payment proposal lines.
-      - id: trial-balance-query
-        name: Query trial balance
-        description: Read GL balances by account and dimension.
-      - id: ar-aging-query
-        name: Query AR aging
-        description: Read AR aging buckets by customer.
-      - id: sales-order-query
-        name: Query sales orders
-        description: Read sales order headers and lines.
-      - id: bom-query
-        name: Query BOM
-        description: Read bills of materials.
-      - id: fixed-asset-query
-        name: Query fixed assets
-        description: Read fixed asset register entries.
+      # Data tools - OData CRUD against data entities.
+      - id: data_find_entity_type
+        name: Find OData entity types
+        description: Search the catalog of OData entity types in F&SCM. Prerequisite for data_get_entity_metadata.
+      - id: data_get_entity_metadata
+        name: Get entity metadata
+        description: Get metadata for a specific entity. Prerequisite for create/update/delete/find.
+      - id: data_find_entities
+        name: Find entities (OData)
+        description: Find or read data records using OData query syntax.
+      - id: data_find_entities_sql
+        name: Find entities (SQL)
+        description: Find or read records using SQL. Replaces data_find_entities for OData in 10.0.48+.
+      - id: data_create_entities
+        name: Create entities
+        description: Create data records via OData. Deep inserts not supported.
+      - id: data_update_entities
+        name: Update entities
+        description: Update data records via OData.
+      - id: data_delete_entities
+        name: Delete entities
+        description: Delete data records via OData.
+      # Form tools - server-form navigation to perform actions not available through entities.
+      - id: form_find_menu_item
+        name: Find menu item
+        description: Find display and action menu items the user has access to.
+      - id: form_open_menu_item
+        name: Open menu item
+        description: Open a form via its menu item.
+      - id: form_find_controls
+        name: Find controls on a form
+        description: Find specific controls when the agent doesn't see them in the current form state.
+      - id: form_set_control_values
+        name: Set control values
+        description: Set values on one or more form controls (not for lookup controls).
+      - id: form_open_lookup
+        name: Open a lookup
+        description: Open a lookup control on the form (use this before setting lookup values).
+      - id: form_click_control
+        name: Click control
+        description: Click a button or other control to invoke business logic.
+      - id: form_filter_form
+        name: Filter form
+        description: Apply a filter on a form.
+      - id: form_filter_grid
+        name: Filter grid
+        description: Apply a filter on a grid (only the "matches" operator is supported).
+      - id: form_sort_grid_column
+        name: Sort grid column
+        description: Sort a grid by a column.
+      - id: form_select_grid_row
+        name: Select grid row
+        description: Select a row in a grid.
+      - id: form_open_or_close_tab
+        name: Open or close form tab
+        description: Form tabs are closed by default; open them to interact with controls under them.
+      - id: form_save_form
+        name: Save form
+        description: Save changes on a form.
+      - id: form_close_form
+        name: Close form
+        description: Close a form.
+      # Action tools - invoke developer-defined ICustomAPI classes registered as AI tools.
+      - id: api_find_actions
+        name: Find custom actions
+        description: Find ICustomAPI actions that developers have registered as AI tools.
+      - id: api_invoke_action
+        name: Invoke custom action
+        description: Invoke a registered ICustomAPI action.

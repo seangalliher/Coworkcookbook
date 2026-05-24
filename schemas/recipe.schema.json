@@ -31,6 +31,12 @@
     },
     "title": { "type": "string", "minLength": 3, "maxLength": 120 },
     "summary": { "type": "string", "minLength": 10, "maxLength": 280 },
+    "business_value": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Why this recipe matters to the business — outcomes, time saved, risk reduced, decisions enabled. Plain prose, one or two sentences."
+    },
     "plugin": {
       "type": "string",
       "enum": ["dynamics-365-erp", "dynamics-365-cs", "dynamics-365-sales", "none"]

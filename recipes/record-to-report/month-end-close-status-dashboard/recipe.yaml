@@ -2,6 +2,8 @@ id: month-end-close-status-dashboard
 title: Month-End Close Status Dashboard
 summary: >-
   Builds a one-page status dashboard summarizing where each close task stands as of today.
+business_value: >-
+  Replaces 'where are we on close?' standup chatter with a glanceable RAG dashboard the finance lead can post to Teams.
 plugin: dynamics-365-erp
 process_tags:
   - record-to-report/close-financial-periods
@@ -20,7 +22,9 @@ uses_skills:
     - Adaptive Cards
   plugin:
     - plugin: dynamics-365-erp
-      action: trial-balance-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM read access

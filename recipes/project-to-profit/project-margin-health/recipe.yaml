@@ -1,0 +1,37 @@
+id: project-margin-health
+title: Project Margin Health Report
+summary: >-
+  Compares project budget to actuals by cost category, flags projects with margin erosion, and drafts emails to the project managers of red projects.
+business_value: >-
+  Catches project margin erosion mid-flight (instead of at close-out), so project managers can act on overruns while there is still time to negotiate a change order or replan.
+plugin: dynamics-365-erp
+process_tags:
+  - project-to-profit/analyze-project-performance
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - Email
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 F&SCM access with the Project manager role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

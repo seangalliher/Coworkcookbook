@@ -1,0 +1,36 @@
+id: case-heatmap-html
+title: Customer Service Case Heatmap (HTML)
+summary: >-
+  Builds an interactive HTML heatmap of customer service cases by product category × priority × age bucket, with drill-through tooltips.
+business_value: >-
+  Gives service-ops leadership a one-click view of where backlog is concentrated so staffing and SLA effort can be retargeted on the products that are actually causing pain.
+plugin: dynamics-365-erp
+process_tags:
+  - case-to-resolution/analyze-case-performance
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+prerequisites:
+  - Dynamics 365 access with read on Customer Service cases
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-23"
+version: "1.0.0"

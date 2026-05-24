@@ -2,6 +2,8 @@ id: bom-completeness-audit
 title: BOM Completeness Audit
 summary: >-
   Audits active BOMs for missing components, expired versions, and items that are obsolete.
+business_value: >-
+  Prevents MRP planning failures and production stoppages by catching obsolete components and version gaps before they cause a line-down event.
 plugin: dynamics-365-erp
 process_tags:
   - plan-to-produce/develop-production-strategies
@@ -19,7 +21,9 @@ uses_skills:
     - Excel
   plugin:
     - plugin: dynamics-365-erp
-      action: bom-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Production role

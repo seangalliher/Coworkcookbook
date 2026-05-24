@@ -2,6 +2,8 @@ id: period-close-checklist
 title: Period Close Checklist Generator
 summary: >-
   Generates a tailored period-close checklist with item owners and ETA estimates based on the active legal entity's configuration.
+business_value: >-
+  Standardizes the close calendar so nothing slips, and gives the controller a single-page view to chase owners across legal entities.
 plugin: dynamics-365-erp
 process_tags:
   - record-to-report/close-financial-periods
@@ -21,7 +23,9 @@ uses_skills:
     - Communications
   plugin:
     - plugin: dynamics-365-erp
-      action: trial-balance-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM read access

@@ -2,6 +2,8 @@ id: vendor-invoice-validation
 title: Vendor Invoice Pre-Posting Validation
 summary: >-
   Validates open vendor invoices against posting rules and emails the AP team a fix-list.
+business_value: >-
+  Avoids the back-and-forth of failed postings by surfacing posting blockers (inactive vendor, missing tax, PO mismatch) before AP releases the batch.
 plugin: dynamics-365-erp
 process_tags:
   - source-to-pay/manage-accounts-payable
@@ -20,7 +22,9 @@ uses_skills:
     - Email
   plugin:
     - plugin: dynamics-365-erp
-      action: vendor-invoice-query
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
   custom: []
 prerequisites:
   - Dynamics 365 F&SCM access with the Accounts payable role

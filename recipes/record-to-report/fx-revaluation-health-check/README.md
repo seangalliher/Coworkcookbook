@@ -2,7 +2,11 @@
 
 Reviews FX revaluation configuration and last-run status, and flags any monetary accounts that look misconfigured.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Plugin action ids may not match Microsoft's actual published surface. Validate before relying on it.
+> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+
+## Business value
+
+Prevents misstated currency exposure by catching unflagged monetary accounts and skipped revaluations before they hit the financials.
 
 ## What it does
 
@@ -26,7 +30,7 @@ Workbook listing misconfigured accounts and missed runs.
 ## Skills used
 
 OOTB: Excel
-Plugin actions: dynamics-365-erp/trial-balance-query
+Plugin actions: dynamics-365-erp/data_find_entity_type, dynamics-365-erp/data_find_entities_sql
 
 ## License
 
