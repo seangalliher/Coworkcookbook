@@ -952,6 +952,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF Q1 2017 forecast model 'CurrentF'. "
+            "Cowork found 46 items with a Q1 2017 demand forecast and matched actuals on RequestedShippingDate. Findings: "
+            "35 items (StandardSpeakerDF1 through DF35) had zero matching Q1 2017 sales orders (0% accuracy); the 11 items "
+            "with sales activity all scored below 50% accuracy. Best performer: S0001 (31.2%); worst: P0001 (12,839 forecast "
+            "vs 368 actual = 2.9%). Cowork also flagged four items (T0004, A0001, D0006, D0111) that had Q1 sales but no "
+            "forecast - correctly excluded from accuracy math. Per the prompt, no forecast lines were modified."
+        ),
         prompt=(
             "For each item with a demand forecast in the previous 3 months (for the USMF demo tenant, use FY2017 — Jan-Mar 2017), "
             "compare forecasted quantity vs the sum of actual sales-order quantities for the same period. Compute the absolute "
