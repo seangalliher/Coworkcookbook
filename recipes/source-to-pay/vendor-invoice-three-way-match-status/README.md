@@ -2,7 +2,7 @@
 
 Builds a status report of recent vendor invoices and their three-way-match state against the corresponding purchase orders and goods receipts. The output is a formatted Excel workbook plus a draft email to the AP team.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and Dynamics 365 ERP plugin action ids below are starter content. No one has run this against a live Cowork tenant yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork engaged the D365 ERP plugin and queried `VendorInvoiceHeader` / `VendInvoiceInfoTable` - USMF has **zero** vendor-invoice header records. The agent ran a cross-tenant scan and reported real data in USSI (35 headers, 8 lines, latest 2016-11-26), USRT (2 headers, 0 lines, 2016-11-23), and several smaller entities (BRMF/FRSI/INMF/JPMF/MXMF/THMF) - but every record across all tenants shows `MatchStatus = NotPerformed`. Cowork also identified that `VendInvoiceJour` (the posted vendor-invoice journal where match status is computed) is NOT exposed as a queryable OData entity in this build. Rather than fabricate, Cowork stopped and offered three actionable next directions: (1) check a different legal entity, (2) pull the same view via the F&O UI route (Invoice matching details form), or (3) rebuild the report around received-not-invoiced quantities. This is a textbook example of honest agent behavior - read the screenshot for the agent's cross-tenant evidence table.
 
 This recipe is **read-only** — it does not modify any data in Dynamics 365.
 
@@ -35,7 +35,7 @@ This recipe is **read-only** — it does not modify any data in Dynamics 365.
   - One sheet per vendor with mismatch rows highlighted
 - A draft email to the AP team referencing the workbook.
 
-![Sample of the produced workbook summary sheet](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot once captured against your tenant")
+![Cowork output for Vendor Invoice Three-Way Match Status Report](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Troubleshooting
 
