@@ -897,6 +897,18 @@ RECIPES: List[Recipe] = [
         ootb=["Word", "Email"],
         plugin_actions=[],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23. Generated onboarding-jordan-lee.docx for a "
+            "hypothetical Senior Project Manager (Jordan Lee, reporting to Mei Chen, start Mon May 25 2026) with sections "
+            "for cover block, welcome email draft, Week 1 Foundations (manager pre-arrival, hour-by-hour Day 1, IT/HR/access "
+            "provisioning including PM-specific tools: MS Project, Planner, Jira, PMO SharePoint, project financials, time "
+            "tracking), First 30 Days (project handoffs, RAID log audits, budget reconciliation, stakeholder mapping, PMO "
+            "methodology training, Day 30 deliverables), and First 90 Days (baselined projects, owned steering committees, "
+            "360 review, stretch opportunities). Every item uses a checkbox so it works on paper or screen."
+        ),
         prompt=(
             "I'll provide a new hire name, role, start date, and manager. Produce a Word onboarding checklist tailored to the role "
             "covering: IT access, mandatory training, intro meetings, week-1/week-2/week-4 milestones. Also draft a welcome email "
