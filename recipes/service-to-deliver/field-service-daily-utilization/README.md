@@ -2,7 +2,7 @@
 
 Drafts a morning email to service operations summarizing technician utilization for today and the coming week, including overbooked and underbooked resources.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork found the latest scheduled service date is 2016-12-30 and used the window 2016-12-01 to 2016-12-30. Roster: 2 technicians (Charlie Carson #000002, Ted Howard #000003). Real findings: (a) Overbooked - Charlie scheduled on Sat 2016-12-10 (1 hr on a non-working day against the 8h Mon-Fri baseline); (b) Slack - every weekday with scheduled work is at 12.5% or 0%, both technicians have ~18-21 weekdays in the window with zero scheduled work; (c) Unassigned - 0 of the 21 service order lines (all assigned). Email draft saved to Outlook (recipient blank since no service-ops-manager address is in the worker directory). Honesty notes: USMF has no published per-technician work calendar so the 8h Mon-Fri baseline is assumed; USMF has the Service Management module, not a dedicated Field Service module.
 
 ## Business value
 
@@ -27,7 +27,7 @@ Builds a daily dispatch-ready utilization brief covering overbookings, slack, an
 
 One email draft and one Communications summary covering technician utilization for the coming week.
 
-![Placeholder screenshot for Field Service Resource Utilization Daily Email](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Field Service Resource Utilization Daily Email](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 

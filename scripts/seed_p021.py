@@ -1308,6 +1308,19 @@ RECIPES: List[Recipe] = [
         ootb=["Email", "Communications"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork found the latest scheduled "
+            "service date is 2016-12-30 and used the window 2016-12-01 to 2016-12-30. Roster: 2 technicians (Charlie Carson "
+            "#000002, Ted Howard #000003). Real findings: (a) Overbooked - Charlie scheduled on Sat 2016-12-10 (1 hr on a "
+            "non-working day against the 8h Mon-Fri baseline); (b) Slack - every weekday with scheduled work is at 12.5% or "
+            "0%, both technicians have ~18-21 weekdays in the window with zero scheduled work; (c) Unassigned - 0 of the 21 "
+            "service order lines (all assigned). Email draft saved to Outlook (recipient blank since no service-ops-manager "
+            "address is in the worker directory). Honesty notes: USMF has no published per-technician work calendar so the "
+            "8h Mon-Fri baseline is assumed; USMF has the Service Management module, not a dedicated Field Service module."
+        ),
         prompt=(
             "For each field-service technician, read scheduled work orders for today and the next 7 days. Compute: scheduled "
             "hours per day, configured working hours per day, and utilization percent. Identify: (a) technicians with utilization "
