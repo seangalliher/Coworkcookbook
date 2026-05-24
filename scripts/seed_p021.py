@@ -649,6 +649,17 @@ RECIPES: List[Recipe] = [
         ootb=["Excel"],
         plugin_actions=[("dynamics-365-erp", "data_find_entity_type"), ("dynamics-365-erp", "data_find_entities_sql")],
         mutates_data=False,
+        verified=True,
+        verified_screenshot="01-cowork-output.png",
+        verified_against_cowork_build="m365.cloud.microsoft 2026-05-23",
+        tenant_caveat=(
+            "Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork ran all four audit queries in "
+            "parallel and produced 'FA-audit-2026-05-23.xlsx' with: 24 assets missing service life or depreciation profile, "
+            "12 fully-depreciated-but-still-Open, 0 profile mismatches, 2 missing physical location (COMP-000007, VEHC-000007). "
+            "Cowork added valuable context-aware commentary - 12 LAND rows correctly carry CalculateDepreciation=No (not a bug), "
+            "and 12 MACH rows on CONSUM/T_CONSUM books are expected to have zero service life because they use consumption-based "
+            "depreciation. No asset records were modified."
+        ),
         prompt=(
             "Audit the fixed-asset register. Flag: assets missing service-life or depreciation profile, assets fully depreciated but not "
             "retired, assets with mismatched depreciation profile vs asset group, and assets with no location assigned. Output a workbook."

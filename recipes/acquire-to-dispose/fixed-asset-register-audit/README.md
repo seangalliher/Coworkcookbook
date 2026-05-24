@@ -2,7 +2,7 @@
 
 Audits the fixed asset register for missing fields, inconsistent depreciation profiles, and assets due for retirement.
 
-> ⚠ **Draft recipe — not yet verified.** The prompt, OOTB skill list, and plugin actions named below are starter content. No one has run this against a live Cowork tenant with the Dynamics 365 ERP plugin yet. Validate before relying on it.
+> ℹ **Tenant data caveat.** Validated end-to-end against a live Cowork tenant on 2026-05-23 with USMF. Cowork ran all four audit queries in parallel and produced 'FA-audit-2026-05-23.xlsx' with: 24 assets missing service life or depreciation profile, 12 fully-depreciated-but-still-Open, 0 profile mismatches, 2 missing physical location (COMP-000007, VEHC-000007). Cowork added valuable context-aware commentary - 12 LAND rows correctly carry CalculateDepreciation=No (not a bug), and 12 MACH rows on CONSUM/T_CONSUM books are expected to have zero service life because they use consumption-based depreciation. No asset records were modified.
 
 ## Business value
 
@@ -25,7 +25,7 @@ Surfaces fixed-asset data quality issues.
 
 Workbook of fixed-asset register findings.
 
-![Placeholder screenshot for Fixed Asset Register Audit](screenshots/01-placeholder.svg "Placeholder — replace with a real screenshot captured against your tenant.")
+![Cowork output for Fixed Asset Register Audit](screenshots/01-cowork-output.png "Captured against a live Cowork tenant on 2026-05-23.")
 
 ## Skills used
 
