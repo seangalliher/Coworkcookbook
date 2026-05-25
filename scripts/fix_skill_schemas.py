@@ -2,7 +2,7 @@
 
 Cowork's contract (per the in-app /skills documentation):
 
-    OneDrive path: Cowork/.claude/skills/<slug>/SKILL.md
+    OneDrive path: Documents/Cowork/skills/<slug>/SKILL.md
     Frontmatter:
         ---
         name: <slug>                           # must match folder name exactly (kebab-case)
@@ -18,7 +18,7 @@ Cowork's contract (per the in-app /skills documentation):
 
 Also updates each recipe's README.md install steps + recipe.yaml summary
 to point at the correct OneDrive path (was Documents/Cowork/skills, must
-be Cowork/.claude/skills).
+be Documents/Cowork/skills).
 """
 from __future__ import annotations
 import re
@@ -196,11 +196,11 @@ def update_readme(rid: str, area: str) -> None:
     text = readme_path.read_text(encoding="utf-8")
     # Replace the install path
     text = text.replace(
-        "/Documents/Cowork/skills/",
         "/Cowork/.claude/skills/",
+        "/Documents/Cowork/skills/",
     ).replace(
-        "Documents/Cowork/skills/",
         "Cowork/.claude/skills/",
+        "Documents/Cowork/skills/",
     )
     readme_path.write_text(text, encoding="utf-8")
 
