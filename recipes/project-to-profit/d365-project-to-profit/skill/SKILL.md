@@ -2,7 +2,7 @@
 name: d365-project-to-profit
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to project to profit. Use when user mentions "project", "project margin", "project budget", "project actuals", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Tasks
 ---
 

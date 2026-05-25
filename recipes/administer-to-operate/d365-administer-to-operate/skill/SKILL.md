@@ -2,7 +2,7 @@
 name: d365-administer-to-operate
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to administer to operate. Use when user mentions "D365 administration", "user access", "system features", "background jobs", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Settings
 ---
 

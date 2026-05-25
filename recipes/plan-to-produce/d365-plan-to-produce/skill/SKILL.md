@@ -2,7 +2,7 @@
 name: d365-plan-to-produce
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to plan to produce. Use when user mentions "production order", "BOM completeness", "production planning", "MRP", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: BuildingFactory
 ---
 

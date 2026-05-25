@@ -2,7 +2,7 @@
 name: d365-case-to-resolution
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to case to resolution. Use when user mentions "service case", "customer case", "case management", "service desk", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Headset
 ---
 

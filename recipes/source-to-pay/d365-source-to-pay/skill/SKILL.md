@@ -2,7 +2,7 @@
 name: d365-source-to-pay
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to source to pay. Use when user mentions "vendor", "purchase order", "AP", "accounts payable", "supplier", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Cart
 ---
 

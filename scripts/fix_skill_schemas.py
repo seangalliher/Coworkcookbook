@@ -181,7 +181,7 @@ Also activate when the user names any Dynamics 365 F&SCM entity that belongs to 
 name: {slug}
 description: {description}
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: {icon}
 ---
 

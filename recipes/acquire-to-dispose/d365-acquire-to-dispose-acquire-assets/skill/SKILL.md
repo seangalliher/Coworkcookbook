@@ -2,7 +2,7 @@
 name: d365-acquire-to-dispose-acquire-assets
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to acquire to dispose. Use when user mentions "fixed assets", "asset depreciation", "asset disposal", "asset acquisition", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Building
 ---
 

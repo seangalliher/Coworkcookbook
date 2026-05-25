@@ -2,7 +2,7 @@
 name: d365-forecast-to-plan-develop-business-strategy
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to forecast to plan. Use when user mentions "forecast", "S&OP", "demand planning", "business strategy", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: ChartMultiple
 ---
 
