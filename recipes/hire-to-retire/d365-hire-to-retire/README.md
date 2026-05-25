@@ -28,7 +28,7 @@ Save time and improve accuracy by giving Cowork a persistent expert context for 
 
 Once the skill is installed, the bootstrap prompt below activates it for a single conversation:
 
-![Placeholder screenshot](screenshots/01-placeholder.svg "Placeholder - replace with a real screenshot.")
+![Cowork /skills audit confirming this skill loads](screenshots/01-cowork-audit.png "Cowork /skills audit on 2026-05-24 confirming all 30 d365-* skills load as personal skills from Documents/Cowork/skills/")
 
 ## Skill contents
 
