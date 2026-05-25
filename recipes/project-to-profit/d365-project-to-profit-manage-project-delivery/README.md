@@ -2,7 +2,7 @@
 
 A Dynamics 365 F&SCM expert scoped to the Manage project delivery area (a level-2 subdomain of Project to profit) - covers 11 L3 processes.
 
-> ℹ **This is a Cowork custom skill.** Place the contents of the `skill/` folder under `Documents/Cowork/skills/d365-project-to-profit-manage-project-delivery/` in your OneDrive. Cowork auto-discovers custom skills at the start of each conversation.
+> ℹ **This is a Cowork custom skill.** Place the contents of the `skill/` folder under `Cowork/.claude/skills/d365-project-to-profit-manage-project-delivery/` in your OneDrive. Cowork auto-discovers custom skills at the start of each conversation.
 
 ## Business value
 
@@ -11,7 +11,7 @@ Save time and improve accuracy by giving Cowork a persistent expert context for 
 ## How to install
 
 1. Open OneDrive in your browser or sync client.
-2. Navigate to `/Documents/Cowork/skills/` (create the folder if it doesn't exist).
+2. Navigate to `/Cowork/.claude/skills/` (create the folder if it doesn't exist).
 3. Create a subfolder named `d365-project-to-profit-manage-project-delivery`.
 4. Download `skill/SKILL.md` from this recipe and place it inside the subfolder.
 5. Start a new Cowork task - the skill is auto-loaded.
