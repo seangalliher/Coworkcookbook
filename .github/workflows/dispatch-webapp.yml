@@ -1,0 +1,32 @@
+name: dispatch-webapp
+# When recipes/taxonomy change on main, tell the Cowork Cookbook webapp
+# to rebuild and redeploy both staging and prod.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'recipes/**'
+      - 'taxonomy/**'
+      - 'schemas/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger webapp deploys
+        env:
+          GH_TOKEN: ${{ secrets.WEBAPP_DISPATCH_TOKEN }}
+        run: |
+          set -e
+          for event in recipes-updated recipes-published; do
+            echo "Dispatching $event to seangalliher/CoworkCookBookWebApp"
+            gh api repos/seangalliher/CoworkCookBookWebApp/dispatches \
+              -X POST \
+              -f event_type="$event" \
+              -F client_payload[sha]="$GITHUB_SHA" \
+              -F client_payload[ref]="$GITHUB_REF"
+          done
