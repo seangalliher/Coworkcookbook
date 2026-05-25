@@ -369,8 +369,7 @@ nodes:
     parent: administer-to-operate
     ms_bpc_id: 'd6689987c9711v0'
     sequence_id: '99.01.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/overview
-https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/administer-to-operate-implement-solutions'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/administer-to-operate-implement-solutions'
     description: 'Administer to operate serves as the linchpin for the sustained success of Dynamics 365 within organizational landscapes'
   - id: administer-to-operate/implement-solutions/implement-cloud-solutions
     title: 'Implement cloud solutions'
@@ -1269,11 +1268,7 @@ https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/admini
     level: end-to-end
     ms_bpc_id: 'd6689987c901v0'
     sequence_id: '20.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/case-to-resolution-introduction
-
-
-case-to-resolution-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/case-to-resolution-graphics.pptx?d=wf2809a298f41448a8a39bc973122fb79&csf=1&web=1&e=1J87Oy]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/case-to-resolution-introduction'
     description: 'The case to resolution process is a critical business process that enables organizations to effectively manage customer or employee inquiries, complaints, and issues'
   - id: case-to-resolution/establish-a-knowledge-base
     title: 'Establish a knowledge base'
@@ -1809,11 +1804,7 @@ case-to-resolution-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c2022v0'
     sequence_id: '40.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/design-to-retire-introduction
-
-
-design-to-retire-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/design-to-retire-graphics.pptx?d=we8734c3901124290b161209ebd6ebdd7&csf=1&web=1&e=M2NR73]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/design-to-retire-introduction'
     description: 'Design to retire is the process of managing a product from its inception to its eventual end of life'
   - id: design-to-retire/develop-product-strategy
     title: 'Develop product strategy'
@@ -2069,11 +2060,7 @@ design-to-retire-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c2726v0'
     sequence_id: '50.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/forecast-to-plan-introduction
-
-
-forecast-to-plan-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/forecast-to-plan-graphics.pptx?d=w09a61b02599d4e2bb707b79b945111d8&csf=1&web=1&e=sjMyID]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/forecast-to-plan-introduction'
     description: 'The term forecast to plan typically describes a collection of business processes that an organization implements to estimate demand and determine how much supply is required to meet those demands'
   - id: forecast-to-plan/develop-business-strategy
     title: 'Develop business strategy'
@@ -2433,11 +2420,7 @@ forecast-to-plan-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c3344v0'
     sequence_id: '55.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/hire-to-retire-introduction
-
-
-hire-to-retire-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/hire-to-retire-graphics.pptx?d=w67954b86e1864fc497d3c099fe4a8bdd&csf=1&web=1&e=6BhX3m]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/hire-to-retire-introduction'
     description: 'The hire to retire process, also known as the employee lifecycle, is a critical business process that involves various activities from recruiting and onboarding employees to their separation from a company'
   - id: hire-to-retire/develop-people-strategy
     title: 'Develop people strategy'
@@ -2900,11 +2883,7 @@ hire-to-retire-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c4149v0'
     sequence_id: '60.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/inventory-to-deliver-introduction
-
-
-inventory-to-deliver-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/inventory-to-deliver-graphics.pptx?d=w13fa54c63c1848a6859908b10205eec4&csf=1&web=1&e=PXvAUD]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/inventory-to-deliver-introduction'
     description: 'The inventory to deliver business process involves managing the flow of goods from receipt into a warehouse or distribution center through to delivery to the customer'
   - id: inventory-to-deliver/manage-warehouse-operations
     title: 'Manage warehouse operations'
@@ -2912,9 +2891,7 @@ inventory-to-deliver-graphics.pptx
     parent: inventory-to-deliver
     ms_bpc_id: 'd6689987c4150v0'
     sequence_id: '60.10.000.000'
-    learn_url: 'Define and manage warehouse operations strategy and policies overview - Dynamics
-365 | Microsoft Learn
-[https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/inventory-to-deliver-define-manage-warehouse-operations-overview]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/inventory-to-deliver-define-manage-warehouse-operations-overview'
     description: 'The inventory to deliver business process involves managing the flow of goods from receipt into a warehouse or distribution center through to delivery to the customer'
   - id: inventory-to-deliver/manage-warehouse-operations/define-warehouse-processes
     title: 'Define warehouse processes'
@@ -3244,11 +3221,7 @@ inventory-to-deliver-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c4914v0'
     sequence_id: '65.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/order-to-cash-introduction
-
-
-order-to-cash-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/order-to-cash-graphics.pptx?d=w662193a63d6a41e9bf5955625d65e2f9&csf=1&web=1&e=cPXYOw]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/order-to-cash-introduction'
     description: 'The order to cash business process flow is a standard term used to describe the entirety of an organization''s sales order process'
   - id: order-to-cash/develop-sales-policies
     title: 'Develop sales policies'
@@ -3586,11 +3559,7 @@ order-to-cash-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c5725v0'
     sequence_id: '70.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/plan-to-produce-introduction
-
-
-plan-to-produce-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/plan-to-produce-graphics.pptx?d=wce6e9c9d408243d093c54c40a52cd109&csf=1&web=1&e=VZan9R]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/plan-to-produce-introduction'
     description: 'The term plan to produce is used to describe a collection of business processes that an organization implements to support the planning and execution of the production process'
   - id: plan-to-produce/develop-production-strategies
     title: 'Develop production strategies'
@@ -3839,11 +3808,7 @@ plan-to-produce-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c7166v0'
     sequence_id: '80.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/project-to-profit-introduction
-
-
-project-to-profit-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/project-to-profit-graphics.pptx?d=wbbcf53c40bcf409d843f7d5da41a8e9d&csf=1&web=1&e=amu5li]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/project-to-profit-introduction'
     description: 'The project to profit process can be used in any project-oriented business'
   - id: project-to-profit/develop-project-strategy
     title: 'Develop project strategy'
@@ -4159,7 +4124,7 @@ project-to-profit-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c7775v0'
     sequence_id: '85.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/Dynamics365/guidance/business-processes/prospect-to-quote-introduction'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/prospect-to-quote-introduction'
     description: 'The prospect to quote business process flow is a sales process that starts with identifying potential customers (prospects)'
   - id: prospect-to-quote/manage-customer-relationships
     title: 'Manage customer relationships'
@@ -4167,7 +4132,7 @@ project-to-profit-graphics.pptx
     parent: prospect-to-quote
     ms_bpc_id: 'd6689987c7776v0'
     sequence_id: '85.15.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/Dynamics365/guidance/business-processes/prospect-to-quote-manage-customer-relationships'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/prospect-to-quote-manage-customer-relationships'
     description: 'Strong customer relationship management requires collaboration across Sales, Service, Marketing, and Operations to maximize customer lifetime value'
   - id: prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
     title: 'Maintain contacts and accounts'
@@ -4337,18 +4302,13 @@ project-to-profit-graphics.pptx
     parent: prospect-to-quote/analyze-sales
     ms_bpc_id: 'd6689987c49558v0'
     sequence_id: '85.65.200.000'
-    learn_url: 'Sales Research Agent overview (preview) | Microsoft Learn
-[https://learn.microsoft.com/en-us/dynamics365/sales/sales-research-agent]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/sales/sales-research-agent'
   - id: record-to-report
     title: 'Record to report'
     level: end-to-end
     ms_bpc_id: 'd6689987c8160v0'
     sequence_id: '90.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/record-to-report-introduction
-
-
-record-to-report-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/record-to-report-graphics.pptx?d=wfdb63eb7fdbc43958af7b162a8ad194a&csf=1&web=1&e=ddBl7j]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/record-to-report-introduction'
     description: 'The record to report (R2R) process is sometimes referred to as the financial recording and close process'
   - id: record-to-report/define-accounting-policies
     title: 'Define accounting policies'
@@ -4742,11 +4702,7 @@ record-to-report-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c9178v0'
     sequence_id: '95.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/service-to-cash-introduction
-
-
-service-to-cash-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/service-to-cash-graphics.pptx?d=wbc14c61bff0e41059733a796598950a4&csf=1&web=1&e=eLnWG1]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/service-to-cash-introduction'
     description: 'Service to cash is a set of integrated capabilities in Dynamics 365 that helps organizations streamline their service delivery and invoicing processes'
   - id: service-to-deliver/develop-service-strategy
     title: 'Develop service strategy'
@@ -5011,11 +4967,7 @@ service-to-cash-graphics.pptx
     level: end-to-end
     ms_bpc_id: 'd6689987c6275v0'
     sequence_id: '75.00.000.000'
-    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/procure-to-pay-introduction
-
-
-procure-to-pay-graphics.pptx
-[https://bdo4.sharepoint.com/:p:/r/sites/bdodigital-erp/Shared%20Documents/Compliance/FastTrack/Business%20Process%20Catalog/Microsoft%20BPC%20-%202024.05/Business%20Process%20Flows/procure-to-pay-graphics.pptx?d=w8174b29e8ac94b70a3e8ff337bab1009&csf=1&web=1&e=MiXcGA]'
+    learn_url: 'https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/procure-to-pay-introduction'
     description: 'The source (previously procure to pay process, also known as purchase to pay) is a term used to describe the entire process of purchasing goods or services from a supplier and paying for them'
   - id: source-to-pay/develop-procurement-and-sourcing-strategy
     title: 'Develop procurement and sourcing strategy'
