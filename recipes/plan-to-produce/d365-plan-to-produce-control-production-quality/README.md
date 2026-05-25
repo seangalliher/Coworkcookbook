@@ -18,7 +18,7 @@ The recipe page above ships a one-click **Download skill.zip** button (extracted
 
 Once the skill is installed, the bootstrap prompt below activates it for a single conversation:
 
-![Cowork /skills audit confirming this skill loads](screenshots/01-cowork-audit.png "Cowork /skills audit on 2026-05-24 confirming all 30 d365-* skills load as personal skills from Documents/Cowork/skills/")
+![Cowork /skills score audit for this skill](screenshots/02-cowork-score.png "Per-skill Cowork /skills audit on 2026-05-24")
 
 ## Skill contents
 
