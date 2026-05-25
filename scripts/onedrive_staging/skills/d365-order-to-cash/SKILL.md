@@ -2,7 +2,7 @@
 name: d365-order-to-cash
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to order to cash. Use when user mentions "sales order", "AR", "accounts receivable", "credit", "collections", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Money
 ---
 

@@ -2,7 +2,7 @@
 name: d365-design-to-retire
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to design to retire. Use when user mentions "BOM", "engineering change", "ECO", "product lifecycle", "BOM audit", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Wrench
 ---
 

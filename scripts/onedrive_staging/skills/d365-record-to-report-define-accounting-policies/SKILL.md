@@ -2,7 +2,7 @@
 name: d365-record-to-report-define-accounting-policies
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to record to report. Use when user mentions "trial balance", "general ledger", "GL", "period close", "month-end", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: DocumentBulletList
 ---
 

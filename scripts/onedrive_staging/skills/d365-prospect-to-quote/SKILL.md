@@ -2,7 +2,7 @@
 name: d365-prospect-to-quote
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to prospect to quote. Use when user mentions "sales quote", "lead", "opportunity", "quote conversion", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Target
 ---
 

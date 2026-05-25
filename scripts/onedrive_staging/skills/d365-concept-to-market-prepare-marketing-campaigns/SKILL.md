@@ -2,7 +2,7 @@
 name: d365-concept-to-market-prepare-marketing-campaigns
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to concept to market. Use when user mentions "product launch", "marketing campaign", "product readiness", "go-to-market", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: Lightbulb
 ---
 

@@ -2,7 +2,7 @@
 name: d365-hire-to-retire
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to hire to retire. Use when user mentions "workforce", "HR", "headcount", "onboarding", "employee", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: PeopleTeam
 ---
 

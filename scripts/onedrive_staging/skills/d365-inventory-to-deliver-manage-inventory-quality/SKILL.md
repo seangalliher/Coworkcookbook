@@ -2,7 +2,7 @@
 name: d365-inventory-to-deliver-manage-inventory-quality
 description: Dynamics 365 Finance & Supply Chain Management expert scoped to inventory to deliver. Use when user mentions "warehouse", "inventory", "freight", "shipping", "on-hand", or any USMF tenant question that lands in this domain.
 cowork:
-  category: dynamics-365
+  category: analysis
   icon: BoxMultiple
 ---
 
