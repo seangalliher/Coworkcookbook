@@ -4,26 +4,16 @@ A Dynamics 365 F&SCM expert scoped to the Prepare marketing campaigns area (a le
 
 > ℹ **This is a Cowork custom skill.** Place the contents of the `skill/` folder under `Documents/Cowork/skills/d365-concept-to-market-prepare-marketing-campaigns/` in your OneDrive. Cowork auto-discovers custom skills at the start of each conversation.
 
-## Business value
-
-Save time and improve accuracy by giving Cowork a persistent expert context for the target domain - it knows the right entities, the USMF tenant data quirks, and the honest-degrade options before you even open a task.
-
 ## How to install
 
-**Option A - One-click ZIP (recommended)**
+The recipe page above ships a one-click **Download skill.zip** button (extracted from this repo's `skill.zip` + `skill.zip.sha256` for tamper-evidence). To install:
 
-1. [Download `d365-concept-to-market-prepare-marketing-campaigns.zip`](https://github.com/seangalliher/Coworkcookbook/raw/main/recipes/concept-to-market/d365-concept-to-market-prepare-marketing-campaigns/skill/dist/d365-concept-to-market-prepare-marketing-campaigns.zip)
+1. Click **Download skill.zip** on the recipe page.
 2. Extract the archive - you get a folder named `d365-concept-to-market-prepare-marketing-campaigns/` containing `SKILL.md`.
 3. Drop that folder into your OneDrive at `Documents/Cowork/skills/`.
 4. Start a new Cowork conversation - the skill loads automatically.
 
-**Option B - Manual**
-
-1. Open OneDrive in your browser or sync client.
-2. Navigate to `/Documents/Cowork/skills/` (create the folder if it doesn't exist).
-3. Create a subfolder named `d365-concept-to-market-prepare-marketing-campaigns`.
-4. Download `skill/SKILL.md` from this recipe and place it inside the subfolder.
-5. Start a new Cowork task - the skill is auto-loaded.
+**Manual fallback**: navigate to `/Documents/Cowork/skills/` in OneDrive, create a subfolder named `d365-concept-to-market-prepare-marketing-campaigns`, download `skill/SKILL.md` from the source repo, drop it in.
 ## How to use
 
 Once the skill is installed, the bootstrap prompt below activates it for a single conversation:
