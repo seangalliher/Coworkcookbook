@@ -1,0 +1,36 @@
+id: d365-administer-to-operate-administer-system-features
+title: D365 Administer system features Expert
+summary: >-
+  A Dynamics 365 F&SCM expert scoped to the Administer system features area (a level-2 subdomain of Administer to operate) - covers 20 L3 processes.
+business_value: >-
+  Save time and improve accuracy by giving Cowork a persistent expert context for the target domain - it knows the right entities, the USMF tenant data quirks, and the honest-degrade options before you even open a task.
+plugin: dynamics-365-erp
+process_tags:
+  - administer-to-operate/administer-system-features
+recipe_type: prompt+skill
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb: []
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom:
+    - d365-administer-to-operate-administer-system-features
+prerequisites:
+  - Dynamics 365 F&SCM access with the appropriate role
+  - Cowork D365 ERP plugin enabled
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-05-24"
+version: "1.0.0"
