@@ -10,12 +10,20 @@ Save time and improve accuracy by giving Cowork a persistent expert context for 
 
 ## How to install
 
+**Option A - One-click ZIP (recommended)**
+
+1. [Download `d365-forecast-to-plan-develop-business-strategy.zip`](https://github.com/seangalliher/Coworkcookbook/raw/main/recipes/forecast-to-plan/d365-forecast-to-plan-develop-business-strategy/skill/dist/d365-forecast-to-plan-develop-business-strategy.zip)
+2. Extract the archive - you get a folder named `d365-forecast-to-plan-develop-business-strategy/` containing `SKILL.md`.
+3. Drop that folder into your OneDrive at `Documents/Cowork/skills/`.
+4. Start a new Cowork conversation - the skill loads automatically.
+
+**Option B - Manual**
+
 1. Open OneDrive in your browser or sync client.
 2. Navigate to `/Documents/Cowork/skills/` (create the folder if it doesn't exist).
 3. Create a subfolder named `d365-forecast-to-plan-develop-business-strategy`.
 4. Download `skill/SKILL.md` from this recipe and place it inside the subfolder.
 5. Start a new Cowork task - the skill is auto-loaded.
-
 ## How to use
 
 Once the skill is installed, the bootstrap prompt below activates it for a single conversation:
