@@ -1,5 +1,9 @@
 # Cowork Cookbook — Recipes
 
+https://coworkcookbook.com/
+<img width="1146" height="986" alt="Screen 1" src="https://github.com/user-attachments/assets/7ff2159a-14bf-430d-83e0-864d9e5523a2" />
+
+
 A community catalog of prompt and skill "recipes" for **Microsoft Copilot Cowork**, organized along Microsoft's [Business Process Catalog](https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/overview).
 
 This repository is the **source of truth** for the [Cowork Cookbook](https://github.com/seangalliher/CoworkCookBookWebApp) web app. Recipes live here as files; the website is a rendered/indexed view.
