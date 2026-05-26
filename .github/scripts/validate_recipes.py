@@ -68,10 +68,14 @@ def main() -> int:
             for tag in data.get("process_tags", []):
                 if tag not in taxonomy_ids:
                     errors.append(f"{rel}: process_tag '{tag}' not in taxonomy")
-            if data.get("mutates_data") is True:
+            # VERIFICATION.md is required only when a mutating recipe has been
+            # verified against a live tenant. Draft scaffolded recipes that
+            # declare mutates_data:true but are not yet validated do not need
+            # one — the amber draft warning in their README is sufficient.
+            if data.get("mutates_data") is True and data.get("status") == "verified":
                 if not (ry.parent / "VERIFICATION.md").exists():
                     errors.append(
-                        f"{rel}: mutates_data:true requires VERIFICATION.md in the same folder"
+                        f"{rel}: mutates_data:true + status:verified requires VERIFICATION.md in the same folder"
                     )
 
     if errors:
