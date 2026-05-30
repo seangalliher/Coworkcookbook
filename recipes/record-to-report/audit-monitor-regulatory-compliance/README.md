@@ -27,7 +27,7 @@ Reads monitor regulatory compliance records, runs a rule-based completeness audi
 
 See the prompt for the specific deliverable(s). All generated files land in `Documents/Cowork/output/` in OneDrive.
 
-![Placeholder screenshot for Monitor regulatory compliance Completeness Audit](screenshots/01-placeholder.svg "Placeholder - replace with a real screenshot captured against your tenant.")
+![Cowork output captured against USMF](screenshots/01-cowork-output.png "Cowork audit output captured 2026-05-25")
 
 ## Skills used
 

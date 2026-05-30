@@ -27,7 +27,7 @@ Builds a single-file HTML dashboard with inline SVG/d3 charts visualizing predic
 
 See the prompt for the specific deliverable(s). All generated files land in `Documents/Cowork/output/` in OneDrive.
 
-![Placeholder screenshot for Predict customer payments Interactive HTML Dashboard](screenshots/01-placeholder.svg "Placeholder - replace with a real screenshot captured against your tenant.")
+![Cowork output captured against USMF](screenshots/01-cowork-output.png "Cowork audit output captured 2026-05-25")
 
 ## Skills used
 
