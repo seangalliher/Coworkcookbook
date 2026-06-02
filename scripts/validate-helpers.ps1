@@ -49,13 +49,14 @@ function Apply-BatchResults {
             if (Test-Path $yaml) {
                 $t = Get-Content $yaml -Raw
                 if ($t -match 'status:\s*draft') {
-                    $t = $t -replace 'status:\s*draft', "status: verified`nlast_verified_on: `"2026-05-25`"`nverified_against_cowork_build: `"m365.cloud.microsoft 2026-05-25`""
+                    $t = $t -replace 'status:\s*draft', "status: verified`nlast_verified_on: `"2026-06-01`"`nverified_against_cowork_build: `"m365.cloud.microsoft 2026-06-01`""
                     Set-Content -Path $yaml -Value $t -NoNewline
                 }
             }
             if (Test-Path $readme) {
                 $rt = Get-Content $readme -Raw
-                $rt = $rt -replace '!\[Placeholder screenshot\]\(screenshots/01-placeholder\.svg "Placeholder - replace with a real screenshot\."\)', '![Cowork output](screenshots/01-cowork-output.png "Cowork audit output captured 2026-05-25")'
+                $rt = $rt -replace '!\[[^\]]*\]\(screenshots/01-placeholder\.svg "[^"]*"\)', '![Cowork output captured against USMF](screenshots/01-cowork-output.png "Cowork audit output captured 2026-06-01")'
+                $rt = $rt -replace '(?m)^> \u26a0 \*\*Draft recipe \u2014 not yet verified.*\r?\n(?:>.*\r?\n)*\r?\n', ''
                 Set-Content -Path $readme -Value $rt -NoNewline
             }
         } else {
@@ -67,7 +68,7 @@ function Apply-BatchResults {
 }
 
 function Get-VerifiedToday {
-    (Get-ChildItem (Join-Path $Repo 'recipes\*\*\recipe.yaml') | Where-Object { $_.Directory.Name -notlike 'd365-*' } | Where-Object { (Get-Content $_.FullName -Raw) -match 'last_verified_on: "2026-05-25"' }).Count
+    (Get-ChildItem (Join-Path $Repo 'recipes\*\*\recipe.yaml') | Where-Object { $_.Directory.Name -notlike 'd365-*' } | Where-Object { (Get-Content $_.FullName -Raw) -match 'last_verified_on: "2026-06-01"' }).Count
 }
 
 function Commit-Batch {
