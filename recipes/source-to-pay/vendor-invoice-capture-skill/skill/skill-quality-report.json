@@ -1,0 +1,101 @@
+{
+  "description": "Capture vendor invoices from email PDF attachments into Dynamics 365 USMF as pending vendor invoices, including sales-tax application.",
+  "dimensions": {
+    "instruction_specificity": 25,
+    "robustness": 24,
+    "scope_boundaries": 24,
+    "trigger_clarity": 24
+  },
+  "improvements": [
+    {
+      "priority": "low",
+      "text": "Consider adding a worked example of vendor matching by name when account is absent."
+    }
+  ],
+  "skill_name": "vendor-invoice-capture",
+  "structural_checks": [
+    {
+      "detail": "",
+      "label": "File exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "label": "Name matches directory",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "label": "YAML parseable",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "label": "cowork metadata block",
+      "status": "PASS"
+    }
+  ],
+  "timestamp": "2026-06-04 21:05 UTC",
+  "trigger_analysis": [
+    {
+      "phrase": "capture vendor invoices from my inbox",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "process invoice emails",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "enter this invoice in D365",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "create a pending vendor invoice",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "add tax to that invoice",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "intake invoices from email",
+      "should_trigger": true,
+      "verdict": "PASS",
+      "would_match": "Yes"
+    },
+    {
+      "phrase": "send a customer invoice",
+      "should_trigger": false,
+      "verdict": "PASS",
+      "would_match": "No"
+    },
+    {
+      "phrase": "post the vendor invoice",
+      "should_trigger": false,
+      "verdict": "PASS",
+      "would_match": "No"
+    },
+    {
+      "phrase": "create a purchase order",
+      "should_trigger": false,
+      "verdict": "PASS",
+      "would_match": "No"
+    },
+    {
+      "phrase": "summarize my emails",
+      "should_trigger": false,
+      "verdict": "PASS",
+      "would_match": "No"
+    }
+  ]
+}
