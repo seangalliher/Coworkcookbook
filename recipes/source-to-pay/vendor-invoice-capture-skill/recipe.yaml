@@ -1,0 +1,46 @@
+id: vendor-invoice-capture-skill
+title: Vendor Invoice Capture Skill (packaged + scored)
+summary: >-
+  The packaged Cowork skill that powers the vendor-invoice intake recipe — runs the PDF extraction, USMF vendor match, and pending invoice creation as a single reusable skill, with a 97/100 quality scorecard from the Cowork skill quality tool.
+business_value: >-
+  Lets you ship the vendor-invoice intake workflow as a reusable Cowork skill instead of pasting a long prompt every time. The Skill Management quality report (97/100, Excellent) covers trigger clarity, instruction specificity, scope boundaries, and robustness — so AP and IT can adopt the skill knowing it passes Cowork's skill-quality gates.
+plugin: dynamics-365-erp
+process_tags:
+  - source-to-pay/manage-accounts-payable/process-supplier-invoices
+recipe_type: prompt+skill
+difficulty: intermediate
+mutates_data: true
+min_plugin_version: "1.0.0"
+generated_by: human
+reviewed_by: seangalliher
+status: verified
+last_verified_on: "2026-06-05"
+verified_against_cowork_build: "m365.cloud.microsoft 2026-06-05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_get_entity_metadata
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+    - plugin: dynamics-365-erp
+      action: data_create_entities
+  custom:
+    - vendor-invoice-capture
+prerequisites:
+  - Cowork Skill Management enabled in the session
+  - Cowork D365 ERP plugin enabled and pointed at USMF
+  - PDF parsing skill enabled in the session
+  - Outlook plugin enabled with mailbox read access
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-06-05"
+version: "1.0.0"

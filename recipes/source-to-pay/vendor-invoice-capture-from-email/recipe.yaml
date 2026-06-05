@@ -1,0 +1,46 @@
+id: vendor-invoice-capture-from-email
+title: Vendor Invoice Capture from Email
+summary: >-
+  Watches the inbox for emails with PDF attachments that look like vendor invoices, extracts every field from the PDF, matches the vendor against USMF master data, and creates a pending vendor invoice record in Dynamics 365 F&O with the header and lines populated.
+business_value: >-
+  Shrinks vendor-invoice intake from a manual data-entry chore to an unattended inbox scan. Each captured PDF becomes a pending invoice in USMF with header + lines pre-filled, so AP only reviews and approves instead of keying. Duplicate detection and message-ID tracking keep the same invoice from being booked twice.
+plugin: dynamics-365-erp
+process_tags:
+  - source-to-pay/manage-accounts-payable/process-supplier-invoices
+recipe_type: prompt+skill
+difficulty: intermediate
+mutates_data: true
+min_plugin_version: "1.0.0"
+generated_by: human
+reviewed_by: seangalliher
+status: verified
+last_verified_on: "2026-06-05"
+verified_against_cowork_build: "m365.cloud.microsoft 2026-06-05"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - PDF
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_get_entity_metadata
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+    - plugin: dynamics-365-erp
+      action: data_create_entities
+  custom:
+    - vendor-invoice-capture
+prerequisites:
+  - Cowork session signed in with mailbox access (Outlook plugin)
+  - Cowork D365 ERP plugin enabled and pointed at USMF
+  - PDF parsing skill enabled in the session
+  - Optional - Cowork scheduled task to run this prompt hourly so capture is unattended
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-06-05"
+version: "1.0.0"
