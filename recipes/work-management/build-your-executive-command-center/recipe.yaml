@@ -1,0 +1,31 @@
+id: build-your-executive-command-center
+title: "Build your executive command center"
+summary: >-
+  Start every day knowing exactly where to focus - without scrolling through emails, meetings, and chats to triangulate it yourself.
+business_value: >-
+  Start every day knowing exactly where to focus - without scrolling through emails, meetings, and chats to triangulate it yourself. A personal, interactive HTML command center that surfaces what needs your attention this week, where your time is going, and one or two prescriptive recommendations grounded in real signal patterns.
+plugin: fabric-iq
+process_tags:
+  - work-management/research-and-synthesize/build-personal-insight-dashboards
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

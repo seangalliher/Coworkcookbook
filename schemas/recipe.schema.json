@@ -39,7 +39,17 @@
     },
     "plugin": {
       "type": "string",
-      "enum": ["dynamics-365-erp", "dynamics-365-cs", "dynamics-365-sales", "none"]
+      "description": "The Cowork plugin a recipe depends on. 'none' means the recipe runs on built-in Cowork skills alone - it may still ship an installable custom skill of its own, recorded in uses_skills.custom.",
+      "enum": [
+        "dynamics-365-erp",
+        "dynamics-365-cs",
+        "dynamics-365-sales",
+        "fabric-iq",
+        "monday-com",
+        "miro",
+        "prezi",
+        "none"
+      ]
     },
     "process_tags": {
       "type": "array",

@@ -1,0 +1,32 @@
+id: build-a-project-board-from-work-context
+title: "Build a project board from work context"
+summary: >-
+  Spin up a fully scoped project board without the manual setup tax - no copying from emails, chasing owners, or piecing together task lists from scattered threads.
+business_value: >-
+  Spin up a fully scoped project board without the manual setup tax - no copying from emails, chasing owners, or piecing together task lists from scattered threads. A ready-to-run Monday.com board grounded in your actual work - with owners, statuses, and priorities already in place so the team can pick it up and move.
+plugin: monday-com
+process_tags:
+  - work-management/coordinate-team-work/set-up-project-boards
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - monday.com plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

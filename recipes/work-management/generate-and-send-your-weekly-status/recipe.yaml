@@ -1,0 +1,33 @@
+id: generate-and-send-your-weekly-status
+title: "Generate and send your weekly status automatically"
+summary: >-
+  Replace the Monday-morning scramble with a status update that writes itself.
+business_value: >-
+  Replace the Monday-morning scramble with a status update that writes itself. A ready-to-send weekly status, drafted from your real meetings and conversations, that lands in your team's inbox to start the week.
+plugin: fabric-iq
+process_tags:
+  - work-management/manage-communications/produce-recurring-status-updates
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Scheduling
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

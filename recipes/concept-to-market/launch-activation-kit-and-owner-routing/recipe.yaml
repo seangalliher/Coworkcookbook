@@ -1,0 +1,36 @@
+id: launch-activation-kit-and-owner-routing
+title: "Launch activation kit and owner routing"
+summary: >-
+  Build the full launch kit across customer, field, partner, exec, and creator audiences - grounded in real performance baselines and proof points - and get every asset to the right owner with a review deadline.
+business_value: >-
+  Build the full launch kit across customer, field, partner, exec, and creator audiences - grounded in real performance baselines and proof points - and get every asset to the right owner with a review deadline. A fully-routed launch package across Word, PowerPoint, and Excel - every asset substantiated with Fabric IQ performance data, sequenced by audience beat, filed into a launch workspace by owner, with review requests sent.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/create-marketing-material
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - PowerPoint
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

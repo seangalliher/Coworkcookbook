@@ -1,0 +1,29 @@
+id: pull-whats-relevant-for-another-team
+title: "Pull what's relevant for another team from a campaign brief"
+summary: >-
+  Get a partner team only the parts of a campaign brief that apply to them - without making them read the whole thing to find their section.
+business_value: >-
+  Get a partner team only the parts of a campaign brief that apply to them - without making them read the whole thing to find their section. A focused doc containing just the sections relevant to the receiving team, saved in Box and shared with the right group.
+plugin: none
+process_tags:
+  - work-management/create-and-repurpose-content/tailor-content-for-an-audience
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb: []
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

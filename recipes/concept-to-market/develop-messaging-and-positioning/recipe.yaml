@@ -1,0 +1,30 @@
+id: develop-messaging-and-positioning
+title: "Develop messaging and positioning"
+summary: >-
+  Move messaging development out of scattered docs into one working surface the team can pressure-test together.
+business_value: >-
+  Move messaging development out of scattered docs into one working surface the team can pressure-test together. A Monday.com board capturing value pillars, persona messaging, business alignment, and competitive positioning - grounded in your real product, customer, and competitive context.
+plugin: monday-com
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/develop-campaign-themes-and-messages
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb: []
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - monday.com plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

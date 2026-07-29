@@ -1,0 +1,33 @@
+id: partner-and-channel-activation-kit
+title: "Partner and channel activation kit"
+summary: >-
+  Adapt the [Product/Campaign name] launch materials for partners and channel teams and route them for review.
+business_value: >-
+  Adapt the [Product/Campaign name] launch materials for partners and channel teams and route them for review. A partner-ready and channel-ready activation kit across Word and Excel, plus a routing plan so partner, field, and channel marketing can move fast.
+plugin: none
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/create-marketing-material
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - Email
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,32 @@
+id: build-a-visual-project-plan-from-work-context
+title: "Build a visual project plan from work context"
+summary: >-
+  Turn a scattered project picture - emails, meetings, files - into a single visual plan the team can rally around without rebuilding it from scratch.
+business_value: >-
+  Turn a scattered project picture - emails, meetings, files - into a single visual plan the team can rally around without rebuilding it from scratch. A Miro board that maps the project end-to-end, with workstreams, milestones, and ownership visualized in one place - paired with a tracking table the team can update as work moves forward.
+plugin: miro
+process_tags:
+  - work-management/coordinate-team-work/build-project-plans
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Miro plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

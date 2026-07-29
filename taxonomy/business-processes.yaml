@@ -1,5 +1,5 @@
-version: '1.0.0'
-source: 'Microsoft Business Process Catalog MAR 2026 - https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/overview'
+version: '1.1.0'
+source: 'Built on the Microsoft Business Process Catalog MAR 2026 (https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/overview), which supplies the fifteen Dynamics 365 end-to-end domains. Extended with additional domains where the catalog has no equivalent. Nodes carry source: bpc or source: cookbook.'
 
 nodes:
   - id: acquire-to-dispose
@@ -5311,3 +5311,196 @@ nodes:
     ms_bpc_id: 'd6689987c7139v0'
     sequence_id: '75.80.060.000'
     description: 'Manage Procurement Risks in Dynamics 365 finance and operations apps enables organizations to identify, assess, and mitigate risks in the procurement process'
+
+  # ---------------------------------------------------------------------------
+  # Work management
+  #
+  # The knowledge work every role does regardless of function: planning a week,
+  # clearing an inbox, producing a status update, turning a document into a deck,
+  # handing off before leave. The Business Process Catalog covers the Dynamics 365
+  # value chains and has no equivalent for this, so these nodes are defined here.
+  # Work that IS a business process stays in its domain - onboarding a new hire
+  # belongs in hire-to-retire, not here.
+  # ---------------------------------------------------------------------------
+  - id: work-management
+    title: 'Work management'
+    level: end-to-end
+    source: cookbook
+    description: 'How individuals and teams plan, communicate, produce, and close out everyday knowledge work across Microsoft 365 - the cross-functional processes that sit alongside the Dynamics 365 value chains rather than inside any one of them.'
+
+  # --- Plan and prioritize work ---
+  - id: work-management/plan-and-prioritize-work
+    title: 'Plan and prioritize work'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Deciding what gets attention and when, and protecting the time to do it.'
+  - id: work-management/plan-and-prioritize-work/manage-time-and-focus
+    title: 'Manage time and focus'
+    level: process
+    parent: work-management/plan-and-prioritize-work
+    source: cookbook
+    description: 'Reviewing and restructuring a calendar so committed time matches stated priorities, including protecting blocks for focused work.'
+  - id: work-management/plan-and-prioritize-work/prioritize-incoming-work
+    title: 'Prioritize incoming work'
+    level: process
+    parent: work-management/plan-and-prioritize-work
+    source: cookbook
+    description: 'Ranking requests, action items, and commitments arriving across mail, meetings, and chat so the most consequential work surfaces first.'
+
+  # --- Manage communications ---
+  - id: work-management/manage-communications
+    title: 'Manage communications'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Keeping correspondence and reporting current without letting it consume the week.'
+  - id: work-management/manage-communications/triage-and-respond-to-messages
+    title: 'Triage and respond to messages'
+    level: process
+    parent: work-management/manage-communications
+    source: cookbook
+    description: 'Working through accumulated mail and chat to identify what needs a reply and drafting responses for review before anything is sent.'
+  - id: work-management/manage-communications/produce-recurring-status-updates
+    title: 'Produce recurring status updates'
+    level: process
+    parent: work-management/manage-communications
+    source: cookbook
+    description: 'Assembling a status update on a fixed cadence from work already captured in mail, meetings, files, and boards.'
+  - id: work-management/manage-communications/prepare-leadership-updates
+    title: 'Prepare leadership updates'
+    level: process
+    parent: work-management/manage-communications
+    source: cookbook
+    description: 'Producing an upward briefing covering progress, priorities, and outlook, sourced from real work context rather than recollection.'
+
+  # --- Coordinate team work ---
+  - id: work-management/coordinate-team-work
+    title: 'Coordinate team work'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Getting shared work organized, visible, and covered.'
+  - id: work-management/coordinate-team-work/set-up-project-boards
+    title: 'Set up project boards'
+    level: process
+    parent: work-management/coordinate-team-work
+    source: cookbook
+    description: 'Standing up a working board with tasks, owners, statuses, and dates inferred from existing work context instead of a blank template.'
+  - id: work-management/coordinate-team-work/build-project-plans
+    title: 'Build project plans'
+    level: process
+    parent: work-management/coordinate-team-work
+    source: cookbook
+    description: 'Turning a scattered project picture into a single visual plan showing phases, milestones, dependencies, and owners.'
+  - id: work-management/coordinate-team-work/hand-off-work-during-absence
+    title: 'Hand off work during absence'
+    level: process
+    parent: work-management/coordinate-team-work
+    source: cookbook
+    description: 'Preparing a complete handover before planned leave so in-flight work continues, including delegation and calendar cover.'
+  - id: work-management/coordinate-team-work/automate-recurring-reporting
+    title: 'Automate recurring reporting'
+    level: process
+    parent: work-management/coordinate-team-work
+    source: cookbook
+    description: 'Replacing a manual pull-and-send reporting cycle with a scheduled task that assembles and distributes the update itself.'
+
+  # --- Organize information ---
+  - id: work-management/organize-information
+    title: 'Organize information'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Keeping files and records findable, current, and shareable.'
+  - id: work-management/organize-information/archive-completed-work
+    title: 'Archive completed work'
+    level: process
+    parent: work-management/organize-information
+    source: cookbook
+    description: 'Closing out a project by collecting its deliverables and references into a single organized, shareable location.'
+  - id: work-management/organize-information/catalog-and-clean-up-file-stores
+    title: 'Catalog and clean up file stores'
+    level: process
+    parent: work-management/organize-information
+    source: cookbook
+    description: 'Profiling a large document store by age, relevance, owner, and subject to produce a catalog and a defensible cleanup plan.'
+
+  # --- Create and repurpose content ---
+  - id: work-management/create-and-repurpose-content
+    title: 'Create and repurpose content'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Reshaping material you already have into the format the audience needs.'
+  - id: work-management/create-and-repurpose-content/build-presentations-from-source-material
+    title: 'Build presentations from source material'
+    level: process
+    parent: work-management/create-and-repurpose-content
+    source: cookbook
+    description: 'Producing a working deck from existing documents, data, or approved artifacts rather than starting from a blank slide.'
+  - id: work-management/create-and-repurpose-content/visualize-concepts-and-frameworks
+    title: 'Visualize concepts and frameworks'
+    level: process
+    parent: work-management/create-and-repurpose-content
+    source: cookbook
+    description: 'Turning dense written content into a visual framework a team can review and discuss.'
+  - id: work-management/create-and-repurpose-content/diagram-processes-and-workflows
+    title: 'Diagram processes and workflows'
+    level: process
+    parent: work-management/create-and-repurpose-content
+    source: cookbook
+    description: 'Producing a shareable workflow diagram from a written process description so it can be reviewed and improved.'
+  - id: work-management/create-and-repurpose-content/tailor-content-for-an-audience
+    title: 'Tailor content for an audience'
+    level: process
+    parent: work-management/create-and-repurpose-content
+    source: cookbook
+    description: 'Extracting the portion of a long document that applies to a specific team or role, rather than circulating the whole thing.'
+
+  # --- Research and synthesize ---
+  - id: work-management/research-and-synthesize
+    title: 'Research and synthesize'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Turning scattered sources and signals into something you can act on.'
+  - id: work-management/research-and-synthesize/conduct-deep-research
+    title: 'Conduct deep research'
+    level: process
+    parent: work-management/research-and-synthesize
+    source: cookbook
+    description: 'Working through a body of source material to produce a structured brief with claims traceable back to their sources.'
+  - id: work-management/research-and-synthesize/curate-information-briefs
+    title: 'Curate information briefs'
+    level: process
+    parent: work-management/research-and-synthesize
+    source: cookbook
+    description: 'Filtering high-volume inbound content down to the items that matter for your work and summarizing them.'
+  - id: work-management/research-and-synthesize/analyze-collaboration-patterns
+    title: 'Analyze collaboration patterns'
+    level: process
+    parent: work-management/research-and-synthesize
+    source: cookbook
+    description: 'Looking across meetings, mail, and chat to find recurring themes, time sinks, and relationships that need attention.'
+  - id: work-management/research-and-synthesize/build-personal-insight-dashboards
+    title: 'Build personal insight dashboards'
+    level: process
+    parent: work-management/research-and-synthesize
+    source: cookbook
+    description: 'Assembling a personal view of where attention is going and what needs it next, with prescriptive recommendations grounded in real signals.'
+
+  # --- Review against standards ---
+  - id: work-management/review-against-standards
+    title: 'Review against standards'
+    level: area
+    parent: work-management
+    source: cookbook
+    description: 'Checking work against an agreed standard before it goes out.'
+  - id: work-management/review-against-standards/audit-content-against-a-standard
+    title: 'Audit content against a standard'
+    level: process
+    parent: work-management/review-against-standards
+    source: cookbook
+    description: 'Reviewing a body of files or assets against a brand guide, naming convention, compliance policy, or quality bar, reporting findings without altering the originals.'
+

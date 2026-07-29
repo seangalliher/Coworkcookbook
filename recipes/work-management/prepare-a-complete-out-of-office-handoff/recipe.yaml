@@ -1,0 +1,33 @@
+id: prepare-a-complete-out-of-office-handoff
+title: "Prepare a complete out-of-office handoff"
+summary: >-
+  Step away from your laptop knowing nothing in flight will stall while you are out.
+business_value: >-
+  Step away from your laptop knowing nothing in flight will stall while you are out. A handover document built from your real work - projects, owners, deadlines, and supporting files - so coverage stays clear and execution keeps moving.
+plugin: none
+process_tags:
+  - work-management/coordinate-team-work/hand-off-work-during-absence
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Calendar Management
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

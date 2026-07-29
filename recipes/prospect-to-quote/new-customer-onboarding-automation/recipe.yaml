@@ -1,0 +1,34 @@
+id: new-customer-onboarding-automation
+title: "New customer onboarding automation"
+summary: >-
+  Close a new customer and trigger the full onboarding sequence in one prompt.
+business_value: >-
+  Close a new customer and trigger the full onboarding sequence in one prompt. A SharePoint folder, executive onboarding artifacts (PowerPoint + Word), a Teams message to the account team, and a welcome email draft - all triggered from a single new-customer email.
+plugin: none
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/conduct-post-sale-follow-up
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - PowerPoint
+    - Email
+    - Communications
+    - Enterprise Search
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

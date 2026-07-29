@@ -1,0 +1,34 @@
+id: weekly-marketing-standup-prep
+title: "Weekly marketing standup prep"
+summary: >-
+  Walk into Monday's standup with progress, blockers, owner updates, and live campaign performance already in front of you.
+business_value: >-
+  Walk into Monday's standup with progress, blockers, owner updates, and live campaign performance already in front of you. A Word standup brief - campaign progress, blockers, decisions, owner updates, and a live campaign performance read from Fabric IQ - ready to share at the meeting.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/manage-marketing-campaigns/oversee-active-campaigns
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

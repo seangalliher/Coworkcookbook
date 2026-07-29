@@ -1,0 +1,32 @@
+id: prepare-a-leadership-update
+title: "Prepare a leadership update"
+summary: >-
+  Walk into a leadership update with a deck that's on-brand, on-message, and grounded in your team's real work - without rebuilding it from scratch every cycle.
+business_value: >-
+  Walk into a leadership update with a deck that's on-brand, on-message, and grounded in your team's real work - without rebuilding it from scratch every cycle. A leadership-ready deck in Templafy using your organization's approved templates and brand standards - covering progress, priorities, and the outlook ahead - sourced from your real work context.
+plugin: none
+process_tags:
+  - work-management/manage-communications/prepare-leadership-updates
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+    - Email
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

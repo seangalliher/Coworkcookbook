@@ -1,0 +1,32 @@
+id: stand-up-a-campaign-workspace
+title: "Stand up a campaign workspace"
+summary: >-
+  Spin up a working campaign board grounded in real context - not a blank template - so the team has a single source of truth before the kickoff calendar invite goes out.
+business_value: >-
+  Spin up a working campaign board grounded in real context - not a blank template - so the team has a single source of truth before the kickoff calendar invite goes out. A Monday.com campaign board capturing workstreams, owners, deliverables, milestones, and key dates - built from your intake brief and recent campaign threads - so the campaign starts the way you want it to run.
+plugin: monday-com
+process_tags:
+  - concept-to-market/manage-marketing-campaigns/oversee-active-campaigns
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - monday.com plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

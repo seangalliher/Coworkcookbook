@@ -1,0 +1,33 @@
+id: stand-up-an-account-plan-board
+title: "Stand up an account plan board"
+summary: >-
+  Move from a scattered account plan to a structured working board the full account team can run against.
+business_value: >-
+  Move from a scattered account plan to a structured working board the full account team can run against. A Monday.com account plan board capturing stakeholders, workstreams, next steps, and owners - built from your real customer context - so the account team has a single source of truth.
+plugin: monday-com
+process_tags:
+  - prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - monday.com plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

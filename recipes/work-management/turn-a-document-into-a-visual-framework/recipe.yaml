@@ -1,0 +1,31 @@
+id: turn-a-document-into-a-visual-framework
+title: "Turn a document or deck into a visual framework"
+summary: >-
+  Take dense, written content and turn it into a clear visual the team can actually engage with - without spending the afternoon redrawing it by hand.
+business_value: >-
+  Take dense, written content and turn it into a clear visual the team can actually engage with - without spending the afternoon redrawing it by hand. A Miro visual - flowchart, mindmap, or framework diagram - that translates the source content into a clean, presentation-ready format.
+plugin: miro
+process_tags:
+  - work-management/create-and-repurpose-content/visualize-concepts-and-frameworks
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Miro plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

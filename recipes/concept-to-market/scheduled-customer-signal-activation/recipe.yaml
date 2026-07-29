@@ -1,0 +1,34 @@
+id: scheduled-customer-signal-activation
+title: "Scheduled customer signal activation"
+summary: >-
+  Run a weekly customer-signal sweep that feeds next week's messaging, content, and campaign moves - correlated against live campaign performance.
+business_value: >-
+  Run a weekly customer-signal sweep that feeds next week's messaging, content, and campaign moves - correlated against live campaign performance. Every Friday, a Word customer signal brief - themes, objections, message implications, recommended campaign adjustments, and owner follow-ups - grounded in customer voice and Fabric IQ campaign response data.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/analyze-marketing-operations/analyze-marketing-trends
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Email
+    - Scheduling
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

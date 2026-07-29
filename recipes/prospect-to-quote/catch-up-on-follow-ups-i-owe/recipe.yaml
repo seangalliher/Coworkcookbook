@@ -1,0 +1,33 @@
+id: catch-up-on-follow-ups-i-owe
+title: "Catch up on follow-ups I owe"
+summary: >-
+  Close the loop on every contact you met but never circled back to.
+business_value: >-
+  Close the loop on every contact you met but never circled back to. A list of un-re-engaged contacts with a drafted, personalized follow-up for each.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Calendar Management
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,31 @@
+id: run-deep-research-with-a-citation-map
+title: "Run deep research with a citation map"
+summary: >-
+  Read a full folder of source documents and produce a brief you can act on - key findings, conflicts, and the strongest insights surfaced, each traceable to its source.
+business_value: >-
+  Read a full folder of source documents and produce a brief you can act on - key findings, conflicts, and the strongest insights surfaced, each traceable to its source. A structured research artifact grounded in every source document, with a clickable citation map linking each insight back to the original file. Conflicts, gaps, and the three strongest findings surfaced explicitly.
+plugin: fabric-iq
+process_tags:
+  - work-management/research-and-synthesize/conduct-deep-research
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Deep Research
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

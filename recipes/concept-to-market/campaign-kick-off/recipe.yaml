@@ -1,0 +1,35 @@
+id: campaign-kick-off
+title: "Campaign kick-off"
+summary: >-
+  Stand up a new campaign with a working brief, prior campaign learnings baked in, the right stakeholders, and a kickoff already on the calendar.
+business_value: >-
+  Stand up a new campaign with a working brief, prior campaign learnings baked in, the right stakeholders, and a kickoff already on the calendar. A Word campaign brief - grounded in prior campaign performance and best practices - saved into a dedicated OneDrive workspace, plus a draft kickoff invite with relevant stakeholders.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/identify-campaign-audiences
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Email
+    - Calendar Management
+    - Scheduling
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,37 @@
+id: upsell-identification
+title: "Upsell identification"
+summary: >-
+  Find the best expansion opportunity in your book this week and arrive with a pitch already built.
+business_value: >-
+  Find the best expansion opportunity in your book this week and arrive with a pitch already built. A 5-slide PowerPoint Expansion Pack, a 1-page Word internal account plan, and a draft executive outreach email - held for review before sending.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/conduct-upsell-cross-sell-or-repeat-sale-prompt
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - PowerPoint
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

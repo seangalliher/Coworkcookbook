@@ -1,0 +1,32 @@
+id: pricing-screenshot-to-customer-presentation
+title: "Pricing screenshot -> customer presentation"
+summary: >-
+  Turn an approved pricing screenshot into a customer-ready deck - numbers exact, deck polished, email drafted.
+business_value: >-
+  Turn an approved pricing screenshot into a customer-ready deck - numbers exact, deck polished, email drafted. A customer-ready PowerPoint deck (cover, context, pricing, next steps) and a draft customer email with the deck attached - pricing slide surfaced for your approval before the rest of the deck is built.
+plugin: none
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/define-sales-quotations
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+    - Email
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

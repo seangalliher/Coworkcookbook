@@ -1,0 +1,30 @@
+id: campaign-narrative-architecture-board
+title: "Build a campaign narrative architecture board"
+summary: >-
+  Turn a campaign narrative into a structured visual the team can pressure-test before any copy gets written - so the story holds together across every audience, channel, and asset.
+business_value: >-
+  Turn a campaign narrative into a structured visual the team can pressure-test before any copy gets written - so the story holds together across every audience, channel, and asset. A Miro narrative architecture board mapping the core campaign story, message pillars, proof points, and audience adaptations - so the entire team is building from the same architecture, not interpreting the brief differently.
+plugin: miro
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/develop-campaign-themes-and-messages
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb: []
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Miro plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

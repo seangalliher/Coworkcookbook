@@ -1,0 +1,30 @@
+id: roi-and-value-selling-artifact
+title: "ROI and value selling artifact"
+summary: >-
+  Build an executive-level business value story for a customer - use cases, ROI model, and call to action - delivered as a deck and microsite.
+business_value: >-
+  Build an executive-level business value story for a customer - use cases, ROI model, and call to action - delivered as a deck and microsite. A 5-7 slide PowerPoint executive deck and an interactive HTML executive microsite - strategic context, 9 use cases, prioritization matrix, pain → outcome map, KPIs, transparent ROI model, and a workshop → pilot → scale call to action.
+plugin: none
+process_tags:
+  - prospect-to-quote/pursue-opportunities/nurture-opportunities-and-finalize-the-sale
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

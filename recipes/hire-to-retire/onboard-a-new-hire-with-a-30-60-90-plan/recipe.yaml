@@ -1,0 +1,34 @@
+id: onboard-a-new-hire-with-a-30-60-90-plan
+title: "Onboard a new hire with a complete 30-60-90-plan"
+summary: >-
+  Set a new hire up to succeed from day one - without building the plan from scratch.
+business_value: >-
+  Set a new hire up to succeed from day one - without building the plan from scratch. A Word 30-60-90-day onboarding plan, an interactive "Getting started" HTML dashboard, and recurring check-ins scheduled with the new hire across their first month.
+plugin: none
+process_tags:
+  - hire-to-retire/recruit-and-onboard-talent/onboard-new-employees
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Calendar Management
+    - Scheduling
+    - Communications
+    - Enterprise Search
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

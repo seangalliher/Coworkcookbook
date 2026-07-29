@@ -1,0 +1,33 @@
+id: build-a-customer-facing-pitch-deck-on-brand
+title: "Build a customer-facing pitch deck on brand"
+summary: >-
+  Hand the field a customer-facing pitch deck that's on-brand, on-message, and tailored to a specific exec audience - instead of letting every team rebuild from a generic template.
+business_value: >-
+  Hand the field a customer-facing pitch deck that's on-brand, on-message, and tailored to a specific exec audience - instead of letting every team rebuild from a generic template. A Templafy pitch deck for an enterprise audience - grounded in the platform release messaging and the customer's strategic context - built on approved corporate templates so the field can lead with it.
+plugin: none
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/create-marketing-material
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+    - Email
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,35 @@
+id: event-marketing-command-center
+title: "Event marketing command center"
+summary: >-
+  Prep every moment of [Event name] - speaker slots, customer meetings, content drops, social posts - and bring it together in a single interactive command center with live event KPIs.
+business_value: >-
+  Prep every moment of [Event name] - speaker slots, customer meetings, content drops, social posts - and bring it together in a single interactive command center with live event KPIs. An interactive HTML command center with one row per event moment linked to its supporting artifact, plus live event KPIs from Fabric IQ - registrations, pipeline influenced, attendee engagement - surfaced alongside the programming.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/plan-events
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - PowerPoint
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

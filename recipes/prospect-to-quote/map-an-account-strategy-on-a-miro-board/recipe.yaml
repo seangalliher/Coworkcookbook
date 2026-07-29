@@ -1,0 +1,33 @@
+id: map-an-account-strategy-on-a-miro-board
+title: "Map an account strategy on a Miro board"
+summary: >-
+  Turn an account strategy conversation into a visual map the team can rally around - without spending an afternoon assembling it by hand.
+business_value: >-
+  Turn an account strategy conversation into a visual map the team can rally around - without spending an afternoon assembling it by hand. A Miro account strategy board - stakeholders, deal stages, key initiatives, and strategic priorities visualized in one place - paired with a tracking table the team can update as the strategy evolves.
+plugin: miro
+process_tags:
+  - prospect-to-quote/define-sales-strategy-and-policies/define-sales-process
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Miro plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

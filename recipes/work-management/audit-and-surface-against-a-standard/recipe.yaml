@@ -1,0 +1,30 @@
+id: audit-and-surface-against-a-standard
+title: "Audit and surface against a standard"
+summary: >-
+  Apply a brand guide, naming convention, compliance policy, or quality standard across dozens of files - without manually reviewing each one and without risking accidental changes.
+business_value: >-
+  Apply a brand guide, naming convention, compliance policy, or quality standard across dozens of files - without manually reviewing each one and without risking accidental changes. A sortable audit report showing every violation, its severity, and a recommended fix - so you can prioritize manual cleanup confidently.
+plugin: none
+process_tags:
+  - work-management/review-against-standards/audit-content-against-a-standard
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

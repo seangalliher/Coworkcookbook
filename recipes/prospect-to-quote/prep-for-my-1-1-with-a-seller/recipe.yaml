@@ -1,0 +1,33 @@
+id: prep-for-my-1-1-with-a-seller
+title: "Prep for my 1:1 with a seller"
+summary: >-
+  Walk into every 1:1 with the full picture on your seller's book - and a coaching plan, not just talking points.
+business_value: >-
+  Walk into every 1:1 with the full picture on your seller's book - and a coaching plan, not just talking points. A structured 1:1 prep brief and an interactive coaching dashboard - showing pipeline, deal movement, win/loss trend, and a focused set of coaching themes ready to work through together.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/analyze-sales/provide-insights-into-sales-strategies-and-performance
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

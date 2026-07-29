@@ -1,0 +1,30 @@
+id: customer-adoption-materials
+title: "Customer adoption materials"
+summary: >-
+  Build a role-relevant learning curriculum for a customer - structured, sourced, and deployment-ready.
+business_value: >-
+  Build a role-relevant learning curriculum for a customer - structured, sourced, and deployment-ready. A full Markdown curriculum with three progressive learning paths (Beginner, Intermediate, Advanced) - each with sequenced resource tables, persona-tailored application notes, and a recommended rollout order for the customer's champion or power-user program.
+plugin: none
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/conduct-post-sale-follow-up
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

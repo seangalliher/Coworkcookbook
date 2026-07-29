@@ -1,0 +1,32 @@
+id: find-the-deals-that-need-my-help
+title: "Find the deals that need my help"
+summary: >-
+  Know where your attention moves the number this week - and understand why each deal is stuck, not just that it is
+business_value: >-
+  Know where your attention moves the number this week - and understand why each deal is stuck, not just that it is A prioritized list of team deals needing manager involvement, paired with a deep research report that digs into the at-risk opportunities - root cause, account context, and a recommended play for each.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/pursue-opportunities/manage-opportunity-process
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Deep Research
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

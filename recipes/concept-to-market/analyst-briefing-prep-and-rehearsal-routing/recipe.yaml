@@ -1,0 +1,32 @@
+id: analyst-briefing-prep-and-rehearsal-routing
+title: "Analyst briefing prep and rehearsal routing"
+summary: >-
+  Prep the [Analyst Firm] briefing package and get the team rehearsed before the room.
+business_value: >-
+  Prep the [Analyst Firm] briefing package and get the team rehearsed before the room. An interactive HTML briefing dashboard - positioning, top three messages, anticipated Q&A, speaker notes - and a rehearsal locked on the calendar 48 hours out with the dashboard attached on approval.
+plugin: none
+process_tags:
+  - concept-to-market/develop-marketing-strategy/define-value-proposition
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

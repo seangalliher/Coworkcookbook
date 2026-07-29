@@ -1,0 +1,31 @@
+id: catch-up-on-messages-and-send-replies
+title: "Catch up on messages and send replies automatically"
+summary: >-
+  Close the loop on unanswered questions without scrolling back through a week of threads.
+business_value: >-
+  Close the loop on unanswered questions without scrolling back through a week of threads. Routine acknowledgments handled automatically, higher-stakes replies drafted for review - so you stay responsive without spending hours catching up.
+plugin: none
+process_tags:
+  - work-management/manage-communications/triage-and-respond-to-messages
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

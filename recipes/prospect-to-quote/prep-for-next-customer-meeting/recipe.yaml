@@ -1,0 +1,35 @@
+id: prep-for-next-customer-meeting
+title: "Prep for my next customer meeting"
+summary: >-
+  Walk into your next call already knowing the account cold - no scramble through CRM tabs and email.
+business_value: >-
+  Walk into your next call already knowing the account cold - no scramble through CRM tabs and email. A single meeting-prep brief pulling account history, open opportunities, recent activity, and calendar context.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Email
+    - Calendar Management
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,32 @@
+id: weekly-external-customer-email-review
+title: "Weekly external customer email review"
+summary: >-
+  Every Monday, surface action items from external customer emails, draft replies in thread, and remind yourself to review before anything goes out.
+business_value: >-
+  Every Monday, surface action items from external customer emails, draft replies in thread, and remind yourself to review before anything goes out. Outlook draft replies waiting in your Drafts folder, an email summary reminder, and a Teams self-message - queued every Monday morning so the inbox is already moving when you sit down.
+plugin: none
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/nurture-trust-relationship-regularly-with-customer
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Scheduling
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

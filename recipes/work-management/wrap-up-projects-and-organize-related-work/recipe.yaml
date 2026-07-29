@@ -1,0 +1,30 @@
+id: wrap-up-projects-and-organize-related-work
+title: "Wrap up projects and organize all related work"
+summary: >-
+  Close out a project with a clean, shareable archive - not a scattered trail of files.
+business_value: >-
+  Close out a project with a clean, shareable archive - not a scattered trail of files. A single OneDrive folder with the project's deliverables and references, shared with the team so the work stays findable and easy to reference.
+plugin: none
+process_tags:
+  - work-management/organize-information/archive-completed-work
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

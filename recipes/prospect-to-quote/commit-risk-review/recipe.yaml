@@ -1,0 +1,35 @@
+id: commit-risk-review
+title: "Commit risk review"
+summary: >-
+  Know which Commit deals are at risk before quarter-end - with follow-ups drafted and CRM updated.
+business_value: >-
+  Know which Commit deals are at risk before quarter-end - with follow-ups drafted and CRM updated. A one-page PowerPoint risk summary, a targeted follow-up email per at-risk deal, and a CRM update file with risk flags and dated follow-up tasks
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/analyze-sales/analyze-sales-data
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - PowerPoint
+    - Email
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

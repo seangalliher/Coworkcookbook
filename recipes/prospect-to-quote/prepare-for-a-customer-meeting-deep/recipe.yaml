@@ -1,0 +1,37 @@
+id: prepare-for-a-customer-meeting-deep
+title: "Prepare for a customer meeting"
+summary: >-
+  Walk into your next customer meeting fully briefed - context pulled, deck built, prep time blocked.
+business_value: >-
+  Walk into your next customer meeting fully briefed - context pulled, deck built, prep time blocked. A Word briefing document, an Excel customer trends overview, a client-ready PowerPoint pitch, a calendar prep block, and a draft customer update email - all sequenced before the meeting.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - PowerPoint
+    - Email
+    - Calendar Management
+    - Scheduling
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

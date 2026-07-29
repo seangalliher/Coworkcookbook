@@ -1,0 +1,34 @@
+id: post-launch-readout-and-optimization
+title: "Post-launch readout and optimization routing"
+summary: >-
+  Close the [Product name] launch loop - what worked, what didn't, and what comes next - grounded in live launch data, not exported snapshots.
+business_value: >-
+  Close the [Product name] launch loop - what worked, what didn't, and what comes next - grounded in live launch data, not exported snapshots. A Word executive summary as the cover, a PowerPoint readout deck for exec review, and an owner-routed Excel optimization action plan - all built directly from Fabric IQ launch performance data.
+plugin: fabric-iq
+process_tags:
+  - concept-to-market/analyze-marketing-operations/evaluate-campaign-performance
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - PowerPoint
+    - Email
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Fabric IQ plugin enabled in your Cowork session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

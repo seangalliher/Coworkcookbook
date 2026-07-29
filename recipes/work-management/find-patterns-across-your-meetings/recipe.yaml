@@ -1,0 +1,31 @@
+id: find-patterns-across-your-meetings
+title: "Find patterns across your meetings"
+summary: >-
+  Surface the themes that are repeating across your meetings - without re-listening, re-reading transcripts, or relying on memory.
+business_value: >-
+  Surface the themes that are repeating across your meetings - without re-listening, re-reading transcripts, or relying on memory. A pattern report identifying the most common themes across your recent meetings, with representative quotes, the meetings where each came up, and a recommended action for each.
+plugin: none
+process_tags:
+  - work-management/research-and-synthesize/analyze-collaboration-patterns
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Scheduling
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

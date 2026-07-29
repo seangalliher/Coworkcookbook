@@ -1,0 +1,32 @@
+id: turn-inbox-noise-into-an-intelligence-brief
+title: "Turn inbox noise into a curated intelligence brief"
+summary: >-
+  Cut through a week of newsletters to the stories that actually matter to your work.
+business_value: >-
+  Cut through a week of newsletters to the stories that actually matter to your work. A curated weekly brief that surfaces meaningful trends across the publications you follow - without the time spent reading them.
+plugin: none
+process_tags:
+  - work-management/research-and-synthesize/curate-information-briefs
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Scheduling
+    - Deep Research
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

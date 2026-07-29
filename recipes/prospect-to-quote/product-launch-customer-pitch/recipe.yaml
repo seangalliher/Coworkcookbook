@@ -1,0 +1,34 @@
+id: product-launch-customer-pitch
+title: "Product launch customer pitch"
+summary: >-
+  Turn a competitor announcement into a sharp, differentiated customer pitch - built and ready before tomorrow's meeting.
+business_value: >-
+  Turn a competitor announcement into a sharp, differentiated customer pitch - built and ready before tomorrow's meeting. An Excel competitive comparison, a Word value prop document, and a customer-ready PowerPoint pitch deck - a three-artifact kit ready for tomorrow's meeting.
+plugin: none
+process_tags:
+  - prospect-to-quote/pursue-opportunities/nurture-opportunities-and-finalize-the-sale
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+    - PowerPoint
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

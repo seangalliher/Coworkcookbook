@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/seangalliher/Coworkcookbook/blob/main/schemas/business-processes.schema.json",
-  "title": "Business Process Catalog Taxonomy",
-  "description": "Hierarchical taxonomy mirroring Microsoft's Business Process Catalog (end-to-end -> area -> process -> activity).",
+  "title": "Business Process Taxonomy",
+  "description": "Hierarchical process taxonomy (end-to-end -> area -> process -> activity). Built on Microsoft's Business Process Catalog, which supplies the initial fifteen end-to-end domains, and extended with additional domains where the catalog has no equivalent. Not a 1:1 mirror.",
   "type": "object",
   "additionalProperties": false,
   "required": ["version", "nodes"],
@@ -24,6 +24,12 @@
         "title": { "type": "string", "minLength": 2 },
         "description": { "type": "string" },
         "level": { "type": "string", "enum": ["end-to-end", "area", "process", "activity"] },
+        "source": {
+          "type": "string",
+          "enum": ["bpc", "cookbook"],
+          "default": "bpc",
+          "description": "Where the node came from. 'bpc' = imported from Microsoft's Business Process Catalog; 'cookbook' = defined here. Lets ingest_bpc.py refresh the catalog without deleting locally defined nodes."
+        },
         "parent": { "type": "string", "description": "id of parent node; omitted for end-to-end" },
         "bpmn": { "type": "string", "description": "relative path to .bpmn file under taxonomy/bpmn/" },
         "ms_bpc_id": { "type": "string", "description": "Microsoft BPC stable id (e.g., d6689987c110v0)." },

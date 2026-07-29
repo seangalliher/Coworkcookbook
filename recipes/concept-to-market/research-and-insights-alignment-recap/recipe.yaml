@@ -1,0 +1,32 @@
+id: research-and-insights-alignment-recap
+title: "Research and insights alignment recap"
+summary: >-
+  Surface everything that came out of this week's research sessions - what landed, what didn't, and what still needs an owner.
+business_value: >-
+  Surface everything that came out of this week's research sessions - what landed, what didn't, and what still needs an owner. A Teams post recapping decisions made, open issues, and named next steps - posted to the team channel so everyone walks into next week aligned.
+plugin: none
+process_tags:
+  - concept-to-market/develop-marketing-strategy/perform-market-research
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

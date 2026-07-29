@@ -1,0 +1,32 @@
+id: find-my-best-expansion-accounts
+title: "Find my best expansion accounts"
+summary: >-
+  Surface the accounts most likely to grow - and arrive at each one with the expansion case already built.
+business_value: >-
+  Surface the accounts most likely to grow - and arrive at each one with the expansion case already built. A ranked expansion shortlist plus a one-page expansion brief per top account - the spend-growth signals, the likely expansion play, and the stakeholders to engage.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/conduct-upsell-cross-sell-or-repeat-sale-prompt
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,31 @@
+id: map-a-workflow-from-a-process-description
+title: "Map a workflow from a process description"
+summary: >-
+  Make a workflow shareable, reviewable, and improvable - without spending hours building the diagram by hand.
+business_value: >-
+  Make a workflow shareable, reviewable, and improvable - without spending hours building the diagram by hand. A clear Miro flowchart of the process, paired with a narrative doc that captures purpose, ownership, handoffs, and risks - turning tribal knowledge into an artifact the team can act on.
+plugin: miro
+process_tags:
+  - work-management/create-and-repurpose-content/diagram-processes-and-workflows
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Miro plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

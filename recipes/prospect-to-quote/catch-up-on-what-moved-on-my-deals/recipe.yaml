@@ -1,0 +1,34 @@
+id: catch-up-on-what-moved-on-my-deals
+title: "Catch up on what moved on my deals"
+summary: >-
+  Know what changed across your top deals without reading back through a week of threads.
+business_value: >-
+  Know what changed across your top deals without reading back through a week of threads. A per-deal change readout across your top opportunities, fusing CRM movement with communication signals.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/pursue-opportunities/manage-opportunity-process
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Meetings
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Dynamics 365 Sales plugin enabled in your Cowork session, bound to your CRM environment
+  - A Dynamics 365 Sales licence
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

@@ -1,0 +1,32 @@
+id: turn-source-content-into-a-deck
+title: "Turn source content into a deck"
+summary: >-
+  Get a working deck built from content you already have - without starting from a blank slide.
+business_value: >-
+  Get a working deck built from content you already have - without starting from a blank slide. A ready-to-present Prezi deck built from your source content, structured into clear sections with visuals applied.
+plugin: prezi
+process_tags:
+  - work-management/create-and-repurpose-content/build-presentations-from-source-material
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - Prezi plugin enabled and connected to your account
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

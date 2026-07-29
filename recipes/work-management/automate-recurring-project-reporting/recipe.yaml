@@ -1,0 +1,33 @@
+id: automate-recurring-project-reporting
+title: "Automate recurring project reporting"
+summary: >-
+  Replace the manual "pull the board, write the update, send it out" Monday-morning cycle with a status update that writes and sends itself.
+business_value: >-
+  Replace the manual "pull the board, write the update, send it out" Monday-morning cycle with a status update that writes and sends itself. A recurring stakeholder update - drafted from real board data and delivered on cadence - so progress, risks, and deadlines stay visible without anyone chasing them.
+plugin: monday-com
+process_tags:
+  - work-management/coordinate-team-work/automate-recurring-reporting
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Scheduling
+    - Communications
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+  - monday.com plugin enabled and connected to your workspace
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

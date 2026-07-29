@@ -1,0 +1,30 @@
+id: messaging-drift-audit-and-remediation
+title: "Messaging drift audit and remediation routing"
+summary: >-
+  Catch messaging drift across every asset in [Folder] before it shows up in market.
+business_value: >-
+  Catch messaging drift across every asset in [Folder] before it shows up in market. A sortable Excel audit report flagging every inconsistency by severity, recommended fix, and the right owner - so cleanup happens in priority order.
+plugin: none
+process_tags:
+  - concept-to-market/prepare-marketing-campaigns/develop-campaign-themes-and-messages
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

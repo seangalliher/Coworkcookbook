@@ -1,0 +1,33 @@
+id: rebalance-your-week-and-protect-focus-time
+title: "Rebalance your week and protect focus time"
+summary: >-
+  Take control of a fragmented calendar before it takes control of your week.
+business_value: >-
+  Take control of a fragmented calendar before it takes control of your week. A rebalanced schedule that protects focus time, prioritizes high-impact meetings, and resolves conflicts - without manually negotiating your own availability.
+plugin: none
+process_tags:
+  - work-management/plan-and-prioritize-work/manage-time-and-focus
+recipe_type: prompt
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Email
+    - Calendar Management
+    - Scheduling
+    - Meetings
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

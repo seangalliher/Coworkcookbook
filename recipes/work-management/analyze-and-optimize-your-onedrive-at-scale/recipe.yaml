@@ -1,0 +1,30 @@
+id: analyze-and-optimize-your-onedrive-at-scale
+title: "Analyze and optimize your OneDrive at scale"
+summary: >-
+  Turn a sprawling OneDrive into a structured catalog you can actually act on.
+business_value: >-
+  Turn a sprawling OneDrive into a structured catalog you can actually act on. An organization plan and visual overview of your files - with cleanup decisions queued up for your approval.
+plugin: none
+process_tags:
+  - work-management/organize-information/catalog-and-clean-up-file-stores
+recipe_type: prompt
+difficulty: advanced
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - PowerPoint
+  plugin: []
+  custom: []
+prerequisites:
+  - Microsoft 365 Copilot licence with access to Cowork
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"
