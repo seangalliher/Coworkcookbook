@@ -110,3 +110,67 @@ plugins:
       - id: api_invoke_action
         name: Invoke custom action
         description: Invoke a registered ICustomAPI action.
+
+  - id: dynamics-365-sales
+    name: Dynamics 365 Sales
+    description: >-
+      Read and write Dynamics 365 Sales data via the Dataverse Model Context
+      Protocol (MCP) server. The plugin binds to a Power Platform environment
+      rather than a legal entity, and addresses every table that environment
+      contains - so it also reaches other Dataverse-based Dynamics 365 apps
+      installed there, including Field Service and the Project Operations Core
+      deployment app. Writes pause at a Cowork checkpoint for user approval.
+      Tool names below reflect the post-rename surface - describe_table,
+      list_tables and fetch were folded into describe, and the old data-search
+      search was renamed search_data.
+    docs: https://learn.microsoft.com/en-us/dynamics365/sales/use-copilot-cowork-sales-skills
+    actions:
+      # Discovery - metadata first, then query.
+      - id: search
+        name: Search schemas and skills
+        description: Search table schemas and business skills by keyword. Metadata search, not data search.
+      - id: describe
+        name: Describe
+        description: Get details from search results for tables, records, schemas, skills, and apps.
+      - id: search_data
+        name: Search data
+        description: Search structured and unstructured data across the environment.
+      - id: read_query
+        name: Read query (Dataverse SQL)
+        description: Run supported Dataverse SQL SELECT queries. The workhorse for read-only analytics.
+      # Writes - each gated by a Cowork checkpoint.
+      - id: create_record
+        name: Create record
+        description: Insert a new row into a Dataverse table and return its GUID.
+      - id: update_record
+        name: Update record
+        description: Update an existing row in a Dataverse table.
+      - id: delete_record
+        name: Delete record
+        description: Delete a row. Requires explicit user approval.
+      # Schema management - rarely appropriate in a recipe.
+      - id: create_table
+        name: Create table
+        description: Create a new table with a specified schema.
+      - id: update_table
+        name: Update table
+        description: Modify the schema or metadata of an existing table.
+      - id: delete_table
+        name: Delete table
+        description: Delete a table. Requires explicit user approval.
+      # Dataverse skills (playbooks) and files.
+      - id: upsert_skill
+        name: Upsert Dataverse skill
+        description: Add or update a Dataverse skill/playbook.
+      - id: delete_skill
+        name: Delete Dataverse skill
+        description: Delete a Dataverse skill/playbook by name.
+      - id: init_file_upload
+        name: Start file upload
+        description: Generate a SAS URL for a file upload.
+      - id: commit_file_upload
+        name: Commit file upload
+        description: Commit a file upload.
+      - id: file_download
+        name: Download file
+        description: Generate a SAS URL for a file download.

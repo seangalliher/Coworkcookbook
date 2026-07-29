@@ -1,0 +1,40 @@
+id: account-360-briefing
+title: Account 360 Briefing Pack
+summary: >-
+  Assembles everything Dynamics 365 Sales knows about a named account into a single briefing document you can read before a meeting.
+business_value: >-
+  Replaces fifteen minutes of clicking through related-record tabs with a single document. Sellers walk into customer conversations with the full relationship history rather than whatever they could skim on the way in.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/manage-customer-relationships/maintain-contacts-and-accounts
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Word
+    - Excel
+  plugin:
+    - plugin: dynamics-365-sales
+      action: search
+    - plugin: dynamics-365-sales
+      action: describe
+    - plugin: dynamics-365-sales
+      action: read_query
+  custom: []
+prerequisites:
+  - A Dynamics 365 Sales licence and access to a Dynamics 365 Sales environment
+  - The Dynamics 365 Sales plugin enabled in your Cowork session (+ > Customize > Dynamics 365 Sales)
+  - The plugin bound to the environment you want to analyze (gear icon on the plugin tile)
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"

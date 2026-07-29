@@ -1,0 +1,39 @@
+id: customer-relationship-health-check
+title: Customer Relationship Health Check
+summary: >-
+  Scores the accounts you own for relationship health using contact coverage, engagement recency, and open-pipeline signals.
+business_value: >-
+  Single-threaded and quietly dormant accounts are the ones that churn or get lost to a competitor without warning. This finds them while there is still time to build coverage.
+plugin: dynamics-365-sales
+process_tags:
+  - prospect-to-quote/estimate-and-quote-sales/nurture-trust-relationship-regularly-with-customer
+recipe_type: prompt
+difficulty: intermediate
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+  plugin:
+    - plugin: dynamics-365-sales
+      action: search
+    - plugin: dynamics-365-sales
+      action: describe
+    - plugin: dynamics-365-sales
+      action: read_query
+  custom: []
+prerequisites:
+  - A Dynamics 365 Sales licence and access to a Dynamics 365 Sales environment
+  - The Dynamics 365 Sales plugin enabled in your Cowork session (+ > Customize > Dynamics 365 Sales)
+  - The plugin bound to the environment you want to analyze (gear icon on the plugin tile)
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"
