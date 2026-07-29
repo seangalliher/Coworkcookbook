@@ -1,0 +1,35 @@
+id: d365-recipe-planner
+title: D365 Recipe Planner
+summary: >-
+  A guided planning skill that turns "I want to automate something in Dynamics 365" into a runnable Copilot Cowork prompt, plus a predicted cost tier explaining what drives the estimate.
+business_value: >-
+  Lowers the barrier to authoring Cowork automations. A short interview replaces trial-and-error prompt writing, the generated prompt names the correct plugin and scope anchor for the chosen app, and the cost tier tells you what a run commits you to before you make it.
+plugin: none
+process_tags:
+  - administer-to-operate/administer-system-features/configure-and-manage-copilot-capabilities
+recipe_type: prompt+skill
+difficulty: beginner
+mutates_data: false
+generated_by: human
+reviewed_by: seangalliher
+status: verified
+last_verified_on: "2026-07-28"
+verified_against_cowork_build: "m365.cloud.microsoft 2026-07-28"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb: []
+  plugin: []
+  custom:
+    - d365-recipe-planner
+prerequisites:
+  - Copilot Cowork access
+  - Install the d365-recipe-planner skill - either publish it as a Cowork plugin and turn it on under + > Customize, or drop the skill folder at Documents/Cowork/skills/d365-recipe-planner/ in your OneDrive
+  - "No Dynamics 365 plugin is required: the planner writes prompts, it does not query D365"
+  - "Optional: enable a Dynamics 365 Sales or ERP plugin if you want the planner to confirm entity names against your tenant before finalizing a prompt"
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-07-28"
+version: "1.0.0"
