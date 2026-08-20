@@ -1,0 +1,28 @@
+%% Procurement Spend & Supplier Risk Blueprint
+%% Generated from Microsoft Business Process Catalog node: source-to-pay/analyze-procurement-and-sourcing
+%% Source of truth: taxonomy/business-processes.yaml — regenerate, do not hand-edit.
+flowchart TD
+    TRIGGER(["Trigger: quarterly,<br/>first business day"]):::trigger
+    INPUTS[/"Input variables<br/>legalEntity = USMF<br/>fiscalYear = 2017<br/>concentrationThreshold = 20"/]:::inputs
+    TRIGGER --> INPUTS
+    subgraph P0["1 · Measure spend"]
+        S0["Measure and analyze<br/>procurement spend"]
+        S1["Manage supplier<br/>performance"]
+    end
+    subgraph P1["2 · Assess exposure"]
+        S2["Analyze account payable"]
+        S3["Manage procurement risks"]
+    end
+    INPUTS --> S0
+    S0 --> G_S0{"Purchase activity found?"}
+    G_S0 -- "No spend data" --> H_S0[["Report that the entity<br/>has no purchase spend<br/>and stop"]]:::halt
+    G_S0 -- "Yes" --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> OUTPUT[/"Outputs<br/>procurement-spend-review.xlsx"/]:::outputs
+    OUTPUT --> NOTIFY(["Email the spend summary<br/>to me"]):::notify
+    classDef trigger fill:#1e3a8a,stroke:#1e3a8a,color:#ffffff,font-weight:bold
+    classDef inputs fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
+    classDef outputs fill:#f0fdf4,stroke:#16a34a,color:#14532d
+    classDef notify fill:#7c3aed,stroke:#7c3aed,color:#ffffff,font-weight:bold
+    classDef halt fill:#fef2f2,stroke:#dc2626,color:#7f1d1d

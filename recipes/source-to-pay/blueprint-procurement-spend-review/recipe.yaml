@@ -1,0 +1,51 @@
+id: blueprint-procurement-spend-review
+title: Procurement Spend & Supplier Risk Blueprint
+summary: >-
+  Paste this procurement-analysis workflow blueprint into Cowork and it profiles spend by vendor, flags concentration risk, and surfaces payable exposure.
+business_value: >-
+  Shows where spend is concentrated in a handful of suppliers before that concentration becomes a continuity problem, and does it without waiting on a BI request.
+plugin: dynamics-365-erp
+process_tags:
+  - source-to-pay/analyze-procurement-and-sourcing
+recipe_type: prompt+blueprint
+difficulty: advanced
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: draft
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - Email
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+blueprint:
+  mermaid: blueprint.mmd
+  image: blueprint.png
+  source_node: source-to-pay/analyze-procurement-and-sourcing
+  inputs:
+    - name: "legalEntity"
+      value: "USMF"
+      description: "Legal entity to scope every query to."
+    - name: "fiscalYear"
+      value: "2017"
+      description: "Year to profile. USMF posted activity is mostly FY2017."
+    - name: "concentrationThreshold"
+      value: "20"
+      description: "Percent of total spend with one vendor that flags concentration risk."
+prerequisites:
+  - Dynamics 365 F&SCM access with the Procurement and Accounts payable roles
+  - Cowork D365 ERP plugin toggled on in the session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-08-20"
+version: "1.0.0"

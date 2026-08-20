@@ -1,0 +1,29 @@
+%% Period Close Readiness Blueprint
+%% Generated from Microsoft Business Process Catalog node: record-to-report/close-financial-periods
+%% Reference: https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/record-to-report-close-financial-periods
+%% Source of truth: taxonomy/business-processes.yaml — regenerate, do not hand-edit.
+flowchart TD
+    TRIGGER(["Trigger: monthly,<br/>business day 3"]):::trigger
+    INPUTS[/"Input variables<br/>periodName = 2017-12<br/>legalEntity = USMF<br/>materialityThreshold = 10000"/]:::inputs
+    TRIGGER --> INPUTS
+    subgraph P0["1 · Assess the period"]
+        S0["Finalize and post<br/>transactions"]
+        S1["Reconcile ledger and<br/>subledger"]
+        S2["Revalue currency"]
+    end
+    subgraph P1["2 · Report readiness"]
+        S3["Close periods"]
+    end
+    INPUTS --> S0
+    S0 --> G_S0{"Period has posted<br/>activity?"}
+    G_S0 -- "No activity" --> H_S0[["Report that the period<br/>is empty and stop"]]:::halt
+    G_S0 -- "Yes" --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> OUTPUT[/"Outputs<br/>close-readiness.xlsx"/]:::outputs
+    OUTPUT --> NOTIFY(["Email the readiness<br/>summary to me"]):::notify
+    classDef trigger fill:#1e3a8a,stroke:#1e3a8a,color:#ffffff,font-weight:bold
+    classDef inputs fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
+    classDef outputs fill:#f0fdf4,stroke:#16a34a,color:#14532d
+    classDef notify fill:#7c3aed,stroke:#7c3aed,color:#ffffff,font-weight:bold
+    classDef halt fill:#fef2f2,stroke:#dc2626,color:#7f1d1d

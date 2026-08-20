@@ -1,0 +1,29 @@
+%% Open Position & Onboarding Readiness Blueprint
+%% Generated from Microsoft Business Process Catalog node: hire-to-retire/recruit-and-onboard-talent
+%% Reference: https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/hire-to-retire-plan-recruit-workforce-overview
+%% Source of truth: taxonomy/business-processes.yaml — regenerate, do not hand-edit.
+flowchart TD
+    TRIGGER(["Trigger: weekly, Monday<br/>morning"]):::trigger
+    INPUTS[/"Input variables<br/>legalEntity = USMF<br/>asOfDate = 2017-12-31<br/>vacancyAgeDays = 90"/]:::inputs
+    TRIGGER --> INPUTS
+    subgraph P0["1 · Assess demand"]
+        S0["Budget workforce"]
+        S1["List open positions"]
+    end
+    subgraph P1["2 · Assess pipeline"]
+        S2["Hire for open positions"]
+        S3["Onboard new employees"]
+    end
+    INPUTS --> S0
+    S0 --> S1
+    S1 --> G_S1{"Open positions found?"}
+    G_S1 -- "All filled" --> H_S1[["Report that every<br/>position is filled and<br/>stop"]]:::halt
+    G_S1 -- "Yes" --> S2
+    S2 --> S3
+    S3 --> OUTPUT[/"Outputs<br/>position-readiness.xlsx"/]:::outputs
+    OUTPUT --> NOTIFY(["Email the staffing<br/>summary to me"]):::notify
+    classDef trigger fill:#1e3a8a,stroke:#1e3a8a,color:#ffffff,font-weight:bold
+    classDef inputs fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
+    classDef outputs fill:#f0fdf4,stroke:#16a34a,color:#14532d
+    classDef notify fill:#7c3aed,stroke:#7c3aed,color:#ffffff,font-weight:bold
+    classDef halt fill:#fef2f2,stroke:#dc2626,color:#7f1d1d
