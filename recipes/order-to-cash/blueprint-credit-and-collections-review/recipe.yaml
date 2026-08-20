@@ -1,0 +1,54 @@
+id: blueprint-credit-and-collections-review
+title: Credit & Collections Review Blueprint
+summary: >-
+  Paste this credit-and-collections workflow blueprint into Cowork and it ranks customers by credit exposure and overdue balance, then proposes a collections worklist.
+business_value: >-
+  Points the collections team at the handful of accounts carrying real exposure instead of working the aging report top to bottom, which shortens days sales outstanding.
+plugin: dynamics-365-erp
+process_tags:
+  - order-to-cash/manage-credit-and-collections
+recipe_type: prompt+blueprint
+difficulty: advanced
+mutates_data: false
+min_plugin_version: "1.0.0"
+generated_by: copilot
+reviewed_by: seangalliher
+status: verified
+last_verified_on: "2026-08-20"
+verified_against_cowork_build: "m365.cloud.microsoft 2026-08-20"
+deprecated: false
+license: CC-BY-4.0
+uses_skills:
+  ootb:
+    - Excel
+    - Email
+  plugin:
+    - plugin: dynamics-365-erp
+      action: data_find_entity_type
+    - plugin: dynamics-365-erp
+      action: data_find_entities_sql
+  custom: []
+blueprint:
+  mermaid: blueprint.mmd
+  image: blueprint.png
+  source_node: order-to-cash/manage-credit-and-collections
+  clarifying_questions_asked: 0
+  inputs:
+    - name: "legalEntity"
+      value: "USMF"
+      description: "Legal entity to scope every query to."
+    - name: "asOfDate"
+      value: "2023-11-30"
+      description: "Aging as-of date. USMF customer AR runs through 2023-11-29."
+    - name: "riskThreshold"
+      value: "80"
+      description: "Percent of credit limit consumed that flags a customer as at-risk."
+prerequisites:
+  - Dynamics 365 F&SCM access with the Accounts receivable role
+  - Cowork D365 ERP plugin toggled on in the session
+youtube: []
+authors:
+  - github: seangalliher
+    name: Sean Galliher
+created: "2026-08-20"
+version: "1.0.0"

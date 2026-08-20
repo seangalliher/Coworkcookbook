@@ -1,0 +1,29 @@
+%% Credit & Collections Review Blueprint
+%% Generated from Microsoft Business Process Catalog node: order-to-cash/manage-credit-and-collections
+%% Reference: https://learn.microsoft.com/en-us/dynamics365/guidance/business-processes/order-to-cash-monitor-customer-credit-collections-overview
+%% Source of truth: taxonomy/business-processes.yaml — regenerate, do not hand-edit.
+flowchart TD
+    TRIGGER(["Trigger: weekly, Monday<br/>morning"]):::trigger
+    INPUTS[/"Input variables<br/>legalEntity = USMF<br/>asOfDate = 2023-11-30<br/>riskThreshold = 80"/]:::inputs
+    TRIGGER --> INPUTS
+    subgraph P0["1 · Assess exposure"]
+        S0["Assess customer credit<br/>risk"]
+        S1["Manage customer holds"]
+        S2["Monitor customer credit"]
+    end
+    subgraph P1["2 · Prioritize collections"]
+        S3["Manage customer<br/>collections"]
+    end
+    INPUTS --> S0
+    S0 --> G_S0{"Open AR balances found?"}
+    G_S0 -- "No open AR" --> H_S0[["Report that there is no<br/>open receivable and stop"]]:::halt
+    G_S0 -- "Yes" --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> OUTPUT[/"Outputs<br/>credit-collections-review.xlsx"/]:::outputs
+    OUTPUT --> NOTIFY(["Email the collections<br/>worklist to me"]):::notify
+    classDef trigger fill:#1e3a8a,stroke:#1e3a8a,color:#ffffff,font-weight:bold
+    classDef inputs fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
+    classDef outputs fill:#f0fdf4,stroke:#16a34a,color:#14532d
+    classDef notify fill:#7c3aed,stroke:#7c3aed,color:#ffffff,font-weight:bold
+    classDef halt fill:#fef2f2,stroke:#dc2626,color:#7f1d1d
