@@ -57,7 +57,38 @@
       "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$" },
       "uniqueItems": true
     },
-    "recipe_type": { "type": "string", "enum": ["prompt", "prompt+skill"] },
+    "recipe_type": { "type": "string", "enum": ["prompt", "prompt+skill", "prompt+blueprint"] },
+    "blueprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mermaid", "image", "inputs"],
+      "description": "A workflow diagram the user pastes into Cowork alongside the prompt. The diagram carries the SHAPE of the process; prompt.md binds every input to a concrete VALUE so the agent needs no clarifying turns.",
+      "properties": {
+        "mermaid": { "type": "string", "pattern": "^[a-z0-9._-]+\\.mmd$", "description": "Mermaid source filename in the recipe folder. Canonical artifact; the image is derived from it." },
+        "image": { "type": "string", "pattern": "^[a-z0-9._-]+\\.(png|svg)$", "description": "Rendered diagram filename in the recipe folder. This is the file the user pastes into Cowork." },
+        "source_node": { "type": "string", "description": "Taxonomy node id the blueprint was generated from, e.g. record-to-report/close-financial-periods." },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Every variable the diagram references. Each must be bound by prompt.md — an unbound input is what makes Cowork ask a clarifying question.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "value"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "value": { "type": "string", "minLength": 1 },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "clarifying_questions_asked": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "How many questions Cowork asked before executing, measured during verification. 0 is the quality bar."
+        }
+      }
+    },
     "difficulty": { "type": "string", "enum": ["beginner", "intermediate", "advanced"] },
     "mutates_data": {
       "type": "boolean",
@@ -117,6 +148,10 @@
     {
       "if": { "properties": { "status": { "const": "verified" } } },
       "then": { "required": ["last_verified_on", "verified_against_cowork_build"] }
+    },
+    {
+      "if": { "properties": { "recipe_type": { "const": "prompt+blueprint" } }, "required": ["recipe_type"] },
+      "then": { "required": ["blueprint"] }
     }
   ]
 }
