@@ -12,9 +12,9 @@ jobs:
   schema-and-content:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
 
@@ -39,7 +39,7 @@ jobs:
   links-and-images:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Markdown image alt-text check
         run: |
@@ -55,7 +55,7 @@ jobs:
           exit $found
 
       - name: Link check
-        uses: lycheeverse/lychee-action@2bb232618be239862e31382c5c0eaeba12e5e966 # v1.10.0
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v1.10.0
         with:
           args: --no-progress --offline --include-fragments './**/*.md'
         continue-on-error: false
